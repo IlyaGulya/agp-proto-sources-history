@@ -10,8 +10,8 @@ public interface GeminiTelemetryEventOrBuilder extends
 
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -20,8 +20,8 @@ public interface GeminiTelemetryEventOrBuilder extends
   boolean hasEnvelope();
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -30,8 +30,8 @@ public interface GeminiTelemetryEventOrBuilder extends
   com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope getEnvelope();
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>

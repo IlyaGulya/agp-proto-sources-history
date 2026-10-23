@@ -72,6 +72,10 @@ private static final long serialVersionUID = 0L;
      */
     SHERLOCK_PROJECT_CLOSED(103),
     /**
+     * <code>APK_INSTALL_COMPLETED = 104;</code>
+     */
+    APK_INSTALL_COMPLETED(104),
+    /**
      * <pre>
      * Fired when the user interacts with the new system trace capture dialog.
      * </pre>
@@ -236,6 +240,10 @@ private static final long serialVersionUID = 0L;
      * <code>SHERLOCK_PROJECT_CLOSED = 103;</code>
      */
     public static final int SHERLOCK_PROJECT_CLOSED_VALUE = 103;
+    /**
+     * <code>APK_INSTALL_COMPLETED = 104;</code>
+     */
+    public static final int APK_INSTALL_COMPLETED_VALUE = 104;
     /**
      * <pre>
      * Fired when the user interacts with the new system trace capture dialog.
@@ -405,6 +413,7 @@ private static final long serialVersionUID = 0L;
         case 101: return DEVICE_INITIALIZED;
         case 102: return SHERLOCK_PROJECT_OPENED;
         case 103: return SHERLOCK_PROJECT_CLOSED;
+        case 104: return APK_INSTALL_COMPLETED;
         case 201: return NEW_CAPTURE_DIALOG_OPENED;
         case 202: return NEW_CAPTURE_DIALOG_CANCELLED;
         case 203: return NEW_CAPTURE_DIALOG_PROCEED;
@@ -6082,6 +6091,2824 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.wireless.android.sdk.stats.SherlockEvent.DeviceInitializedMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ApkInstallMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.SherlockEvent.ApkInstallMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     * @return Whether the extendedDeviceInfo field is set.
+     */
+    boolean hasExtendedDeviceInfo();
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     * @return The extendedDeviceInfo.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo getExtendedDeviceInfo();
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder getExtendedDeviceInfoOrBuilder();
+
+    /**
+     * <pre>
+     * Which of Sherlock's bundled APKs was being installed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+     * @return Whether the apk field is set.
+     */
+    boolean hasApk();
+    /**
+     * <pre>
+     * Which of Sherlock's bundled APKs was being installed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+     * @return The apk.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk getApk();
+
+    /**
+     * <pre>
+     * Outcome of the install attempt.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <pre>
+     * Outcome of the install attempt.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+     * @return The status.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus getStatus();
+
+    /**
+     * <pre>
+     * What kind of install was needed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+     * @return Whether the kind field is set.
+     */
+    boolean hasKind();
+    /**
+     * <pre>
+     * What kind of install was needed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+     * @return The kind.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind getKind();
+
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+     * @return Whether the failedStep field is set.
+     */
+    boolean hasFailedStep();
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+     * @return The failedStep.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep getFailedStep();
+
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+     * @return Whether the failureCause field is set.
+     */
+    boolean hasFailureCause();
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+     * @return The failureCause.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause getFailureCause();
+
+    /**
+     * <pre>
+     * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+     * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+     * @return Whether the pmInstallError field is set.
+     */
+    boolean hasPmInstallError();
+    /**
+     * <pre>
+     * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+     * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+     * @return The pmInstallError.
+     */
+    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError getPmInstallError();
+
+    /**
+     * <pre>
+     * Wall-clock duration of the whole install attempt in milliseconds.
+     * </pre>
+     *
+     * <code>optional int32 duration_ms = 8;</code>
+     * @return Whether the durationMs field is set.
+     */
+    boolean hasDurationMs();
+    /**
+     * <pre>
+     * Wall-clock duration of the whole install attempt in milliseconds.
+     * </pre>
+     *
+     * <code>optional int32 duration_ms = 8;</code>
+     * @return The durationMs.
+     */
+    int getDurationMs();
+
+    /**
+     * <pre>
+     * True if a different version of the APK was already on the device and
+     * uninstalling it failed. Sherlock still attempts `pm install -d`
+     * afterwards, so this is a likely explanation for a subsequent
+     * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+     * </pre>
+     *
+     * <code>optional bool previous_uninstall_failed = 9;</code>
+     * @return Whether the previousUninstallFailed field is set.
+     */
+    boolean hasPreviousUninstallFailed();
+    /**
+     * <pre>
+     * True if a different version of the APK was already on the device and
+     * uninstalling it failed. Sherlock still attempts `pm install -d`
+     * afterwards, so this is a likely explanation for a subsequent
+     * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+     * </pre>
+     *
+     * <code>optional bool previous_uninstall_failed = 9;</code>
+     * @return The previousUninstallFailed.
+     */
+    boolean getPreviousUninstallFailed();
+  }
+  /**
+   * <pre>
+   * Metadata for the |APK_INSTALL_COMPLETED| event.
+   * Logged once per attempt to install one of the APKs bundled with Sherlock
+   * (the APA helper APK and the GFXR replay APK) on a device.
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.SherlockEvent.ApkInstallMetadata}
+   */
+  public static final class ApkInstallMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.SherlockEvent.ApkInstallMetadata)
+      ApkInstallMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ApkInstallMetadata.newBuilder() to construct.
+    private ApkInstallMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ApkInstallMetadata() {
+      apk_ = 0;
+      status_ = 0;
+      kind_ = 0;
+      failedStep_ = 0;
+      failureCause_ = 0;
+      pmInstallError_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ApkInstallMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_ApkInstallMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_ApkInstallMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.Apk}
+     */
+    public enum Apk
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>APK_UNKNOWN = 0;</code>
+       */
+      APK_UNKNOWN(0),
+      /**
+       * <pre>
+       * The Android Performance Analyzer helper APK.
+       * </pre>
+       *
+       * <code>APK_APA = 1;</code>
+       */
+      APK_APA(1),
+      /**
+       * <pre>
+       * The GFXReconstruct replay APK used by the frame profiler.
+       * </pre>
+       *
+       * <code>APK_GFXR_REPLAY = 2;</code>
+       */
+      APK_GFXR_REPLAY(2),
+      ;
+
+      /**
+       * <code>APK_UNKNOWN = 0;</code>
+       */
+      public static final int APK_UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * The Android Performance Analyzer helper APK.
+       * </pre>
+       *
+       * <code>APK_APA = 1;</code>
+       */
+      public static final int APK_APA_VALUE = 1;
+      /**
+       * <pre>
+       * The GFXReconstruct replay APK used by the frame profiler.
+       * </pre>
+       *
+       * <code>APK_GFXR_REPLAY = 2;</code>
+       */
+      public static final int APK_GFXR_REPLAY_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Apk valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Apk forNumber(int value) {
+        switch (value) {
+          case 0: return APK_UNKNOWN;
+          case 1: return APK_APA;
+          case 2: return APK_GFXR_REPLAY;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Apk>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Apk> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Apk>() {
+              public Apk findValueByNumber(int number) {
+                return Apk.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Apk[] VALUES = values();
+
+      public static Apk valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Apk(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.Apk)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus}
+     */
+    public enum ApkInstallStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>APK_INSTALL_STATUS_UNKNOWN = 0;</code>
+       */
+      APK_INSTALL_STATUS_UNKNOWN(0),
+      /**
+       * <code>APK_INSTALL_STATUS_SUCCESS = 1;</code>
+       */
+      APK_INSTALL_STATUS_SUCCESS(1),
+      /**
+       * <code>APK_INSTALL_STATUS_ERROR = 2;</code>
+       */
+      APK_INSTALL_STATUS_ERROR(2),
+      /**
+       * <code>APK_INSTALL_STATUS_CANCELLED = 3;</code>
+       */
+      APK_INSTALL_STATUS_CANCELLED(3),
+      ;
+
+      /**
+       * <code>APK_INSTALL_STATUS_UNKNOWN = 0;</code>
+       */
+      public static final int APK_INSTALL_STATUS_UNKNOWN_VALUE = 0;
+      /**
+       * <code>APK_INSTALL_STATUS_SUCCESS = 1;</code>
+       */
+      public static final int APK_INSTALL_STATUS_SUCCESS_VALUE = 1;
+      /**
+       * <code>APK_INSTALL_STATUS_ERROR = 2;</code>
+       */
+      public static final int APK_INSTALL_STATUS_ERROR_VALUE = 2;
+      /**
+       * <code>APK_INSTALL_STATUS_CANCELLED = 3;</code>
+       */
+      public static final int APK_INSTALL_STATUS_CANCELLED_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ApkInstallStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ApkInstallStatus forNumber(int value) {
+        switch (value) {
+          case 0: return APK_INSTALL_STATUS_UNKNOWN;
+          case 1: return APK_INSTALL_STATUS_SUCCESS;
+          case 2: return APK_INSTALL_STATUS_ERROR;
+          case 3: return APK_INSTALL_STATUS_CANCELLED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ApkInstallStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ApkInstallStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ApkInstallStatus>() {
+              public ApkInstallStatus findValueByNumber(int number) {
+                return ApkInstallStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final ApkInstallStatus[] VALUES = values();
+
+      public static ApkInstallStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ApkInstallStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind}
+     */
+    public enum ApkInstallKind
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>APK_INSTALL_KIND_UNKNOWN = 0;</code>
+       */
+      APK_INSTALL_KIND_UNKNOWN(0),
+      /**
+       * <pre>
+       * The same APK was already on the device; nothing was installed.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_SKIPPED_UP_TO_DATE = 1;</code>
+       */
+      APK_INSTALL_KIND_SKIPPED_UP_TO_DATE(1),
+      /**
+       * <pre>
+       * The package was not on the device; installed from scratch.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_FRESH = 2;</code>
+       */
+      APK_INSTALL_KIND_FRESH(2),
+      /**
+       * <pre>
+       * A different version was on the device; uninstalled then installed.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_REINSTALL = 3;</code>
+       */
+      APK_INSTALL_KIND_REINSTALL(3),
+      ;
+
+      /**
+       * <code>APK_INSTALL_KIND_UNKNOWN = 0;</code>
+       */
+      public static final int APK_INSTALL_KIND_UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * The same APK was already on the device; nothing was installed.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_SKIPPED_UP_TO_DATE = 1;</code>
+       */
+      public static final int APK_INSTALL_KIND_SKIPPED_UP_TO_DATE_VALUE = 1;
+      /**
+       * <pre>
+       * The package was not on the device; installed from scratch.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_FRESH = 2;</code>
+       */
+      public static final int APK_INSTALL_KIND_FRESH_VALUE = 2;
+      /**
+       * <pre>
+       * A different version was on the device; uninstalled then installed.
+       * </pre>
+       *
+       * <code>APK_INSTALL_KIND_REINSTALL = 3;</code>
+       */
+      public static final int APK_INSTALL_KIND_REINSTALL_VALUE = 3;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ApkInstallKind valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ApkInstallKind forNumber(int value) {
+        switch (value) {
+          case 0: return APK_INSTALL_KIND_UNKNOWN;
+          case 1: return APK_INSTALL_KIND_SKIPPED_UP_TO_DATE;
+          case 2: return APK_INSTALL_KIND_FRESH;
+          case 3: return APK_INSTALL_KIND_REINSTALL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ApkInstallKind>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ApkInstallKind> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ApkInstallKind>() {
+              public ApkInstallKind findValueByNumber(int number) {
+                return ApkInstallKind.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(2);
+      }
+
+      private static final ApkInstallKind[] VALUES = values();
+
+      public static ApkInstallKind valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ApkInstallKind(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind)
+    }
+
+    /**
+     * <pre>
+     * The steps of an install attempt, in execution order.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep}
+     */
+    public enum ApkInstallStep
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>APK_INSTALL_STEP_UNKNOWN = 0;</code>
+       */
+      APK_INSTALL_STEP_UNKNOWN(0),
+      /**
+       * <pre>
+       * Querying whether the package is already installed and where.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_QUERY_PACKAGE = 1;</code>
+       */
+      APK_INSTALL_STEP_QUERY_PACKAGE(1),
+      /**
+       * <pre>
+       * Hashing the APK on the device and on the host.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_HASH_CHECK = 2;</code>
+       */
+      APK_INSTALL_STEP_HASH_CHECK(2),
+      /**
+       * <pre>
+       * Uninstalling a previous version of the package.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_UNINSTALL = 3;</code>
+       */
+      APK_INSTALL_STEP_UNINSTALL(3),
+      /**
+       * <pre>
+       * Pushing the APK file to the device.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_PUSH = 4;</code>
+       */
+      APK_INSTALL_STEP_PUSH(4),
+      /**
+       * <pre>
+       * Running `pm install`.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_PM_INSTALL = 5;</code>
+       */
+      APK_INSTALL_STEP_PM_INSTALL(5),
+      /**
+       * <pre>
+       * Deleting the pushed APK file from the device.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_CLEANUP = 6;</code>
+       */
+      APK_INSTALL_STEP_CLEANUP(6),
+      /**
+       * <pre>
+       * Granting app-ops permissions (`appops set`).
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_GRANT_APPOPS = 7;</code>
+       */
+      APK_INSTALL_STEP_GRANT_APPOPS(7),
+      /**
+       * <pre>
+       * Granting runtime permissions (`pm grant`).
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_GRANT_PM_PERMISSIONS = 8;</code>
+       */
+      APK_INSTALL_STEP_GRANT_PM_PERMISSIONS(8),
+      ;
+
+      /**
+       * <code>APK_INSTALL_STEP_UNKNOWN = 0;</code>
+       */
+      public static final int APK_INSTALL_STEP_UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * Querying whether the package is already installed and where.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_QUERY_PACKAGE = 1;</code>
+       */
+      public static final int APK_INSTALL_STEP_QUERY_PACKAGE_VALUE = 1;
+      /**
+       * <pre>
+       * Hashing the APK on the device and on the host.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_HASH_CHECK = 2;</code>
+       */
+      public static final int APK_INSTALL_STEP_HASH_CHECK_VALUE = 2;
+      /**
+       * <pre>
+       * Uninstalling a previous version of the package.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_UNINSTALL = 3;</code>
+       */
+      public static final int APK_INSTALL_STEP_UNINSTALL_VALUE = 3;
+      /**
+       * <pre>
+       * Pushing the APK file to the device.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_PUSH = 4;</code>
+       */
+      public static final int APK_INSTALL_STEP_PUSH_VALUE = 4;
+      /**
+       * <pre>
+       * Running `pm install`.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_PM_INSTALL = 5;</code>
+       */
+      public static final int APK_INSTALL_STEP_PM_INSTALL_VALUE = 5;
+      /**
+       * <pre>
+       * Deleting the pushed APK file from the device.
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_CLEANUP = 6;</code>
+       */
+      public static final int APK_INSTALL_STEP_CLEANUP_VALUE = 6;
+      /**
+       * <pre>
+       * Granting app-ops permissions (`appops set`).
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_GRANT_APPOPS = 7;</code>
+       */
+      public static final int APK_INSTALL_STEP_GRANT_APPOPS_VALUE = 7;
+      /**
+       * <pre>
+       * Granting runtime permissions (`pm grant`).
+       * </pre>
+       *
+       * <code>APK_INSTALL_STEP_GRANT_PM_PERMISSIONS = 8;</code>
+       */
+      public static final int APK_INSTALL_STEP_GRANT_PM_PERMISSIONS_VALUE = 8;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ApkInstallStep valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ApkInstallStep forNumber(int value) {
+        switch (value) {
+          case 0: return APK_INSTALL_STEP_UNKNOWN;
+          case 1: return APK_INSTALL_STEP_QUERY_PACKAGE;
+          case 2: return APK_INSTALL_STEP_HASH_CHECK;
+          case 3: return APK_INSTALL_STEP_UNINSTALL;
+          case 4: return APK_INSTALL_STEP_PUSH;
+          case 5: return APK_INSTALL_STEP_PM_INSTALL;
+          case 6: return APK_INSTALL_STEP_CLEANUP;
+          case 7: return APK_INSTALL_STEP_GRANT_APPOPS;
+          case 8: return APK_INSTALL_STEP_GRANT_PM_PERMISSIONS;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ApkInstallStep>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ApkInstallStep> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ApkInstallStep>() {
+              public ApkInstallStep findValueByNumber(int number) {
+                return ApkInstallStep.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(3);
+      }
+
+      private static final ApkInstallStep[] VALUES = values();
+
+      public static ApkInstallStep valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ApkInstallStep(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep)
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause}
+     */
+    public enum ApkInstallFailureCause
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>APK_INSTALL_FAILURE_CAUSE_UNKNOWN = 0;</code>
+       */
+      APK_INSTALL_FAILURE_CAUSE_UNKNOWN(0),
+      /**
+       * <pre>
+       * An adb shell command exited with a non-zero code.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_SHELL_COMMAND_FAILED = 1;</code>
+       */
+      APK_INSTALL_FAILURE_CAUSE_SHELL_COMMAND_FAILED(1),
+      /**
+       * <pre>
+       * The device went offline during the attempt.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_DEVICE_DISCONNECTED = 2;</code>
+       */
+      APK_INSTALL_FAILURE_CAUSE_DEVICE_DISCONNECTED(2),
+      /**
+       * <code>APK_INSTALL_FAILURE_CAUSE_TIMEOUT = 3;</code>
+       */
+      APK_INSTALL_FAILURE_CAUSE_TIMEOUT(3),
+      /**
+       * <pre>
+       * The APK bundled with Sherlock could not be found on the host.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_HOST_FILE_MISSING = 4;</code>
+       */
+      APK_INSTALL_FAILURE_CAUSE_HOST_FILE_MISSING(4),
+      ;
+
+      /**
+       * <code>APK_INSTALL_FAILURE_CAUSE_UNKNOWN = 0;</code>
+       */
+      public static final int APK_INSTALL_FAILURE_CAUSE_UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * An adb shell command exited with a non-zero code.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_SHELL_COMMAND_FAILED = 1;</code>
+       */
+      public static final int APK_INSTALL_FAILURE_CAUSE_SHELL_COMMAND_FAILED_VALUE = 1;
+      /**
+       * <pre>
+       * The device went offline during the attempt.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_DEVICE_DISCONNECTED = 2;</code>
+       */
+      public static final int APK_INSTALL_FAILURE_CAUSE_DEVICE_DISCONNECTED_VALUE = 2;
+      /**
+       * <code>APK_INSTALL_FAILURE_CAUSE_TIMEOUT = 3;</code>
+       */
+      public static final int APK_INSTALL_FAILURE_CAUSE_TIMEOUT_VALUE = 3;
+      /**
+       * <pre>
+       * The APK bundled with Sherlock could not be found on the host.
+       * </pre>
+       *
+       * <code>APK_INSTALL_FAILURE_CAUSE_HOST_FILE_MISSING = 4;</code>
+       */
+      public static final int APK_INSTALL_FAILURE_CAUSE_HOST_FILE_MISSING_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ApkInstallFailureCause valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ApkInstallFailureCause forNumber(int value) {
+        switch (value) {
+          case 0: return APK_INSTALL_FAILURE_CAUSE_UNKNOWN;
+          case 1: return APK_INSTALL_FAILURE_CAUSE_SHELL_COMMAND_FAILED;
+          case 2: return APK_INSTALL_FAILURE_CAUSE_DEVICE_DISCONNECTED;
+          case 3: return APK_INSTALL_FAILURE_CAUSE_TIMEOUT;
+          case 4: return APK_INSTALL_FAILURE_CAUSE_HOST_FILE_MISSING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ApkInstallFailureCause>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ApkInstallFailureCause> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ApkInstallFailureCause>() {
+              public ApkInstallFailureCause findValueByNumber(int number) {
+                return ApkInstallFailureCause.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(4);
+      }
+
+      private static final ApkInstallFailureCause[] VALUES = values();
+
+      public static ApkInstallFailureCause valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ApkInstallFailureCause(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause)
+    }
+
+    /**
+     * <pre>
+     * Error codes reported by `pm install`. Mirrors the INSTALL_FAILED_* /
+     * INSTALL_PARSE_FAILED_* constants in
+     * android.content.pm.PackageManager, limited to the codes Sherlock
+     * expects to see; everything else maps to PM_INSTALL_ERROR_OTHER.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError}
+     */
+    public enum PmInstallError
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PM_INSTALL_ERROR_UNKNOWN = 0;</code>
+       */
+      PM_INSTALL_ERROR_UNKNOWN(0),
+      /**
+       * <pre>
+       * A failure code not listed below.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_OTHER = 1;</code>
+       */
+      PM_INSTALL_ERROR_OTHER(1),
+      /**
+       * <code>PM_INSTALL_ERROR_ALREADY_EXISTS = 2;</code>
+       */
+      PM_INSTALL_ERROR_ALREADY_EXISTS(2),
+      /**
+       * <code>PM_INSTALL_ERROR_INVALID_APK = 3;</code>
+       */
+      PM_INSTALL_ERROR_INVALID_APK(3),
+      /**
+       * <code>PM_INSTALL_ERROR_INSUFFICIENT_STORAGE = 4;</code>
+       */
+      PM_INSTALL_ERROR_INSUFFICIENT_STORAGE(4),
+      /**
+       * <code>PM_INSTALL_ERROR_UPDATE_INCOMPATIBLE = 5;</code>
+       */
+      PM_INSTALL_ERROR_UPDATE_INCOMPATIBLE(5),
+      /**
+       * <code>PM_INSTALL_ERROR_SHARED_USER_INCOMPATIBLE = 6;</code>
+       */
+      PM_INSTALL_ERROR_SHARED_USER_INCOMPATIBLE(6),
+      /**
+       * <code>PM_INSTALL_ERROR_MISSING_SHARED_LIBRARY = 7;</code>
+       */
+      PM_INSTALL_ERROR_MISSING_SHARED_LIBRARY(7),
+      /**
+       * <code>PM_INSTALL_ERROR_OLDER_SDK = 8;</code>
+       */
+      PM_INSTALL_ERROR_OLDER_SDK(8),
+      /**
+       * <code>PM_INSTALL_ERROR_NEWER_SDK = 9;</code>
+       */
+      PM_INSTALL_ERROR_NEWER_SDK(9),
+      /**
+       * <code>PM_INSTALL_ERROR_CONFLICTING_PROVIDER = 10;</code>
+       */
+      PM_INSTALL_ERROR_CONFLICTING_PROVIDER(10),
+      /**
+       * <code>PM_INSTALL_ERROR_TEST_ONLY = 11;</code>
+       */
+      PM_INSTALL_ERROR_TEST_ONLY(11),
+      /**
+       * <code>PM_INSTALL_ERROR_CPU_ABI_INCOMPATIBLE = 12;</code>
+       */
+      PM_INSTALL_ERROR_CPU_ABI_INCOMPATIBLE(12),
+      /**
+       * <code>PM_INSTALL_ERROR_NO_MATCHING_ABIS = 13;</code>
+       */
+      PM_INSTALL_ERROR_NO_MATCHING_ABIS(13),
+      /**
+       * <code>PM_INSTALL_ERROR_VERIFICATION_FAILURE = 14;</code>
+       */
+      PM_INSTALL_ERROR_VERIFICATION_FAILURE(14),
+      /**
+       * <code>PM_INSTALL_ERROR_USER_RESTRICTED = 15;</code>
+       */
+      PM_INSTALL_ERROR_USER_RESTRICTED(15),
+      /**
+       * <code>PM_INSTALL_ERROR_VERSION_DOWNGRADE = 16;</code>
+       */
+      PM_INSTALL_ERROR_VERSION_DOWNGRADE(16),
+      /**
+       * <code>PM_INSTALL_ERROR_INTERNAL_ERROR = 17;</code>
+       */
+      PM_INSTALL_ERROR_INTERNAL_ERROR(17),
+      /**
+       * <code>PM_INSTALL_ERROR_ABORTED = 18;</code>
+       */
+      PM_INSTALL_ERROR_ABORTED(18),
+      /**
+       * <pre>
+       * Any INSTALL_PARSE_FAILED_* code other than the certificate ones.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_PARSE_FAILED = 19;</code>
+       */
+      PM_INSTALL_ERROR_PARSE_FAILED(19),
+      /**
+       * <pre>
+       * INSTALL_PARSE_FAILED_NO_CERTIFICATES or
+       * INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_BAD_CERTIFICATES = 20;</code>
+       */
+      PM_INSTALL_ERROR_BAD_CERTIFICATES(20),
+      /**
+       * <code>PM_INSTALL_ERROR_UID_CHANGED = 21;</code>
+       */
+      PM_INSTALL_ERROR_UID_CHANGED(21),
+      /**
+       * <code>PM_INSTALL_ERROR_PERMISSION_MODEL_DOWNGRADE = 22;</code>
+       */
+      PM_INSTALL_ERROR_PERMISSION_MODEL_DOWNGRADE(22),
+      ;
+
+      /**
+       * <code>PM_INSTALL_ERROR_UNKNOWN = 0;</code>
+       */
+      public static final int PM_INSTALL_ERROR_UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * A failure code not listed below.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_OTHER = 1;</code>
+       */
+      public static final int PM_INSTALL_ERROR_OTHER_VALUE = 1;
+      /**
+       * <code>PM_INSTALL_ERROR_ALREADY_EXISTS = 2;</code>
+       */
+      public static final int PM_INSTALL_ERROR_ALREADY_EXISTS_VALUE = 2;
+      /**
+       * <code>PM_INSTALL_ERROR_INVALID_APK = 3;</code>
+       */
+      public static final int PM_INSTALL_ERROR_INVALID_APK_VALUE = 3;
+      /**
+       * <code>PM_INSTALL_ERROR_INSUFFICIENT_STORAGE = 4;</code>
+       */
+      public static final int PM_INSTALL_ERROR_INSUFFICIENT_STORAGE_VALUE = 4;
+      /**
+       * <code>PM_INSTALL_ERROR_UPDATE_INCOMPATIBLE = 5;</code>
+       */
+      public static final int PM_INSTALL_ERROR_UPDATE_INCOMPATIBLE_VALUE = 5;
+      /**
+       * <code>PM_INSTALL_ERROR_SHARED_USER_INCOMPATIBLE = 6;</code>
+       */
+      public static final int PM_INSTALL_ERROR_SHARED_USER_INCOMPATIBLE_VALUE = 6;
+      /**
+       * <code>PM_INSTALL_ERROR_MISSING_SHARED_LIBRARY = 7;</code>
+       */
+      public static final int PM_INSTALL_ERROR_MISSING_SHARED_LIBRARY_VALUE = 7;
+      /**
+       * <code>PM_INSTALL_ERROR_OLDER_SDK = 8;</code>
+       */
+      public static final int PM_INSTALL_ERROR_OLDER_SDK_VALUE = 8;
+      /**
+       * <code>PM_INSTALL_ERROR_NEWER_SDK = 9;</code>
+       */
+      public static final int PM_INSTALL_ERROR_NEWER_SDK_VALUE = 9;
+      /**
+       * <code>PM_INSTALL_ERROR_CONFLICTING_PROVIDER = 10;</code>
+       */
+      public static final int PM_INSTALL_ERROR_CONFLICTING_PROVIDER_VALUE = 10;
+      /**
+       * <code>PM_INSTALL_ERROR_TEST_ONLY = 11;</code>
+       */
+      public static final int PM_INSTALL_ERROR_TEST_ONLY_VALUE = 11;
+      /**
+       * <code>PM_INSTALL_ERROR_CPU_ABI_INCOMPATIBLE = 12;</code>
+       */
+      public static final int PM_INSTALL_ERROR_CPU_ABI_INCOMPATIBLE_VALUE = 12;
+      /**
+       * <code>PM_INSTALL_ERROR_NO_MATCHING_ABIS = 13;</code>
+       */
+      public static final int PM_INSTALL_ERROR_NO_MATCHING_ABIS_VALUE = 13;
+      /**
+       * <code>PM_INSTALL_ERROR_VERIFICATION_FAILURE = 14;</code>
+       */
+      public static final int PM_INSTALL_ERROR_VERIFICATION_FAILURE_VALUE = 14;
+      /**
+       * <code>PM_INSTALL_ERROR_USER_RESTRICTED = 15;</code>
+       */
+      public static final int PM_INSTALL_ERROR_USER_RESTRICTED_VALUE = 15;
+      /**
+       * <code>PM_INSTALL_ERROR_VERSION_DOWNGRADE = 16;</code>
+       */
+      public static final int PM_INSTALL_ERROR_VERSION_DOWNGRADE_VALUE = 16;
+      /**
+       * <code>PM_INSTALL_ERROR_INTERNAL_ERROR = 17;</code>
+       */
+      public static final int PM_INSTALL_ERROR_INTERNAL_ERROR_VALUE = 17;
+      /**
+       * <code>PM_INSTALL_ERROR_ABORTED = 18;</code>
+       */
+      public static final int PM_INSTALL_ERROR_ABORTED_VALUE = 18;
+      /**
+       * <pre>
+       * Any INSTALL_PARSE_FAILED_* code other than the certificate ones.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_PARSE_FAILED = 19;</code>
+       */
+      public static final int PM_INSTALL_ERROR_PARSE_FAILED_VALUE = 19;
+      /**
+       * <pre>
+       * INSTALL_PARSE_FAILED_NO_CERTIFICATES or
+       * INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES.
+       * </pre>
+       *
+       * <code>PM_INSTALL_ERROR_BAD_CERTIFICATES = 20;</code>
+       */
+      public static final int PM_INSTALL_ERROR_BAD_CERTIFICATES_VALUE = 20;
+      /**
+       * <code>PM_INSTALL_ERROR_UID_CHANGED = 21;</code>
+       */
+      public static final int PM_INSTALL_ERROR_UID_CHANGED_VALUE = 21;
+      /**
+       * <code>PM_INSTALL_ERROR_PERMISSION_MODEL_DOWNGRADE = 22;</code>
+       */
+      public static final int PM_INSTALL_ERROR_PERMISSION_MODEL_DOWNGRADE_VALUE = 22;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PmInstallError valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PmInstallError forNumber(int value) {
+        switch (value) {
+          case 0: return PM_INSTALL_ERROR_UNKNOWN;
+          case 1: return PM_INSTALL_ERROR_OTHER;
+          case 2: return PM_INSTALL_ERROR_ALREADY_EXISTS;
+          case 3: return PM_INSTALL_ERROR_INVALID_APK;
+          case 4: return PM_INSTALL_ERROR_INSUFFICIENT_STORAGE;
+          case 5: return PM_INSTALL_ERROR_UPDATE_INCOMPATIBLE;
+          case 6: return PM_INSTALL_ERROR_SHARED_USER_INCOMPATIBLE;
+          case 7: return PM_INSTALL_ERROR_MISSING_SHARED_LIBRARY;
+          case 8: return PM_INSTALL_ERROR_OLDER_SDK;
+          case 9: return PM_INSTALL_ERROR_NEWER_SDK;
+          case 10: return PM_INSTALL_ERROR_CONFLICTING_PROVIDER;
+          case 11: return PM_INSTALL_ERROR_TEST_ONLY;
+          case 12: return PM_INSTALL_ERROR_CPU_ABI_INCOMPATIBLE;
+          case 13: return PM_INSTALL_ERROR_NO_MATCHING_ABIS;
+          case 14: return PM_INSTALL_ERROR_VERIFICATION_FAILURE;
+          case 15: return PM_INSTALL_ERROR_USER_RESTRICTED;
+          case 16: return PM_INSTALL_ERROR_VERSION_DOWNGRADE;
+          case 17: return PM_INSTALL_ERROR_INTERNAL_ERROR;
+          case 18: return PM_INSTALL_ERROR_ABORTED;
+          case 19: return PM_INSTALL_ERROR_PARSE_FAILED;
+          case 20: return PM_INSTALL_ERROR_BAD_CERTIFICATES;
+          case 21: return PM_INSTALL_ERROR_UID_CHANGED;
+          case 22: return PM_INSTALL_ERROR_PERMISSION_MODEL_DOWNGRADE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PmInstallError>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PmInstallError> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PmInstallError>() {
+              public PmInstallError findValueByNumber(int number) {
+                return PmInstallError.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDescriptor().getEnumTypes().get(5);
+      }
+
+      private static final PmInstallError[] VALUES = values();
+
+      public static PmInstallError valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PmInstallError(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError)
+    }
+
+    private int bitField0_;
+    public static final int EXTENDED_DEVICE_INFO_FIELD_NUMBER = 1;
+    private com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo extendedDeviceInfo_;
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     * @return Whether the extendedDeviceInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasExtendedDeviceInfo() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     * @return The extendedDeviceInfo.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo getExtendedDeviceInfo() {
+      return extendedDeviceInfo_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance() : extendedDeviceInfo_;
+    }
+    /**
+     * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder getExtendedDeviceInfoOrBuilder() {
+      return extendedDeviceInfo_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance() : extendedDeviceInfo_;
+    }
+
+    public static final int APK_FIELD_NUMBER = 2;
+    private int apk_ = 0;
+    /**
+     * <pre>
+     * Which of Sherlock's bundled APKs was being installed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+     * @return Whether the apk field is set.
+     */
+    @java.lang.Override public boolean hasApk() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Which of Sherlock's bundled APKs was being installed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+     * @return The apk.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk getApk() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk.forNumber(apk_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk.APK_UNKNOWN : result;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private int status_ = 0;
+    /**
+     * <pre>
+     * Outcome of the install attempt.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override public boolean hasStatus() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <pre>
+     * Outcome of the install attempt.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus getStatus() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus.forNumber(status_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus.APK_INSTALL_STATUS_UNKNOWN : result;
+    }
+
+    public static final int KIND_FIELD_NUMBER = 4;
+    private int kind_ = 0;
+    /**
+     * <pre>
+     * What kind of install was needed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+     * @return Whether the kind field is set.
+     */
+    @java.lang.Override public boolean hasKind() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <pre>
+     * What kind of install was needed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+     * @return The kind.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind getKind() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind.forNumber(kind_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind.APK_INSTALL_KIND_UNKNOWN : result;
+    }
+
+    public static final int FAILED_STEP_FIELD_NUMBER = 5;
+    private int failedStep_ = 0;
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+     * @return Whether the failedStep field is set.
+     */
+    @java.lang.Override public boolean hasFailedStep() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+     * @return The failedStep.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep getFailedStep() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep.forNumber(failedStep_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep.APK_INSTALL_STEP_UNKNOWN : result;
+    }
+
+    public static final int FAILURE_CAUSE_FIELD_NUMBER = 6;
+    private int failureCause_ = 0;
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+     * @return Whether the failureCause field is set.
+     */
+    @java.lang.Override public boolean hasFailureCause() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+     * @return The failureCause.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause getFailureCause() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause.forNumber(failureCause_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause.APK_INSTALL_FAILURE_CAUSE_UNKNOWN : result;
+    }
+
+    public static final int PM_INSTALL_ERROR_FIELD_NUMBER = 7;
+    private int pmInstallError_ = 0;
+    /**
+     * <pre>
+     * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+     * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+     * @return Whether the pmInstallError field is set.
+     */
+    @java.lang.Override public boolean hasPmInstallError() {
+      return ((bitField0_ & 0x00000040) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+     * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+     * @return The pmInstallError.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError getPmInstallError() {
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError.forNumber(pmInstallError_);
+      return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError.PM_INSTALL_ERROR_UNKNOWN : result;
+    }
+
+    public static final int DURATION_MS_FIELD_NUMBER = 8;
+    private int durationMs_ = 0;
+    /**
+     * <pre>
+     * Wall-clock duration of the whole install attempt in milliseconds.
+     * </pre>
+     *
+     * <code>optional int32 duration_ms = 8;</code>
+     * @return Whether the durationMs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDurationMs() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * Wall-clock duration of the whole install attempt in milliseconds.
+     * </pre>
+     *
+     * <code>optional int32 duration_ms = 8;</code>
+     * @return The durationMs.
+     */
+    @java.lang.Override
+    public int getDurationMs() {
+      return durationMs_;
+    }
+
+    public static final int PREVIOUS_UNINSTALL_FAILED_FIELD_NUMBER = 9;
+    private boolean previousUninstallFailed_ = false;
+    /**
+     * <pre>
+     * True if a different version of the APK was already on the device and
+     * uninstalling it failed. Sherlock still attempts `pm install -d`
+     * afterwards, so this is a likely explanation for a subsequent
+     * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+     * </pre>
+     *
+     * <code>optional bool previous_uninstall_failed = 9;</code>
+     * @return Whether the previousUninstallFailed field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreviousUninstallFailed() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * True if a different version of the APK was already on the device and
+     * uninstalling it failed. Sherlock still attempts `pm install -d`
+     * afterwards, so this is a likely explanation for a subsequent
+     * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+     * </pre>
+     *
+     * <code>optional bool previous_uninstall_failed = 9;</code>
+     * @return The previousUninstallFailed.
+     */
+    @java.lang.Override
+    public boolean getPreviousUninstallFailed() {
+      return previousUninstallFailed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getExtendedDeviceInfo());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeEnum(2, apk_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeEnum(3, status_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeEnum(4, kind_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeEnum(5, failedStep_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        output.writeEnum(6, failureCause_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        output.writeEnum(7, pmInstallError_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        output.writeInt32(8, durationMs_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeBool(9, previousUninstallFailed_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getExtendedDeviceInfo());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, apk_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, status_);
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, kind_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, failedStep_);
+      }
+      if (((bitField0_ & 0x00000020) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, failureCause_);
+      }
+      if (((bitField0_ & 0x00000040) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, pmInstallError_);
+      }
+      if (((bitField0_ & 0x00000080) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, durationMs_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, previousUninstallFailed_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata other = (com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata) obj;
+
+      if (hasExtendedDeviceInfo() != other.hasExtendedDeviceInfo()) return false;
+      if (hasExtendedDeviceInfo()) {
+        if (!getExtendedDeviceInfo()
+            .equals(other.getExtendedDeviceInfo())) return false;
+      }
+      if (hasApk() != other.hasApk()) return false;
+      if (hasApk()) {
+        if (apk_ != other.apk_) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (status_ != other.status_) return false;
+      }
+      if (hasKind() != other.hasKind()) return false;
+      if (hasKind()) {
+        if (kind_ != other.kind_) return false;
+      }
+      if (hasFailedStep() != other.hasFailedStep()) return false;
+      if (hasFailedStep()) {
+        if (failedStep_ != other.failedStep_) return false;
+      }
+      if (hasFailureCause() != other.hasFailureCause()) return false;
+      if (hasFailureCause()) {
+        if (failureCause_ != other.failureCause_) return false;
+      }
+      if (hasPmInstallError() != other.hasPmInstallError()) return false;
+      if (hasPmInstallError()) {
+        if (pmInstallError_ != other.pmInstallError_) return false;
+      }
+      if (hasDurationMs() != other.hasDurationMs()) return false;
+      if (hasDurationMs()) {
+        if (getDurationMs()
+            != other.getDurationMs()) return false;
+      }
+      if (hasPreviousUninstallFailed() != other.hasPreviousUninstallFailed()) return false;
+      if (hasPreviousUninstallFailed()) {
+        if (getPreviousUninstallFailed()
+            != other.getPreviousUninstallFailed()) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasExtendedDeviceInfo()) {
+        hash = (37 * hash) + EXTENDED_DEVICE_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getExtendedDeviceInfo().hashCode();
+      }
+      if (hasApk()) {
+        hash = (37 * hash) + APK_FIELD_NUMBER;
+        hash = (53 * hash) + apk_;
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + status_;
+      }
+      if (hasKind()) {
+        hash = (37 * hash) + KIND_FIELD_NUMBER;
+        hash = (53 * hash) + kind_;
+      }
+      if (hasFailedStep()) {
+        hash = (37 * hash) + FAILED_STEP_FIELD_NUMBER;
+        hash = (53 * hash) + failedStep_;
+      }
+      if (hasFailureCause()) {
+        hash = (37 * hash) + FAILURE_CAUSE_FIELD_NUMBER;
+        hash = (53 * hash) + failureCause_;
+      }
+      if (hasPmInstallError()) {
+        hash = (37 * hash) + PM_INSTALL_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + pmInstallError_;
+      }
+      if (hasDurationMs()) {
+        hash = (37 * hash) + DURATION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + getDurationMs();
+      }
+      if (hasPreviousUninstallFailed()) {
+        hash = (37 * hash) + PREVIOUS_UNINSTALL_FAILED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getPreviousUninstallFailed());
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Metadata for the |APK_INSTALL_COMPLETED| event.
+     * Logged once per attempt to install one of the APKs bundled with Sherlock
+     * (the APA helper APK and the GFXR replay APK) on a device.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.SherlockEvent.ApkInstallMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.SherlockEvent.ApkInstallMetadata)
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_ApkInstallMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_ApkInstallMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.class, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExtendedDeviceInfoFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        extendedDeviceInfo_ = null;
+        if (extendedDeviceInfoBuilder_ != null) {
+          extendedDeviceInfoBuilder_.dispose();
+          extendedDeviceInfoBuilder_ = null;
+        }
+        apk_ = 0;
+        status_ = 0;
+        kind_ = 0;
+        failedStep_ = 0;
+        failureCause_ = 0;
+        pmInstallError_ = 0;
+        durationMs_ = 0;
+        previousUninstallFailed_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_SherlockEvent_ApkInstallMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata build() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata buildPartial() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata result = new com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.extendedDeviceInfo_ = extendedDeviceInfoBuilder_ == null
+              ? extendedDeviceInfo_
+              : extendedDeviceInfoBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.apk_ = apk_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.kind_ = kind_;
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.failedStep_ = failedStep_;
+          to_bitField0_ |= 0x00000010;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.failureCause_ = failureCause_;
+          to_bitField0_ |= 0x00000020;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.pmInstallError_ = pmInstallError_;
+          to_bitField0_ |= 0x00000040;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.durationMs_ = durationMs_;
+          to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.previousUninstallFailed_ = previousUninstallFailed_;
+          to_bitField0_ |= 0x00000100;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata other) {
+        if (other == com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance()) return this;
+        if (other.hasExtendedDeviceInfo()) {
+          mergeExtendedDeviceInfo(other.getExtendedDeviceInfo());
+        }
+        if (other.hasApk()) {
+          setApk(other.getApk());
+        }
+        if (other.hasStatus()) {
+          setStatus(other.getStatus());
+        }
+        if (other.hasKind()) {
+          setKind(other.getKind());
+        }
+        if (other.hasFailedStep()) {
+          setFailedStep(other.getFailedStep());
+        }
+        if (other.hasFailureCause()) {
+          setFailureCause(other.getFailureCause());
+        }
+        if (other.hasPmInstallError()) {
+          setPmInstallError(other.getPmInstallError());
+        }
+        if (other.hasDurationMs()) {
+          setDurationMs(other.getDurationMs());
+        }
+        if (other.hasPreviousUninstallFailed()) {
+          setPreviousUninstallFailed(other.getPreviousUninstallFailed());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getExtendedDeviceInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(2, tmpRaw);
+                } else {
+                  apk_ = tmpRaw;
+                  bitField0_ |= 0x00000002;
+                }
+                break;
+              } // case 16
+              case 24: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(3, tmpRaw);
+                } else {
+                  status_ = tmpRaw;
+                  bitField0_ |= 0x00000004;
+                }
+                break;
+              } // case 24
+              case 32: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(4, tmpRaw);
+                } else {
+                  kind_ = tmpRaw;
+                  bitField0_ |= 0x00000008;
+                }
+                break;
+              } // case 32
+              case 40: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(5, tmpRaw);
+                } else {
+                  failedStep_ = tmpRaw;
+                  bitField0_ |= 0x00000010;
+                }
+                break;
+              } // case 40
+              case 48: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(6, tmpRaw);
+                } else {
+                  failureCause_ = tmpRaw;
+                  bitField0_ |= 0x00000020;
+                }
+                break;
+              } // case 48
+              case 56: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError tmpValue =
+                    com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(7, tmpRaw);
+                } else {
+                  pmInstallError_ = tmpRaw;
+                  bitField0_ |= 0x00000040;
+                }
+                break;
+              } // case 56
+              case 64: {
+                durationMs_ = input.readInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                previousUninstallFailed_ = input.readBool();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo extendedDeviceInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder> extendedDeviceInfoBuilder_;
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       * @return Whether the extendedDeviceInfo field is set.
+       */
+      public boolean hasExtendedDeviceInfo() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       * @return The extendedDeviceInfo.
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo getExtendedDeviceInfo() {
+        if (extendedDeviceInfoBuilder_ == null) {
+          return extendedDeviceInfo_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance() : extendedDeviceInfo_;
+        } else {
+          return extendedDeviceInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public Builder setExtendedDeviceInfo(com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo value) {
+        if (extendedDeviceInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          extendedDeviceInfo_ = value;
+        } else {
+          extendedDeviceInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public Builder setExtendedDeviceInfo(
+          com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.Builder builderForValue) {
+        if (extendedDeviceInfoBuilder_ == null) {
+          extendedDeviceInfo_ = builderForValue.build();
+        } else {
+          extendedDeviceInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public Builder mergeExtendedDeviceInfo(com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo value) {
+        if (extendedDeviceInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            extendedDeviceInfo_ != null &&
+            extendedDeviceInfo_ != com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance()) {
+            getExtendedDeviceInfoBuilder().mergeFrom(value);
+          } else {
+            extendedDeviceInfo_ = value;
+          }
+        } else {
+          extendedDeviceInfoBuilder_.mergeFrom(value);
+        }
+        if (extendedDeviceInfo_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public Builder clearExtendedDeviceInfo() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        extendedDeviceInfo_ = null;
+        if (extendedDeviceInfoBuilder_ != null) {
+          extendedDeviceInfoBuilder_.dispose();
+          extendedDeviceInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.Builder getExtendedDeviceInfoBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getExtendedDeviceInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder getExtendedDeviceInfoOrBuilder() {
+        if (extendedDeviceInfoBuilder_ != null) {
+          return extendedDeviceInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return extendedDeviceInfo_ == null ?
+              com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.getDefaultInstance() : extendedDeviceInfo_;
+        }
+      }
+      /**
+       * <code>optional .android_studio.SherlockEvent.ExtendedDeviceInfo extended_device_info = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder> 
+          getExtendedDeviceInfoFieldBuilder() {
+        if (extendedDeviceInfoBuilder_ == null) {
+          extendedDeviceInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfo.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ExtendedDeviceInfoOrBuilder>(
+                  getExtendedDeviceInfo(),
+                  getParentForChildren(),
+                  isClean());
+          extendedDeviceInfo_ = null;
+        }
+        return extendedDeviceInfoBuilder_;
+      }
+
+      private int apk_ = 0;
+      /**
+       * <pre>
+       * Which of Sherlock's bundled APKs was being installed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+       * @return Whether the apk field is set.
+       */
+      @java.lang.Override public boolean hasApk() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * Which of Sherlock's bundled APKs was being installed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+       * @return The apk.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk getApk() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk.forNumber(apk_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk.APK_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * Which of Sherlock's bundled APKs was being installed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+       * @param value The apk to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApk(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Apk value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        apk_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Which of Sherlock's bundled APKs was being installed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.Apk apk = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApk() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        apk_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Outcome of the install attempt.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+       * @return Whether the status field is set.
+       */
+      @java.lang.Override public boolean hasStatus() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Outcome of the install attempt.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus getStatus() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus.forNumber(status_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus.APK_INSTALL_STATUS_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * Outcome of the install attempt.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outcome of the install attempt.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStatus status = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int kind_ = 0;
+      /**
+       * <pre>
+       * What kind of install was needed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+       * @return Whether the kind field is set.
+       */
+      @java.lang.Override public boolean hasKind() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * What kind of install was needed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+       * @return The kind.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind getKind() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind.forNumber(kind_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind.APK_INSTALL_KIND_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * What kind of install was needed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+       * @param value The kind to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKind(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallKind value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000008;
+        kind_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * What kind of install was needed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallKind kind = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKind() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        kind_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int failedStep_ = 0;
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+       * @return Whether the failedStep field is set.
+       */
+      @java.lang.Override public boolean hasFailedStep() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+       * @return The failedStep.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep getFailedStep() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep.forNumber(failedStep_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep.APK_INSTALL_STEP_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+       * @param value The failedStep to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailedStep(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallStep value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000010;
+        failedStep_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: the step that failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallStep failed_step = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailedStep() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        failedStep_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int failureCause_ = 0;
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+       * @return Whether the failureCause field is set.
+       */
+      @java.lang.Override public boolean hasFailureCause() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+       * @return The failureCause.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause getFailureCause() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause.forNumber(failureCause_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause.APK_INSTALL_FAILURE_CAUSE_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+       * @param value The failureCause to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailureCause(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        failureCause_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set if |status| is |APK_INSTALL_STATUS_ERROR|: why |failed_step| failed.
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.ApkInstallFailureCause failure_cause = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailureCause() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        failureCause_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int pmInstallError_ = 0;
+      /**
+       * <pre>
+       * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+       * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+       * @return Whether the pmInstallError field is set.
+       */
+      @java.lang.Override public boolean hasPmInstallError() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <pre>
+       * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+       * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+       * @return The pmInstallError.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError getPmInstallError() {
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError result = com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError.forNumber(pmInstallError_);
+        return result == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError.PM_INSTALL_ERROR_UNKNOWN : result;
+      }
+      /**
+       * <pre>
+       * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+       * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+       * @param value The pmInstallError to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPmInstallError(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.PmInstallError value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000040;
+        pmInstallError_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Set if |failed_step| is |APK_INSTALL_STEP_PM_INSTALL|: the error code
+       * reported by `pm install` (e.g. INSTALL_FAILED_UPDATE_INCOMPATIBLE).
+       * </pre>
+       *
+       * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata.PmInstallError pm_install_error = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPmInstallError() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        pmInstallError_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int durationMs_ ;
+      /**
+       * <pre>
+       * Wall-clock duration of the whole install attempt in milliseconds.
+       * </pre>
+       *
+       * <code>optional int32 duration_ms = 8;</code>
+       * @return Whether the durationMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasDurationMs() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <pre>
+       * Wall-clock duration of the whole install attempt in milliseconds.
+       * </pre>
+       *
+       * <code>optional int32 duration_ms = 8;</code>
+       * @return The durationMs.
+       */
+      @java.lang.Override
+      public int getDurationMs() {
+        return durationMs_;
+      }
+      /**
+       * <pre>
+       * Wall-clock duration of the whole install attempt in milliseconds.
+       * </pre>
+       *
+       * <code>optional int32 duration_ms = 8;</code>
+       * @param value The durationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationMs(int value) {
+
+        durationMs_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Wall-clock duration of the whole install attempt in milliseconds.
+       * </pre>
+       *
+       * <code>optional int32 duration_ms = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationMs() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        durationMs_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean previousUninstallFailed_ ;
+      /**
+       * <pre>
+       * True if a different version of the APK was already on the device and
+       * uninstalling it failed. Sherlock still attempts `pm install -d`
+       * afterwards, so this is a likely explanation for a subsequent
+       * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+       * </pre>
+       *
+       * <code>optional bool previous_uninstall_failed = 9;</code>
+       * @return Whether the previousUninstallFailed field is set.
+       */
+      @java.lang.Override
+      public boolean hasPreviousUninstallFailed() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * True if a different version of the APK was already on the device and
+       * uninstalling it failed. Sherlock still attempts `pm install -d`
+       * afterwards, so this is a likely explanation for a subsequent
+       * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+       * </pre>
+       *
+       * <code>optional bool previous_uninstall_failed = 9;</code>
+       * @return The previousUninstallFailed.
+       */
+      @java.lang.Override
+      public boolean getPreviousUninstallFailed() {
+        return previousUninstallFailed_;
+      }
+      /**
+       * <pre>
+       * True if a different version of the APK was already on the device and
+       * uninstalling it failed. Sherlock still attempts `pm install -d`
+       * afterwards, so this is a likely explanation for a subsequent
+       * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+       * </pre>
+       *
+       * <code>optional bool previous_uninstall_failed = 9;</code>
+       * @param value The previousUninstallFailed to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPreviousUninstallFailed(boolean value) {
+
+        previousUninstallFailed_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * True if a different version of the APK was already on the device and
+       * uninstalling it failed. Sherlock still attempts `pm install -d`
+       * afterwards, so this is a likely explanation for a subsequent
+       * |failed_step| of |APK_INSTALL_STEP_PM_INSTALL|.
+       * </pre>
+       *
+       * <code>optional bool previous_uninstall_failed = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPreviousUninstallFailed() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        previousUninstallFailed_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.SherlockEvent.ApkInstallMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.SherlockEvent.ApkInstallMetadata)
+    private static final com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata();
+    }
+
+    public static com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<ApkInstallMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<ApkInstallMetadata>() {
+      @java.lang.Override
+      public ApkInstallMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ApkInstallMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ApkInstallMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -24506,6 +27333,44 @@ private static final long serialVersionUID = 0L;
     return deviceTaskEventMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.DeviceTaskEventMetadata.getDefaultInstance() : deviceTaskEventMetadata_;
   }
 
+  public static final int APK_INSTALL_METADATA_FIELD_NUMBER = 15;
+  private com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata apkInstallMetadata_;
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   * @return Whether the apkInstallMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasApkInstallMetadata() {
+    return ((bitField0_ & 0x00004000) != 0);
+  }
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   * @return The apkInstallMetadata.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getApkInstallMetadata() {
+    return apkInstallMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance() : apkInstallMetadata_;
+  }
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder getApkInstallMetadataOrBuilder() {
+    return apkInstallMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance() : apkInstallMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -24561,6 +27426,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00002000) != 0)) {
       output.writeMessage(14, getDeviceTaskEventMetadata());
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      output.writeMessage(15, getApkInstallMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -24626,6 +27494,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00002000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(14, getDeviceTaskEventMetadata());
+    }
+    if (((bitField0_ & 0x00004000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(15, getApkInstallMetadata());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -24711,6 +27583,11 @@ private static final long serialVersionUID = 0L;
       if (!getDeviceTaskEventMetadata()
           .equals(other.getDeviceTaskEventMetadata())) return false;
     }
+    if (hasApkInstallMetadata() != other.hasApkInstallMetadata()) return false;
+    if (hasApkInstallMetadata()) {
+      if (!getApkInstallMetadata()
+          .equals(other.getApkInstallMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -24777,6 +27654,10 @@ private static final long serialVersionUID = 0L;
     if (hasDeviceTaskEventMetadata()) {
       hash = (37 * hash) + DEVICE_TASK_EVENT_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceTaskEventMetadata().hashCode();
+    }
+    if (hasApkInstallMetadata()) {
+      hash = (37 * hash) + APK_INSTALL_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getApkInstallMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -24927,6 +27808,7 @@ private static final long serialVersionUID = 0L;
         getNewCaptureFrameProfilerDialogMetadataFieldBuilder();
         getGfxrTraceLoadedMetadataFieldBuilder();
         getDeviceTaskEventMetadataFieldBuilder();
+        getApkInstallMetadataFieldBuilder();
       }
     }
     @java.lang.Override
@@ -24998,6 +27880,11 @@ private static final long serialVersionUID = 0L;
       if (deviceTaskEventMetadataBuilder_ != null) {
         deviceTaskEventMetadataBuilder_.dispose();
         deviceTaskEventMetadataBuilder_ = null;
+      }
+      apkInstallMetadata_ = null;
+      if (apkInstallMetadataBuilder_ != null) {
+        apkInstallMetadataBuilder_.dispose();
+        apkInstallMetadataBuilder_ = null;
       }
       return this;
     }
@@ -25115,6 +28002,12 @@ private static final long serialVersionUID = 0L;
             : deviceTaskEventMetadataBuilder_.build();
         to_bitField0_ |= 0x00002000;
       }
+      if (((from_bitField0_ & 0x00004000) != 0)) {
+        result.apkInstallMetadata_ = apkInstallMetadataBuilder_ == null
+            ? apkInstallMetadata_
+            : apkInstallMetadataBuilder_.build();
+        to_bitField0_ |= 0x00004000;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -25203,6 +28096,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasDeviceTaskEventMetadata()) {
         mergeDeviceTaskEventMetadata(other.getDeviceTaskEventMetadata());
+      }
+      if (other.hasApkInstallMetadata()) {
+        mergeApkInstallMetadata(other.getApkInstallMetadata());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -25333,6 +28229,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 114
+            case 122: {
+              input.readMessage(
+                  getApkInstallMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 122
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -27447,6 +30350,163 @@ private static final long serialVersionUID = 0L;
         deviceTaskEventMetadata_ = null;
       }
       return deviceTaskEventMetadataBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata apkInstallMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder> apkInstallMetadataBuilder_;
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     * @return Whether the apkInstallMetadata field is set.
+     */
+    public boolean hasApkInstallMetadata() {
+      return ((bitField0_ & 0x00004000) != 0);
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     * @return The apkInstallMetadata.
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getApkInstallMetadata() {
+      if (apkInstallMetadataBuilder_ == null) {
+        return apkInstallMetadata_ == null ? com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance() : apkInstallMetadata_;
+      } else {
+        return apkInstallMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public Builder setApkInstallMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata value) {
+      if (apkInstallMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        apkInstallMetadata_ = value;
+      } else {
+        apkInstallMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public Builder setApkInstallMetadata(
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder builderForValue) {
+      if (apkInstallMetadataBuilder_ == null) {
+        apkInstallMetadata_ = builderForValue.build();
+      } else {
+        apkInstallMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public Builder mergeApkInstallMetadata(com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata value) {
+      if (apkInstallMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00004000) != 0) &&
+          apkInstallMetadata_ != null &&
+          apkInstallMetadata_ != com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance()) {
+          getApkInstallMetadataBuilder().mergeFrom(value);
+        } else {
+          apkInstallMetadata_ = value;
+        }
+      } else {
+        apkInstallMetadataBuilder_.mergeFrom(value);
+      }
+      if (apkInstallMetadata_ != null) {
+        bitField0_ |= 0x00004000;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public Builder clearApkInstallMetadata() {
+      bitField0_ = (bitField0_ & ~0x00004000);
+      apkInstallMetadata_ = null;
+      if (apkInstallMetadataBuilder_ != null) {
+        apkInstallMetadataBuilder_.dispose();
+        apkInstallMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder getApkInstallMetadataBuilder() {
+      bitField0_ |= 0x00004000;
+      onChanged();
+      return getApkInstallMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder getApkInstallMetadataOrBuilder() {
+      if (apkInstallMetadataBuilder_ != null) {
+        return apkInstallMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return apkInstallMetadata_ == null ?
+            com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.getDefaultInstance() : apkInstallMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Set if |type| is |APK_INSTALL_COMPLETED|
+     * </pre>
+     *
+     * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder> 
+        getApkInstallMetadataFieldBuilder() {
+      if (apkInstallMetadataBuilder_ == null) {
+        apkInstallMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata.Builder, com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder>(
+                getApkInstallMetadata(),
+                getParentForChildren(),
+                isClean());
+        apkInstallMetadata_ = null;
+      }
+      return apkInstallMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

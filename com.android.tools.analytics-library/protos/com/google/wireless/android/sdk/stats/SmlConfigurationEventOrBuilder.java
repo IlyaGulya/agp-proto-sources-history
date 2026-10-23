@@ -36,7 +36,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-   *     See studio_stats.proto;l=18903
+   *     See studio_stats.proto;l=19063
    * @return Whether the botOnboardingStarted field is set.
    */
   @java.lang.Deprecated boolean hasBotOnboardingStarted();
@@ -49,7 +49,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional bool bot_onboarding_started = 4 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_started is deprecated.
-   *     See studio_stats.proto;l=18903
+   *     See studio_stats.proto;l=19063
    * @return The botOnboardingStarted.
    */
   @java.lang.Deprecated boolean getBotOnboardingStarted();
@@ -63,7 +63,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-   *     See studio_stats.proto;l=18908
+   *     See studio_stats.proto;l=19068
    * @return Whether the botOnboardingCompleted field is set.
    */
   @java.lang.Deprecated boolean hasBotOnboardingCompleted();
@@ -76,7 +76,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional bool bot_onboarding_completed = 5 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.bot_onboarding_completed is deprecated.
-   *     See studio_stats.proto;l=18908
+   *     See studio_stats.proto;l=19068
    * @return The botOnboardingCompleted.
    */
   @java.lang.Deprecated boolean getBotOnboardingCompleted();
@@ -148,7 +148,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18923
+   *     See studio_stats.proto;l=19083
    * @return Whether the productVariant field is set.
    */
   @java.lang.Deprecated boolean hasProductVariant();
@@ -162,7 +162,7 @@ public interface SmlConfigurationEventOrBuilder extends
    *
    * <code>optional .android_studio.SmlConfigurationEvent.SmlProductVariant product_variant = 7 [deprecated = true];</code>
    * @deprecated android_studio.SmlConfigurationEvent.product_variant is deprecated.
-   *     See studio_stats.proto;l=18923
+   *     See studio_stats.proto;l=19083
    * @return The productVariant.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.SmlConfigurationEvent.SmlProductVariant getProductVariant();

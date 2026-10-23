@@ -235,6 +235,10 @@ public enum StringOption
    * <code>R8_VERSION_OVERRIDE = 55;</code>
    */
   R8_VERSION_OVERRIDE(55),
+  /**
+   * <code>COVERAGE_AGENT_VERSION_OVERRIDE = 56;</code>
+   */
+  COVERAGE_AGENT_VERSION_OVERRIDE(56),
   UNRECOGNIZED(-1),
   ;
 
@@ -462,6 +466,10 @@ public enum StringOption
    * <code>R8_VERSION_OVERRIDE = 55;</code>
    */
   public static final int R8_VERSION_OVERRIDE_VALUE = 55;
+  /**
+   * <code>COVERAGE_AGENT_VERSION_OVERRIDE = 56;</code>
+   */
+  public static final int COVERAGE_AGENT_VERSION_OVERRIDE_VALUE = 56;
 
 
   public final int getNumber() {
@@ -544,6 +552,7 @@ public enum StringOption
       case 53: return NEW_DSL_OPT_OUT;
       case 54: return PROJECT_CREATOR_TOOL;
       case 55: return R8_VERSION_OVERRIDE;
+      case 56: return COVERAGE_AGENT_VERSION_OVERRIDE;
       default: return null;
     }
   }

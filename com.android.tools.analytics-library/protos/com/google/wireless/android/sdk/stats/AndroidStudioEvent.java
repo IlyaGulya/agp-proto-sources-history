@@ -3665,6 +3665,14 @@ private static final long serialVersionUID = 0L;
      * <code>IMPORT_PROJECT_EVENT = 392;</code>
      */
     IMPORT_PROJECT_EVENT(392),
+    /**
+     * <pre>
+     * Event related to external updaters
+     * </pre>
+     *
+     * <code>EXTERNAL_UPDATE_MANAGER_EVENT = 393;</code>
+     */
+    EXTERNAL_UPDATE_MANAGER_EVENT(393),
     ;
 
     /**
@@ -6601,6 +6609,14 @@ private static final long serialVersionUID = 0L;
      * <code>IMPORT_PROJECT_EVENT = 392;</code>
      */
     public static final int IMPORT_PROJECT_EVENT_VALUE = 392;
+    /**
+     * <pre>
+     * Event related to external updaters
+     * </pre>
+     *
+     * <code>EXTERNAL_UPDATE_MANAGER_EVENT = 393;</code>
+     */
+    public static final int EXTERNAL_UPDATE_MANAGER_EVENT_VALUE = 393;
 
 
     public final int getNumber() {
@@ -7011,6 +7027,7 @@ private static final long serialVersionUID = 0L;
         case 390: return STUDIO_BOT_CONFIGURATION_EVENT;
         case 391: return LOCAL_INFERENCE_ENGINE_EVENT;
         case 392: return IMPORT_PROJECT_EVENT;
+        case 393: return EXTERNAL_UPDATE_MANAGER_EVENT;
         default: return null;
       }
     }
@@ -14010,7 +14027,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2283
+       *     See studio_stats.proto;l=2290
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -14021,7 +14038,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2283
+       *     See studio_stats.proto;l=2290
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14552,7 +14569,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2283
+       *     See studio_stats.proto;l=2290
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14566,7 +14583,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2283
+       *     See studio_stats.proto;l=2290
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15238,7 +15255,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2283
+         *     See studio_stats.proto;l=2290
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15252,7 +15269,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2283
+         *     See studio_stats.proto;l=2290
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15266,7 +15283,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2283
+         *     See studio_stats.proto;l=2290
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15284,7 +15301,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2283
+         *     See studio_stats.proto;l=2290
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -28443,6 +28460,44 @@ private static final long serialVersionUID = 0L;
     return importProjectEvent_ == null ? com.google.wireless.android.sdk.stats.ImportProjectEvent.getDefaultInstance() : importProjectEvent_;
   }
 
+  public static final int EXTERNAL_UPDATE_MANAGER_EVENT_FIELD_NUMBER = 266;
+  private com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent externalUpdateManagerEvent_;
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   * @return Whether the externalUpdateManagerEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasExternalUpdateManagerEvent() {
+    return ((bitField8_ & 0x00000004) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   * @return The externalUpdateManagerEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent getExternalUpdateManagerEvent() {
+    return externalUpdateManagerEvent_ == null ? com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance() : externalUpdateManagerEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder getExternalUpdateManagerEventOrBuilder() {
+    return externalUpdateManagerEvent_ == null ? com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance() : externalUpdateManagerEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -29251,6 +29306,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField8_ & 0x00000002) != 0)) {
       output.writeMessage(265, getImportProjectEvent());
+    }
+    if (((bitField8_ & 0x00000004) != 0)) {
+      output.writeMessage(266, getExternalUpdateManagerEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -30326,6 +30384,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField8_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(265, getImportProjectEvent());
+    }
+    if (((bitField8_ & 0x00000004) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(266, getExternalUpdateManagerEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31635,6 +31697,11 @@ private static final long serialVersionUID = 0L;
       if (!getImportProjectEvent()
           .equals(other.getImportProjectEvent())) return false;
     }
+    if (hasExternalUpdateManagerEvent() != other.hasExternalUpdateManagerEvent()) return false;
+    if (hasExternalUpdateManagerEvent()) {
+      if (!getExternalUpdateManagerEvent()
+          .equals(other.getExternalUpdateManagerEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -32708,6 +32775,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + IMPORT_PROJECT_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getImportProjectEvent().hashCode();
     }
+    if (hasExternalUpdateManagerEvent()) {
+      hash = (37 * hash) + EXTERNAL_UPDATE_MANAGER_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getExternalUpdateManagerEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -33080,6 +33151,7 @@ private static final long serialVersionUID = 0L;
         getStudioBotConfigurationEventFieldBuilder();
         getLocalInferenceEngineEventFieldBuilder();
         getImportProjectEventFieldBuilder();
+        getExternalUpdateManagerEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -34337,6 +34409,11 @@ private static final long serialVersionUID = 0L;
       if (importProjectEventBuilder_ != null) {
         importProjectEventBuilder_.dispose();
         importProjectEventBuilder_ = null;
+      }
+      externalUpdateManagerEvent_ = null;
+      if (externalUpdateManagerEventBuilder_ != null) {
+        externalUpdateManagerEventBuilder_.dispose();
+        externalUpdateManagerEventBuilder_ = null;
       }
       return this;
     }
@@ -36000,6 +36077,12 @@ private static final long serialVersionUID = 0L;
             : importProjectEventBuilder_.build();
         to_bitField8_ |= 0x00000002;
       }
+      if (((from_bitField8_ & 0x00000200) != 0)) {
+        result.externalUpdateManagerEvent_ = externalUpdateManagerEventBuilder_ == null
+            ? externalUpdateManagerEvent_
+            : externalUpdateManagerEventBuilder_.build();
+        to_bitField8_ |= 0x00000004;
+      }
       result.bitField7_ |= to_bitField7_;
       result.bitField8_ |= to_bitField8_;
     }
@@ -36969,6 +37052,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasImportProjectEvent()) {
         mergeImportProjectEvent(other.getImportProjectEvent());
+      }
+      if (other.hasExternalUpdateManagerEvent()) {
+        mergeExternalUpdateManagerEvent(other.getExternalUpdateManagerEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -38925,6 +39011,13 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000100;
               break;
             } // case 2122
+            case 2130: {
+              input.readMessage(
+                  getExternalUpdateManagerEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000200;
+              break;
+            } // case 2130
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -80015,6 +80108,163 @@ private static final long serialVersionUID = 0L;
         importProjectEvent_ = null;
       }
       return importProjectEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent externalUpdateManagerEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.Builder, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder> externalUpdateManagerEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     * @return Whether the externalUpdateManagerEvent field is set.
+     */
+    public boolean hasExternalUpdateManagerEvent() {
+      return ((bitField8_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     * @return The externalUpdateManagerEvent.
+     */
+    public com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent getExternalUpdateManagerEvent() {
+      if (externalUpdateManagerEventBuilder_ == null) {
+        return externalUpdateManagerEvent_ == null ? com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance() : externalUpdateManagerEvent_;
+      } else {
+        return externalUpdateManagerEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public Builder setExternalUpdateManagerEvent(com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent value) {
+      if (externalUpdateManagerEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        externalUpdateManagerEvent_ = value;
+      } else {
+        externalUpdateManagerEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public Builder setExternalUpdateManagerEvent(
+        com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.Builder builderForValue) {
+      if (externalUpdateManagerEventBuilder_ == null) {
+        externalUpdateManagerEvent_ = builderForValue.build();
+      } else {
+        externalUpdateManagerEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public Builder mergeExternalUpdateManagerEvent(com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent value) {
+      if (externalUpdateManagerEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000200) != 0) &&
+          externalUpdateManagerEvent_ != null &&
+          externalUpdateManagerEvent_ != com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance()) {
+          getExternalUpdateManagerEventBuilder().mergeFrom(value);
+        } else {
+          externalUpdateManagerEvent_ = value;
+        }
+      } else {
+        externalUpdateManagerEventBuilder_.mergeFrom(value);
+      }
+      if (externalUpdateManagerEvent_ != null) {
+        bitField8_ |= 0x00000200;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public Builder clearExternalUpdateManagerEvent() {
+      bitField8_ = (bitField8_ & ~0x00000200);
+      externalUpdateManagerEvent_ = null;
+      if (externalUpdateManagerEventBuilder_ != null) {
+        externalUpdateManagerEventBuilder_.dispose();
+        externalUpdateManagerEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.Builder getExternalUpdateManagerEventBuilder() {
+      bitField8_ |= 0x00000200;
+      onChanged();
+      return getExternalUpdateManagerEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder getExternalUpdateManagerEventOrBuilder() {
+      if (externalUpdateManagerEventBuilder_ != null) {
+        return externalUpdateManagerEventBuilder_.getMessageOrBuilder();
+      } else {
+        return externalUpdateManagerEvent_ == null ?
+            com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance() : externalUpdateManagerEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.Builder, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder> 
+        getExternalUpdateManagerEventFieldBuilder() {
+      if (externalUpdateManagerEventBuilder_ == null) {
+        externalUpdateManagerEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.Builder, com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder>(
+                getExternalUpdateManagerEvent(),
+                getParentForChildren(),
+                isClean());
+        externalUpdateManagerEvent_ = null;
+      }
+      return externalUpdateManagerEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

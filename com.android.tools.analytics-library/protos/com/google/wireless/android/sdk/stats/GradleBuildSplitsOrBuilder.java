@@ -36,7 +36,7 @@ public interface GradleBuildSplitsOrBuilder extends
    *
    * <code>optional bool density_auto = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-   *     See studio_stats.proto;l=5548
+   *     See studio_stats.proto;l=5555
    * @return Whether the densityAuto field is set.
    */
   @java.lang.Deprecated boolean hasDensityAuto();
@@ -49,7 +49,7 @@ public interface GradleBuildSplitsOrBuilder extends
    *
    * <code>optional bool density_auto = 2 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.density_auto is deprecated.
-   *     See studio_stats.proto;l=5548
+   *     See studio_stats.proto;l=5555
    * @return The densityAuto.
    */
   @java.lang.Deprecated boolean getDensityAuto();
@@ -161,7 +161,7 @@ public interface GradleBuildSplitsOrBuilder extends
    *
    * <code>optional bool language_auto = 6 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-   *     See studio_stats.proto;l=5566
+   *     See studio_stats.proto;l=5573
    * @return Whether the languageAuto field is set.
    */
   @java.lang.Deprecated boolean hasLanguageAuto();
@@ -174,7 +174,7 @@ public interface GradleBuildSplitsOrBuilder extends
    *
    * <code>optional bool language_auto = 6 [deprecated = true];</code>
    * @deprecated android_studio.GradleBuildSplits.language_auto is deprecated.
-   *     See studio_stats.proto;l=5566
+   *     See studio_stats.proto;l=5573
    * @return The languageAuto.
    */
   @java.lang.Deprecated boolean getLanguageAuto();

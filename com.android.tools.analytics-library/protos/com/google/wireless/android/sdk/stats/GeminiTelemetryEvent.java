@@ -210,6 +210,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -219,6 +221,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -228,6 +232,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -238,39 +244,43 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return Whether the modelId field is set.
      */
-    boolean hasModelId();
+    @java.lang.Deprecated boolean hasModelId();
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return The modelId.
      */
-    java.lang.String getModelId();
+    @java.lang.Deprecated java.lang.String getModelId();
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return The bytes for modelId.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getModelIdBytes();
 
     /**
      * <pre>
      * Whether the model is the default model.
+     * Currently not populated by Studio.
      * </pre>
      *
      * <code>optional bool is_default_model = 9;</code>
@@ -280,6 +290,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Whether the model is the default model.
+     * Currently not populated by Studio.
      * </pre>
      *
      * <code>optional bool is_default_model = 9;</code>
@@ -348,7 +359,14 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Model used for this event, from the known model registry.
+     * Model used for this event, from the known model registry
+     * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+     * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+     *   in Studio's model picker.
+     * - ACP agents: the agent's current model, as reported through its ACP
+     *   `model` config option.
+     * Model ids that do not match a registry entry are reported with the
+     * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
      * </pre>
      *
      * <code>optional .android_studio.Model model = 12;</code>
@@ -357,7 +375,14 @@ private static final long serialVersionUID = 0L;
     boolean hasModel();
     /**
      * <pre>
-     * Model used for this event, from the known model registry.
+     * Model used for this event, from the known model registry
+     * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+     * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+     *   in Studio's model picker.
+     * - ACP agents: the agent's current model, as reported through its ACP
+     *   `model` config option.
+     * Model ids that do not match a registry entry are reported with the
+     * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
      * </pre>
      *
      * <code>optional .android_studio.Model model = 12;</code>
@@ -375,6 +400,8 @@ private static final long serialVersionUID = 0L;
    * ties together events belonging to the same conversation.
    * For all events, the trajectory_id in the EventEnvelope ties together
    * events belonging to the same agent (or sub-agent) interaction.
+   * For all events, the user_query_id in the EventEnvelope ties together
+   * events belonging to the same user query turn.
    * </pre>
    *
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.EventEnvelope}
@@ -759,6 +786,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -771,6 +800,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -794,6 +825,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Provider ID of the model used for this event.
+     * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+     * unset for ACP agents, which own their model provider.
      * </pre>
      *
      * <code>optional string model_provider_id = 7;</code>
@@ -819,28 +852,30 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object modelId_ = "";
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return Whether the modelId field is set.
      */
     @java.lang.Override
-    public boolean hasModelId() {
+    @java.lang.Deprecated public boolean hasModelId() {
       return ((bitField0_ & 0x00000080) != 0);
     }
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return The modelId.
      */
     @java.lang.Override
-    public java.lang.String getModelId() {
+    @java.lang.Deprecated public java.lang.String getModelId() {
       java.lang.Object ref = modelId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -856,15 +891,16 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model ID of the model used for this event.
-     * Note: This will be deprecated soon in favor of `model` (field 12).
+     * Deprecated: no longer populated by Studio. Use `model` (field 12).
      * </pre>
      *
-     * <code>optional string model_id = 8;</code>
+     * <code>optional string model_id = 8 [deprecated = true];</code>
+     * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+     *     See studio_stats.proto;l=18277
      * @return The bytes for modelId.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getModelIdBytes() {
       java.lang.Object ref = modelId_;
       if (ref instanceof java.lang.String) {
@@ -883,6 +919,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Whether the model is the default model.
+     * Currently not populated by Studio.
      * </pre>
      *
      * <code>optional bool is_default_model = 9;</code>
@@ -895,6 +932,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Whether the model is the default model.
+     * Currently not populated by Studio.
      * </pre>
      *
      * <code>optional bool is_default_model = 9;</code>
@@ -1011,7 +1049,14 @@ private static final long serialVersionUID = 0L;
     private int model_ = 0;
     /**
      * <pre>
-     * Model used for this event, from the known model registry.
+     * Model used for this event, from the known model registry
+     * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+     * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+     *   in Studio's model picker.
+     * - ACP agents: the agent's current model, as reported through its ACP
+     *   `model` config option.
+     * Model ids that do not match a registry entry are reported with the
+     * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
      * </pre>
      *
      * <code>optional .android_studio.Model model = 12;</code>
@@ -1022,7 +1067,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Model used for this event, from the known model registry.
+     * Model used for this event, from the known model registry
+     * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+     * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+     *   in Studio's model picker.
+     * - ACP agents: the agent's current model, as reported through its ACP
+     *   `model` config option.
+     * Model ids that do not match a registry entry are reported with the
+     * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
      * </pre>
      *
      * <code>optional .android_studio.Model model = 12;</code>
@@ -1374,6 +1426,8 @@ private static final long serialVersionUID = 0L;
      * ties together events belonging to the same conversation.
      * For all events, the trajectory_id in the EventEnvelope ties together
      * events belonging to the same agent (or sub-agent) interaction.
+     * For all events, the user_query_id in the EventEnvelope ties together
+     * events belonging to the same user query turn.
      * </pre>
      *
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.EventEnvelope}
@@ -2306,6 +2360,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2317,6 +2373,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2339,6 +2397,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2360,6 +2420,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2377,6 +2439,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2391,6 +2455,8 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Provider ID of the model used for this event.
+       * Only set for the built-in agent (agent_info.agent_type == BUILT_IN);
+       * unset for ACP agents, which own their model provider.
        * </pre>
        *
        * <code>optional string model_provider_id = 7;</code>
@@ -2409,26 +2475,28 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object modelId_ = "";
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @return Whether the modelId field is set.
        */
-      public boolean hasModelId() {
+      @java.lang.Deprecated public boolean hasModelId() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @return The modelId.
        */
-      public java.lang.String getModelId() {
+      @java.lang.Deprecated public java.lang.String getModelId() {
         java.lang.Object ref = modelId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -2444,14 +2512,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @return The bytes for modelId.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getModelIdBytes() {
         java.lang.Object ref = modelId_;
         if (ref instanceof String) {
@@ -2466,15 +2535,16 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @param value The modelId to set.
        * @return This builder for chaining.
        */
-      public Builder setModelId(
+      @java.lang.Deprecated public Builder setModelId(
           java.lang.String value) {
         if (value == null) { throw new NullPointerException(); }
         modelId_ = value;
@@ -2484,14 +2554,15 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @return This builder for chaining.
        */
-      public Builder clearModelId() {
+      @java.lang.Deprecated public Builder clearModelId() {
         modelId_ = getDefaultInstance().getModelId();
         bitField0_ = (bitField0_ & ~0x00000080);
         onChanged();
@@ -2499,15 +2570,16 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model ID of the model used for this event.
-       * Note: This will be deprecated soon in favor of `model` (field 12).
+       * Deprecated: no longer populated by Studio. Use `model` (field 12).
        * </pre>
        *
-       * <code>optional string model_id = 8;</code>
+       * <code>optional string model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
+       *     See studio_stats.proto;l=18277
        * @param value The bytes for modelId to set.
        * @return This builder for chaining.
        */
-      public Builder setModelIdBytes(
+      @java.lang.Deprecated public Builder setModelIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) { throw new NullPointerException(); }
         modelId_ = value;
@@ -2520,6 +2592,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Whether the model is the default model.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional bool is_default_model = 9;</code>
@@ -2532,6 +2605,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Whether the model is the default model.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional bool is_default_model = 9;</code>
@@ -2544,6 +2618,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Whether the model is the default model.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional bool is_default_model = 9;</code>
@@ -2560,6 +2635,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Whether the model is the default model.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional bool is_default_model = 9;</code>
@@ -2842,7 +2918,14 @@ private static final long serialVersionUID = 0L;
       private int model_ = 0;
       /**
        * <pre>
-       * Model used for this event, from the known model registry.
+       * Model used for this event, from the known model registry
+       * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+       * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+       *   in Studio's model picker.
+       * - ACP agents: the agent's current model, as reported through its ACP
+       *   `model` config option.
+       * Model ids that do not match a registry entry are reported with the
+       * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
        * </pre>
        *
        * <code>optional .android_studio.Model model = 12;</code>
@@ -2853,7 +2936,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model used for this event, from the known model registry.
+       * Model used for this event, from the known model registry
+       * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+       * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+       *   in Studio's model picker.
+       * - ACP agents: the agent's current model, as reported through its ACP
+       *   `model` config option.
+       * Model ids that do not match a registry entry are reported with the
+       * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
        * </pre>
        *
        * <code>optional .android_studio.Model model = 12;</code>
@@ -2866,7 +2956,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model used for this event, from the known model registry.
+       * Model used for this event, from the known model registry
+       * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+       * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+       *   in Studio's model picker.
+       * - ACP agents: the agent's current model, as reported through its ACP
+       *   `model` config option.
+       * Model ids that do not match a registry entry are reported with the
+       * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
        * </pre>
        *
        * <code>optional .android_studio.Model model = 12;</code>
@@ -2884,7 +2981,14 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Model used for this event, from the known model registry.
+       * Model used for this event, from the known model registry
+       * (google3/logs/proto/wireless/android/sdk/stats/model_registry.proto).
+       * - Built-in agent (agent_info.agent_type == BUILT_IN): the model selected
+       *   in Studio's model picker.
+       * - ACP agents: the agent's current model, as reported through its ACP
+       *   `model` config option.
+       * Model ids that do not match a registry entry are reported with the
+       * provider's `*_UNKNOWN` value or `MODEL_UNKNOWN`.
        * </pre>
        *
        * <code>optional .android_studio.Model model = 12;</code>
@@ -2987,7 +3091,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -2996,7 +3101,8 @@ private static final long serialVersionUID = 0L;
     boolean hasAgentVersion();
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -3005,7 +3111,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getAgentVersion();
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -3135,12 +3242,20 @@ private static final long serialVersionUID = 0L;
       OPENCODE(5),
       /**
        * <pre>
-       * copilot
+       * github-copilot-cli
        * </pre>
        *
        * <code>COPILOT = 6;</code>
        */
       COPILOT(6),
+      /**
+       * <pre>
+       * jetski
+       * </pre>
+       *
+       * <code>JETSKI = 8;</code>
+       */
+      JETSKI(8),
       /**
        * <pre>
        * All other agents.
@@ -3201,12 +3316,20 @@ private static final long serialVersionUID = 0L;
       public static final int OPENCODE_VALUE = 5;
       /**
        * <pre>
-       * copilot
+       * github-copilot-cli
        * </pre>
        *
        * <code>COPILOT = 6;</code>
        */
       public static final int COPILOT_VALUE = 6;
+      /**
+       * <pre>
+       * jetski
+       * </pre>
+       *
+       * <code>JETSKI = 8;</code>
+       */
+      public static final int JETSKI_VALUE = 8;
       /**
        * <pre>
        * All other agents.
@@ -3244,6 +3367,7 @@ private static final long serialVersionUID = 0L;
           case 4: return ANTIGRAVITY;
           case 5: return OPENCODE;
           case 6: return COPILOT;
+          case 8: return JETSKI;
           case 7: return OTHER;
           default: return null;
         }
@@ -3328,7 +3452,8 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object agentVersion_ = "";
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -3340,7 +3465,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -3363,7 +3489,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+     * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+     * and for OTHER (custom agent version strings may be identifying).
      * </pre>
      *
      * <code>optional string agent_version = 2;</code>
@@ -3879,7 +4006,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object agentVersion_ = "";
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -3890,7 +4018,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -3912,7 +4041,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -3933,7 +4063,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -3950,7 +4081,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -3964,7 +4096,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Reported version from the ACP initialize handshake. Unset for BUILT_IN.
+       * Reported version from the ACP initialize handshake. Unset for BUILT_IN
+       * and for OTHER (custom agent version strings may be identifying).
        * </pre>
        *
        * <code>optional string agent_version = 2;</code>
@@ -4134,6 +4267,14 @@ private static final long serialVersionUID = 0L;
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.ServerEvent.ResponseEventOrBuilder getResponseEventOrBuilder();
   }
   /**
+   * <pre>
+   * Metrics for one server request/response cycle.
+   * For the built-in agent, one RequestEvent/ResponseEvent pair is logged per
+   * model call. For ACP agents (see EventEnvelope.agent_info), one pair is
+   * logged per ACP `session/prompt` turn instead, since the external agent
+   * manages its own model calls and tool loop.
+   * </pre>
+   *
    * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent}
    */
   public static final class ServerEvent extends
@@ -4238,6 +4379,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Captures metrics for a Request in a step.
+     * For ACP agents, only the prompt sent on the wire is measured.
      * </pre>
      *
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent}
@@ -4560,6 +4702,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Captures metrics for a Request in a step.
+       * For ACP agents, only the prompt sent on the wire is measured.
        * </pre>
        *
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.RequestEvent}
@@ -5009,6 +5152,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Network &amp; Lifecycle
        * HTTP status code of the response.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int32 http_status_code = 1;</code>
@@ -5019,6 +5163,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Network &amp; Lifecycle
        * HTTP status code of the response.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int32 http_status_code = 1;</code>
@@ -5071,6 +5216,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Size of the response in bytes.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int64 response_size_bytes = 4;</code>
@@ -5080,6 +5226,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Size of the response in bytes.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int64 response_size_bytes = 4;</code>
@@ -5149,39 +5296,39 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return Whether the actualModelId field is set.
        */
-      boolean hasActualModelId();
+      @java.lang.Deprecated boolean hasActualModelId();
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return The actualModelId.
        */
-      java.lang.String getActualModelId();
+      @java.lang.Deprecated java.lang.String getActualModelId();
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return The bytes for actualModelId.
        */
-      com.google.protobuf.ByteString
+      @java.lang.Deprecated com.google.protobuf.ByteString
           getActualModelIdBytes();
 
       /**
@@ -5253,6 +5400,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Captures metrics for a Response in a step.
+     * For ACP agents, this covers the whole `session/prompt` turn: latency
+     * includes agent-side tool execution, and token counts are the per-turn
+     * totals reported by the agent in its prompt response.
      * </pre>
      *
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent}
@@ -6783,6 +6933,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Network &amp; Lifecycle
        * HTTP status code of the response.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int32 http_status_code = 1;</code>
@@ -6796,6 +6947,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Network &amp; Lifecycle
        * HTTP status code of the response.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int32 http_status_code = 1;</code>
@@ -6869,6 +7021,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Size of the response in bytes.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int64 response_size_bytes = 4;</code>
@@ -6881,6 +7034,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Size of the response in bytes.
+       * Currently not populated by Studio.
        * </pre>
        *
        * <code>optional int64 response_size_bytes = 4;</code>
@@ -6980,31 +7134,31 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Override
-      public boolean hasActualModelId() {
+      @java.lang.Deprecated public boolean hasActualModelId() {
         return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return The actualModelId.
        */
       @java.lang.Override
-      public java.lang.String getActualModelId() {
+      @java.lang.Deprecated public java.lang.String getActualModelId() {
         java.lang.Object ref = actualModelId_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
@@ -7021,16 +7175,16 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Model Information
-       * The actual model ID that generated the response. This may be different
-       * from the model ID requested by the user (e.g., if the user requested a
-       * specific version of a model).
+       * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
        * </pre>
        *
-       * <code>optional string actual_model_id = 8;</code>
+       * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+       * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+       *     See studio_stats.proto;l=18390
        * @return The bytes for actualModelId.
        */
       @java.lang.Override
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getActualModelIdBytes() {
         java.lang.Object ref = actualModelId_;
         if (ref instanceof java.lang.String) {
@@ -7463,6 +7617,9 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Captures metrics for a Response in a step.
+       * For ACP agents, this covers the whole `session/prompt` turn: latency
+       * includes agent-side tool execution, and token counts are the per-turn
+       * totals reported by the agent in its prompt response.
        * </pre>
        *
        * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent}
@@ -7832,6 +7989,7 @@ private static final long serialVersionUID = 0L;
          * <pre>
          * Network &amp; Lifecycle
          * HTTP status code of the response.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int32 http_status_code = 1;</code>
@@ -7845,6 +8003,7 @@ private static final long serialVersionUID = 0L;
          * <pre>
          * Network &amp; Lifecycle
          * HTTP status code of the response.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int32 http_status_code = 1;</code>
@@ -7858,6 +8017,7 @@ private static final long serialVersionUID = 0L;
          * <pre>
          * Network &amp; Lifecycle
          * HTTP status code of the response.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int32 http_status_code = 1;</code>
@@ -7875,6 +8035,7 @@ private static final long serialVersionUID = 0L;
          * <pre>
          * Network &amp; Lifecycle
          * HTTP status code of the response.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int32 http_status_code = 1;</code>
@@ -8011,6 +8172,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Size of the response in bytes.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int64 response_size_bytes = 4;</code>
@@ -8023,6 +8185,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Size of the response in bytes.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int64 response_size_bytes = 4;</code>
@@ -8035,6 +8198,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Size of the response in bytes.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int64 response_size_bytes = 4;</code>
@@ -8051,6 +8215,7 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Size of the response in bytes.
+         * Currently not populated by Studio.
          * </pre>
          *
          * <code>optional int64 response_size_bytes = 4;</code>
@@ -8239,29 +8404,29 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @return Whether the actualModelId field is set.
          */
-        public boolean hasActualModelId() {
+        @java.lang.Deprecated public boolean hasActualModelId() {
           return ((bitField0_ & 0x00000080) != 0);
         }
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @return The actualModelId.
          */
-        public java.lang.String getActualModelId() {
+        @java.lang.Deprecated public java.lang.String getActualModelId() {
           java.lang.Object ref = actualModelId_;
           if (!(ref instanceof java.lang.String)) {
             com.google.protobuf.ByteString bs =
@@ -8278,15 +8443,15 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @return The bytes for actualModelId.
          */
-        public com.google.protobuf.ByteString
+        @java.lang.Deprecated public com.google.protobuf.ByteString
             getActualModelIdBytes() {
           java.lang.Object ref = actualModelId_;
           if (ref instanceof String) {
@@ -8302,16 +8467,16 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @param value The actualModelId to set.
          * @return This builder for chaining.
          */
-        public Builder setActualModelId(
+        @java.lang.Deprecated public Builder setActualModelId(
             java.lang.String value) {
           if (value == null) { throw new NullPointerException(); }
           actualModelId_ = value;
@@ -8322,15 +8487,15 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @return This builder for chaining.
          */
-        public Builder clearActualModelId() {
+        @java.lang.Deprecated public Builder clearActualModelId() {
           actualModelId_ = getDefaultInstance().getActualModelId();
           bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
@@ -8339,16 +8504,16 @@ private static final long serialVersionUID = 0L;
         /**
          * <pre>
          * Model Information
-         * The actual model ID that generated the response. This may be different
-         * from the model ID requested by the user (e.g., if the user requested a
-         * specific version of a model).
+         * Deprecated: no longer populated by Studio. Use EventEnvelope.model.
          * </pre>
          *
-         * <code>optional string actual_model_id = 8;</code>
+         * <code>optional string actual_model_id = 8 [deprecated = true];</code>
+         * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
+         *     See studio_stats.proto;l=18390
          * @param value The bytes for actualModelId to set.
          * @return This builder for chaining.
          */
-        public Builder setActualModelIdBytes(
+        @java.lang.Deprecated public Builder setActualModelIdBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) { throw new NullPointerException(); }
           actualModelId_ = value;
@@ -9048,6 +9213,14 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Metrics for one server request/response cycle.
+     * For the built-in agent, one RequestEvent/ResponseEvent pair is logged per
+     * model call. For ACP agents (see EventEnvelope.agent_info), one pair is
+     * logged per ACP `session/prompt` turn instead, since the external agent
+     * manages its own model calls and tool loop.
+     * </pre>
+     *
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.ServerEvent}
      */
     public static final class Builder extends
@@ -37989,8 +38162,8 @@ private static final long serialVersionUID = 0L;
   private com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope envelope_;
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38002,8 +38175,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38015,8 +38188,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The envelope holds metadata about the event, such as the model ID,
-   * provider Id, etc.,
+   * The envelope holds metadata about the event, such as the trajectory ids,
+   * the agent (built-in or ACP) and the model used.
    * </pre>
    *
    * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38719,8 +38892,8 @@ private static final long serialVersionUID = 0L;
         com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.Builder, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelopeOrBuilder> envelopeBuilder_;
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38731,8 +38904,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38747,8 +38920,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38768,8 +38941,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38787,8 +38960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38813,8 +38986,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38831,8 +39004,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38844,8 +39017,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>
@@ -38860,8 +39033,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The envelope holds metadata about the event, such as the model ID,
-     * provider Id, etc.,
+     * The envelope holds metadata about the event, such as the trajectory ids,
+     * the agent (built-in or ACP) and the model used.
      * </pre>
      *
      * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope envelope = 1;</code>

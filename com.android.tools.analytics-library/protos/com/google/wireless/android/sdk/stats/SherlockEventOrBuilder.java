@@ -377,4 +377,31 @@ public interface SherlockEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent.DeviceTaskEventMetadata device_task_event_metadata = 14 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEvent.DeviceTaskEventMetadataOrBuilder getDeviceTaskEventMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   * @return Whether the apkInstallMetadata field is set.
+   */
+  boolean hasApkInstallMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   * @return The apkInstallMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadata getApkInstallMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |APK_INSTALL_COMPLETED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder getApkInstallMetadataOrBuilder();
 }

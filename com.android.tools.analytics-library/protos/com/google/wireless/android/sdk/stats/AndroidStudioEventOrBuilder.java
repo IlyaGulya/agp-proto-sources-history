@@ -7402,4 +7402,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ImportProjectEvent import_project_event = 265 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ImportProjectEventOrBuilder getImportProjectEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   * @return Whether the externalUpdateManagerEvent field is set.
+   */
+  boolean hasExternalUpdateManagerEvent();
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   * @return The externalUpdateManagerEvent.
+   */
+  com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent getExternalUpdateManagerEvent();
+  /**
+   * <pre>
+   * set when kind = EXTERNAL_UPDATE_MANAGER_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder getExternalUpdateManagerEventOrBuilder();
 }

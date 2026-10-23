@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-   *     See studio_stats.proto;l=3279
+   *     See studio_stats.proto;l=3286
    * @return Whether the containerLaunch field is set.
    */
   @java.lang.Override
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool container_launch = 4 [deprecated = true];</code>
    * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-   *     See studio_stats.proto;l=3279
+   *     See studio_stats.proto;l=3286
    * @return The containerLaunch.
    */
   @java.lang.Override
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-     *     See studio_stats.proto;l=3279
+     *     See studio_stats.proto;l=3286
      * @return Whether the containerLaunch field is set.
      */
     @java.lang.Override
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-     *     See studio_stats.proto;l=3279
+     *     See studio_stats.proto;l=3286
      * @return The containerLaunch.
      */
     @java.lang.Override
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-     *     See studio_stats.proto;l=3279
+     *     See studio_stats.proto;l=3286
      * @param value The containerLaunch to set.
      * @return This builder for chaining.
      */
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool container_launch = 4 [deprecated = true];</code>
      * @deprecated android_studio.EmulatorFeatures.container_launch is deprecated.
-     *     See studio_stats.proto;l=3279
+     *     See studio_stats.proto;l=3286
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearContainerLaunch() {

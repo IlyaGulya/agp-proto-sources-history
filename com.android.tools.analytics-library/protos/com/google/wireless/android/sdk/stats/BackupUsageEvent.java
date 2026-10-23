@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-     *     See studio_stats.proto;l=20095
+     *     See studio_stats.proto;l=20255
      * @return Whether the type field is set.
      */
     @java.lang.Deprecated boolean hasType();
@@ -485,7 +485,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-     *     See studio_stats.proto;l=20095
+     *     See studio_stats.proto;l=20255
      * @return The type.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.BackupUsageEvent.BackupEvent.Type getType();
@@ -497,7 +497,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-     *     See studio_stats.proto;l=20097
+     *     See studio_stats.proto;l=20257
      * @return Whether the source field is set.
      */
     @java.lang.Deprecated boolean hasSource();
@@ -508,7 +508,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-     *     See studio_stats.proto;l=20097
+     *     See studio_stats.proto;l=20257
      * @return The source.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.BackupUsageEvent.Source getSource();
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-     *     See studio_stats.proto;l=20099
+     *     See studio_stats.proto;l=20259
      * @return Whether the result field is set.
      */
     @java.lang.Deprecated boolean hasResult();
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-     *     See studio_stats.proto;l=20099
+     *     See studio_stats.proto;l=20259
      * @return The result.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.BackupUsageEvent.Result getResult();
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 type_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-     *     See studio_stats.proto;l=20101
+     *     See studio_stats.proto;l=20261
      * @return Whether the typeValue field is set.
      */
     @java.lang.Deprecated boolean hasTypeValue();
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 type_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-     *     See studio_stats.proto;l=20101
+     *     See studio_stats.proto;l=20261
      * @return The typeValue.
      */
     @java.lang.Deprecated int getTypeValue();
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 5 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20103
+     *     See studio_stats.proto;l=20263
      * @return Whether the sourceValue field is set.
      */
     @java.lang.Deprecated boolean hasSourceValue();
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 5 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20103
+     *     See studio_stats.proto;l=20263
      * @return The sourceValue.
      */
     @java.lang.Deprecated int getSourceValue();
@@ -589,7 +589,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 6 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20105
+     *     See studio_stats.proto;l=20265
      * @return Whether the resultValue field is set.
      */
     @java.lang.Deprecated boolean hasResultValue();
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 6 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20105
+     *     See studio_stats.proto;l=20265
      * @return The resultValue.
      */
     @java.lang.Deprecated int getResultValue();
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-     *     See studio_stats.proto;l=20095
+     *     See studio_stats.proto;l=20255
      * @return Whether the type field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasType() {
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-     *     See studio_stats.proto;l=20095
+     *     See studio_stats.proto;l=20255
      * @return The type.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.BackupUsageEvent.BackupEvent.Type getType() {
@@ -886,7 +886,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-     *     See studio_stats.proto;l=20097
+     *     See studio_stats.proto;l=20257
      * @return Whether the source field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasSource() {
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-     *     See studio_stats.proto;l=20097
+     *     See studio_stats.proto;l=20257
      * @return The source.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.BackupUsageEvent.Source getSource() {
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-     *     See studio_stats.proto;l=20099
+     *     See studio_stats.proto;l=20259
      * @return Whether the result field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasResult() {
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-     *     See studio_stats.proto;l=20099
+     *     See studio_stats.proto;l=20259
      * @return The result.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.BackupUsageEvent.Result getResult() {
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 type_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-     *     See studio_stats.proto;l=20101
+     *     See studio_stats.proto;l=20261
      * @return Whether the typeValue field is set.
      */
     @java.lang.Override
@@ -960,7 +960,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 type_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-     *     See studio_stats.proto;l=20101
+     *     See studio_stats.proto;l=20261
      * @return The typeValue.
      */
     @java.lang.Override
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 5 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20103
+     *     See studio_stats.proto;l=20263
      * @return Whether the sourceValue field is set.
      */
     @java.lang.Override
@@ -991,7 +991,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 5 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20103
+     *     See studio_stats.proto;l=20263
      * @return The sourceValue.
      */
     @java.lang.Override
@@ -1008,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 6 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20105
+     *     See studio_stats.proto;l=20265
      * @return Whether the resultValue field is set.
      */
     @java.lang.Override
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 6 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20105
+     *     See studio_stats.proto;l=20265
      * @return The resultValue.
      */
     @java.lang.Override
@@ -1811,7 +1811,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-       *     See studio_stats.proto;l=20095
+       *     See studio_stats.proto;l=20255
        * @return Whether the type field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasType() {
@@ -1824,7 +1824,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-       *     See studio_stats.proto;l=20095
+       *     See studio_stats.proto;l=20255
        * @return The type.
        */
       @java.lang.Override
@@ -1839,7 +1839,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-       *     See studio_stats.proto;l=20095
+       *     See studio_stats.proto;l=20255
        * @param value The type to set.
        * @return This builder for chaining.
        */
@@ -1859,7 +1859,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.BackupEvent.Type type = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type is deprecated.
-       *     See studio_stats.proto;l=20095
+       *     See studio_stats.proto;l=20255
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearType() {
@@ -1877,7 +1877,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-       *     See studio_stats.proto;l=20097
+       *     See studio_stats.proto;l=20257
        * @return Whether the source field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasSource() {
@@ -1890,7 +1890,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-       *     See studio_stats.proto;l=20097
+       *     See studio_stats.proto;l=20257
        * @return The source.
        */
       @java.lang.Override
@@ -1905,7 +1905,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-       *     See studio_stats.proto;l=20097
+       *     See studio_stats.proto;l=20257
        * @param value The source to set.
        * @return This builder for chaining.
        */
@@ -1925,7 +1925,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source is deprecated.
-       *     See studio_stats.proto;l=20097
+       *     See studio_stats.proto;l=20257
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSource() {
@@ -1943,7 +1943,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-       *     See studio_stats.proto;l=20099
+       *     See studio_stats.proto;l=20259
        * @return Whether the result field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasResult() {
@@ -1956,7 +1956,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-       *     See studio_stats.proto;l=20099
+       *     See studio_stats.proto;l=20259
        * @return The result.
        */
       @java.lang.Override
@@ -1971,7 +1971,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-       *     See studio_stats.proto;l=20099
+       *     See studio_stats.proto;l=20259
        * @param value The result to set.
        * @return This builder for chaining.
        */
@@ -1991,7 +1991,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result is deprecated.
-       *     See studio_stats.proto;l=20099
+       *     See studio_stats.proto;l=20259
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResult() {
@@ -2009,7 +2009,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 type_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-       *     See studio_stats.proto;l=20101
+       *     See studio_stats.proto;l=20261
        * @return Whether the typeValue field is set.
        */
       @java.lang.Override
@@ -2023,7 +2023,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 type_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-       *     See studio_stats.proto;l=20101
+       *     See studio_stats.proto;l=20261
        * @return The typeValue.
        */
       @java.lang.Override
@@ -2037,7 +2037,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 type_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-       *     See studio_stats.proto;l=20101
+       *     See studio_stats.proto;l=20261
        * @param value The typeValue to set.
        * @return This builder for chaining.
        */
@@ -2055,7 +2055,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 type_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.type_value is deprecated.
-       *     See studio_stats.proto;l=20101
+       *     See studio_stats.proto;l=20261
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTypeValue() {
@@ -2073,7 +2073,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 5 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20103
+       *     See studio_stats.proto;l=20263
        * @return Whether the sourceValue field is set.
        */
       @java.lang.Override
@@ -2087,7 +2087,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 5 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20103
+       *     See studio_stats.proto;l=20263
        * @return The sourceValue.
        */
       @java.lang.Override
@@ -2101,7 +2101,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 5 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20103
+       *     See studio_stats.proto;l=20263
        * @param value The sourceValue to set.
        * @return This builder for chaining.
        */
@@ -2119,7 +2119,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 5 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20103
+       *     See studio_stats.proto;l=20263
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSourceValue() {
@@ -2137,7 +2137,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 6 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20105
+       *     See studio_stats.proto;l=20265
        * @return Whether the resultValue field is set.
        */
       @java.lang.Override
@@ -2151,7 +2151,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 6 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20105
+       *     See studio_stats.proto;l=20265
        * @return The resultValue.
        */
       @java.lang.Override
@@ -2165,7 +2165,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 6 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20105
+       *     See studio_stats.proto;l=20265
        * @param value The resultValue to set.
        * @return This builder for chaining.
        */
@@ -2183,7 +2183,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 6 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.BackupEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20105
+       *     See studio_stats.proto;l=20265
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResultValue() {
@@ -2579,7 +2579,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-     *     See studio_stats.proto;l=20114
+     *     See studio_stats.proto;l=20274
      * @return Whether the source field is set.
      */
     @java.lang.Deprecated boolean hasSource();
@@ -2590,7 +2590,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-     *     See studio_stats.proto;l=20114
+     *     See studio_stats.proto;l=20274
      * @return The source.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.BackupUsageEvent.Source getSource();
@@ -2602,7 +2602,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-     *     See studio_stats.proto;l=20116
+     *     See studio_stats.proto;l=20276
      * @return Whether the result field is set.
      */
     @java.lang.Deprecated boolean hasResult();
@@ -2613,7 +2613,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-     *     See studio_stats.proto;l=20116
+     *     See studio_stats.proto;l=20276
      * @return The result.
      */
     @java.lang.Deprecated com.google.wireless.android.sdk.stats.BackupUsageEvent.Result getResult();
@@ -2625,7 +2625,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20118
+     *     See studio_stats.proto;l=20278
      * @return Whether the sourceValue field is set.
      */
     @java.lang.Deprecated boolean hasSourceValue();
@@ -2636,7 +2636,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20118
+     *     See studio_stats.proto;l=20278
      * @return The sourceValue.
      */
     @java.lang.Deprecated int getSourceValue();
@@ -2648,7 +2648,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20120
+     *     See studio_stats.proto;l=20280
      * @return Whether the resultValue field is set.
      */
     @java.lang.Deprecated boolean hasResultValue();
@@ -2659,7 +2659,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20120
+     *     See studio_stats.proto;l=20280
      * @return The resultValue.
      */
     @java.lang.Deprecated int getResultValue();
@@ -2775,7 +2775,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-     *     See studio_stats.proto;l=20114
+     *     See studio_stats.proto;l=20274
      * @return Whether the source field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasSource() {
@@ -2788,7 +2788,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-     *     See studio_stats.proto;l=20114
+     *     See studio_stats.proto;l=20274
      * @return The source.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.BackupUsageEvent.Source getSource() {
@@ -2805,7 +2805,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-     *     See studio_stats.proto;l=20116
+     *     See studio_stats.proto;l=20276
      * @return Whether the result field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasResult() {
@@ -2818,7 +2818,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-     *     See studio_stats.proto;l=20116
+     *     See studio_stats.proto;l=20276
      * @return The result.
      */
     @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.BackupUsageEvent.Result getResult() {
@@ -2835,7 +2835,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20118
+     *     See studio_stats.proto;l=20278
      * @return Whether the sourceValue field is set.
      */
     @java.lang.Override
@@ -2849,7 +2849,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 source_value = 3 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-     *     See studio_stats.proto;l=20118
+     *     See studio_stats.proto;l=20278
      * @return The sourceValue.
      */
     @java.lang.Override
@@ -2866,7 +2866,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20120
+     *     See studio_stats.proto;l=20280
      * @return Whether the resultValue field is set.
      */
     @java.lang.Override
@@ -2880,7 +2880,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional int32 result_value = 4 [deprecated = true];</code>
      * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-     *     See studio_stats.proto;l=20120
+     *     See studio_stats.proto;l=20280
      * @return The resultValue.
      */
     @java.lang.Override
@@ -3514,7 +3514,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-       *     See studio_stats.proto;l=20114
+       *     See studio_stats.proto;l=20274
        * @return Whether the source field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasSource() {
@@ -3527,7 +3527,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-       *     See studio_stats.proto;l=20114
+       *     See studio_stats.proto;l=20274
        * @return The source.
        */
       @java.lang.Override
@@ -3542,7 +3542,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-       *     See studio_stats.proto;l=20114
+       *     See studio_stats.proto;l=20274
        * @param value The source to set.
        * @return This builder for chaining.
        */
@@ -3562,7 +3562,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Source source = 1 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source is deprecated.
-       *     See studio_stats.proto;l=20114
+       *     See studio_stats.proto;l=20274
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSource() {
@@ -3580,7 +3580,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-       *     See studio_stats.proto;l=20116
+       *     See studio_stats.proto;l=20276
        * @return Whether the result field is set.
        */
       @java.lang.Override @java.lang.Deprecated public boolean hasResult() {
@@ -3593,7 +3593,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-       *     See studio_stats.proto;l=20116
+       *     See studio_stats.proto;l=20276
        * @return The result.
        */
       @java.lang.Override
@@ -3608,7 +3608,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-       *     See studio_stats.proto;l=20116
+       *     See studio_stats.proto;l=20276
        * @param value The result to set.
        * @return This builder for chaining.
        */
@@ -3628,7 +3628,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional .android_studio.BackupUsageEvent.Result result = 2 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result is deprecated.
-       *     See studio_stats.proto;l=20116
+       *     See studio_stats.proto;l=20276
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResult() {
@@ -3646,7 +3646,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20118
+       *     See studio_stats.proto;l=20278
        * @return Whether the sourceValue field is set.
        */
       @java.lang.Override
@@ -3660,7 +3660,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20118
+       *     See studio_stats.proto;l=20278
        * @return The sourceValue.
        */
       @java.lang.Override
@@ -3674,7 +3674,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20118
+       *     See studio_stats.proto;l=20278
        * @param value The sourceValue to set.
        * @return This builder for chaining.
        */
@@ -3692,7 +3692,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 source_value = 3 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.source_value is deprecated.
-       *     See studio_stats.proto;l=20118
+       *     See studio_stats.proto;l=20278
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearSourceValue() {
@@ -3710,7 +3710,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20120
+       *     See studio_stats.proto;l=20280
        * @return Whether the resultValue field is set.
        */
       @java.lang.Override
@@ -3724,7 +3724,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20120
+       *     See studio_stats.proto;l=20280
        * @return The resultValue.
        */
       @java.lang.Override
@@ -3738,7 +3738,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20120
+       *     See studio_stats.proto;l=20280
        * @param value The resultValue to set.
        * @return This builder for chaining.
        */
@@ -3756,7 +3756,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional int32 result_value = 4 [deprecated = true];</code>
        * @deprecated android_studio.BackupUsageEvent.RestoreEvent.result_value is deprecated.
-       *     See studio_stats.proto;l=20120
+       *     See studio_stats.proto;l=20280
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearResultValue() {
