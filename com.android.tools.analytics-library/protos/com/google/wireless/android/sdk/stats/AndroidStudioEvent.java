@@ -3673,6 +3673,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXTERNAL_UPDATE_MANAGER_EVENT = 393;</code>
      */
     EXTERNAL_UPDATE_MANAGER_EVENT(393),
+    /**
+     * <pre>
+     * Event related to the In-Memory Compose Preview Tool API.
+     * </pre>
+     *
+     * <code>IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT = 394;</code>
+     */
+    IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT(394),
     ;
 
     /**
@@ -6617,6 +6625,14 @@ private static final long serialVersionUID = 0L;
      * <code>EXTERNAL_UPDATE_MANAGER_EVENT = 393;</code>
      */
     public static final int EXTERNAL_UPDATE_MANAGER_EVENT_VALUE = 393;
+    /**
+     * <pre>
+     * Event related to the In-Memory Compose Preview Tool API.
+     * </pre>
+     *
+     * <code>IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT = 394;</code>
+     */
+    public static final int IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT_VALUE = 394;
 
 
     public final int getNumber() {
@@ -7028,6 +7044,7 @@ private static final long serialVersionUID = 0L;
         case 391: return LOCAL_INFERENCE_ENGINE_EVENT;
         case 392: return IMPORT_PROJECT_EVENT;
         case 393: return EXTERNAL_UPDATE_MANAGER_EVENT;
+        case 394: return IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT;
         default: return null;
       }
     }
@@ -14027,7 +14044,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2290
+       *     See studio_stats.proto;l=2297
        * @return Whether the minSdk field is set.
        */
       @java.lang.Deprecated boolean hasMinSdk();
@@ -14038,7 +14055,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2290
+       *     See studio_stats.proto;l=2297
        * @return The minSdk.
        */
       @java.lang.Deprecated int getMinSdk();
@@ -14569,7 +14586,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2290
+       *     See studio_stats.proto;l=2297
        * @return Whether the minSdk field is set.
        */
       @java.lang.Override
@@ -14583,7 +14600,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
        * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-       *     See studio_stats.proto;l=2290
+       *     See studio_stats.proto;l=2297
        * @return The minSdk.
        */
       @java.lang.Override
@@ -15255,7 +15272,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2290
+         *     See studio_stats.proto;l=2297
          * @return Whether the minSdk field is set.
          */
         @java.lang.Override
@@ -15269,7 +15286,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2290
+         *     See studio_stats.proto;l=2297
          * @return The minSdk.
          */
         @java.lang.Override
@@ -15283,7 +15300,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2290
+         *     See studio_stats.proto;l=2297
          * @param value The minSdk to set.
          * @return This builder for chaining.
          */
@@ -15301,7 +15318,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional uint32 min_sdk = 2 [deprecated = true];</code>
          * @deprecated android_studio.AndroidStudioEvent.TemplatesUsage.TemplateModule.min_sdk is deprecated.
-         *     See studio_stats.proto;l=2290
+         *     See studio_stats.proto;l=2297
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearMinSdk() {
@@ -28498,6 +28515,44 @@ private static final long serialVersionUID = 0L;
     return externalUpdateManagerEvent_ == null ? com.google.wireless.android.sdk.stats.ExternalUpdateManagerEvent.getDefaultInstance() : externalUpdateManagerEvent_;
   }
 
+  public static final int IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT_FIELD_NUMBER = 267;
+  private com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent inMemoryComposePreviewToolEvent_;
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   * @return Whether the inMemoryComposePreviewToolEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasInMemoryComposePreviewToolEvent() {
+    return ((bitField8_ & 0x00000008) != 0);
+  }
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   * @return The inMemoryComposePreviewToolEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent getInMemoryComposePreviewToolEvent() {
+    return inMemoryComposePreviewToolEvent_ == null ? com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.getDefaultInstance() : inMemoryComposePreviewToolEvent_;
+  }
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder getInMemoryComposePreviewToolEventOrBuilder() {
+    return inMemoryComposePreviewToolEvent_ == null ? com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.getDefaultInstance() : inMemoryComposePreviewToolEvent_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -29309,6 +29364,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField8_ & 0x00000004) != 0)) {
       output.writeMessage(266, getExternalUpdateManagerEvent());
+    }
+    if (((bitField8_ & 0x00000008) != 0)) {
+      output.writeMessage(267, getInMemoryComposePreviewToolEvent());
     }
     getUnknownFields().writeTo(output);
   }
@@ -30388,6 +30446,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField8_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(266, getExternalUpdateManagerEvent());
+    }
+    if (((bitField8_ & 0x00000008) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(267, getInMemoryComposePreviewToolEvent());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -31702,6 +31764,11 @@ private static final long serialVersionUID = 0L;
       if (!getExternalUpdateManagerEvent()
           .equals(other.getExternalUpdateManagerEvent())) return false;
     }
+    if (hasInMemoryComposePreviewToolEvent() != other.hasInMemoryComposePreviewToolEvent()) return false;
+    if (hasInMemoryComposePreviewToolEvent()) {
+      if (!getInMemoryComposePreviewToolEvent()
+          .equals(other.getInMemoryComposePreviewToolEvent())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -32779,6 +32846,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXTERNAL_UPDATE_MANAGER_EVENT_FIELD_NUMBER;
       hash = (53 * hash) + getExternalUpdateManagerEvent().hashCode();
     }
+    if (hasInMemoryComposePreviewToolEvent()) {
+      hash = (37 * hash) + IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT_FIELD_NUMBER;
+      hash = (53 * hash) + getInMemoryComposePreviewToolEvent().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -33152,6 +33223,7 @@ private static final long serialVersionUID = 0L;
         getLocalInferenceEngineEventFieldBuilder();
         getImportProjectEventFieldBuilder();
         getExternalUpdateManagerEventFieldBuilder();
+        getInMemoryComposePreviewToolEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -34414,6 +34486,11 @@ private static final long serialVersionUID = 0L;
       if (externalUpdateManagerEventBuilder_ != null) {
         externalUpdateManagerEventBuilder_.dispose();
         externalUpdateManagerEventBuilder_ = null;
+      }
+      inMemoryComposePreviewToolEvent_ = null;
+      if (inMemoryComposePreviewToolEventBuilder_ != null) {
+        inMemoryComposePreviewToolEventBuilder_.dispose();
+        inMemoryComposePreviewToolEventBuilder_ = null;
       }
       return this;
     }
@@ -36083,6 +36160,12 @@ private static final long serialVersionUID = 0L;
             : externalUpdateManagerEventBuilder_.build();
         to_bitField8_ |= 0x00000004;
       }
+      if (((from_bitField8_ & 0x00000400) != 0)) {
+        result.inMemoryComposePreviewToolEvent_ = inMemoryComposePreviewToolEventBuilder_ == null
+            ? inMemoryComposePreviewToolEvent_
+            : inMemoryComposePreviewToolEventBuilder_.build();
+        to_bitField8_ |= 0x00000008;
+      }
       result.bitField7_ |= to_bitField7_;
       result.bitField8_ |= to_bitField8_;
     }
@@ -37055,6 +37138,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExternalUpdateManagerEvent()) {
         mergeExternalUpdateManagerEvent(other.getExternalUpdateManagerEvent());
+      }
+      if (other.hasInMemoryComposePreviewToolEvent()) {
+        mergeInMemoryComposePreviewToolEvent(other.getInMemoryComposePreviewToolEvent());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -39018,6 +39104,13 @@ private static final long serialVersionUID = 0L;
               bitField8_ |= 0x00000200;
               break;
             } // case 2130
+            case 2138: {
+              input.readMessage(
+                  getInMemoryComposePreviewToolEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField8_ |= 0x00000400;
+              break;
+            } // case 2138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -80265,6 +80358,163 @@ private static final long serialVersionUID = 0L;
         externalUpdateManagerEvent_ = null;
       }
       return externalUpdateManagerEventBuilder_;
+    }
+
+    private com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent inMemoryComposePreviewToolEvent_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.Builder, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder> inMemoryComposePreviewToolEventBuilder_;
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     * @return Whether the inMemoryComposePreviewToolEvent field is set.
+     */
+    public boolean hasInMemoryComposePreviewToolEvent() {
+      return ((bitField8_ & 0x00000400) != 0);
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     * @return The inMemoryComposePreviewToolEvent.
+     */
+    public com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent getInMemoryComposePreviewToolEvent() {
+      if (inMemoryComposePreviewToolEventBuilder_ == null) {
+        return inMemoryComposePreviewToolEvent_ == null ? com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.getDefaultInstance() : inMemoryComposePreviewToolEvent_;
+      } else {
+        return inMemoryComposePreviewToolEventBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public Builder setInMemoryComposePreviewToolEvent(com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent value) {
+      if (inMemoryComposePreviewToolEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        inMemoryComposePreviewToolEvent_ = value;
+      } else {
+        inMemoryComposePreviewToolEventBuilder_.setMessage(value);
+      }
+      bitField8_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public Builder setInMemoryComposePreviewToolEvent(
+        com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.Builder builderForValue) {
+      if (inMemoryComposePreviewToolEventBuilder_ == null) {
+        inMemoryComposePreviewToolEvent_ = builderForValue.build();
+      } else {
+        inMemoryComposePreviewToolEventBuilder_.setMessage(builderForValue.build());
+      }
+      bitField8_ |= 0x00000400;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public Builder mergeInMemoryComposePreviewToolEvent(com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent value) {
+      if (inMemoryComposePreviewToolEventBuilder_ == null) {
+        if (((bitField8_ & 0x00000400) != 0) &&
+          inMemoryComposePreviewToolEvent_ != null &&
+          inMemoryComposePreviewToolEvent_ != com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.getDefaultInstance()) {
+          getInMemoryComposePreviewToolEventBuilder().mergeFrom(value);
+        } else {
+          inMemoryComposePreviewToolEvent_ = value;
+        }
+      } else {
+        inMemoryComposePreviewToolEventBuilder_.mergeFrom(value);
+      }
+      if (inMemoryComposePreviewToolEvent_ != null) {
+        bitField8_ |= 0x00000400;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public Builder clearInMemoryComposePreviewToolEvent() {
+      bitField8_ = (bitField8_ & ~0x00000400);
+      inMemoryComposePreviewToolEvent_ = null;
+      if (inMemoryComposePreviewToolEventBuilder_ != null) {
+        inMemoryComposePreviewToolEventBuilder_.dispose();
+        inMemoryComposePreviewToolEventBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.Builder getInMemoryComposePreviewToolEventBuilder() {
+      bitField8_ |= 0x00000400;
+      onChanged();
+      return getInMemoryComposePreviewToolEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    public com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder getInMemoryComposePreviewToolEventOrBuilder() {
+      if (inMemoryComposePreviewToolEventBuilder_ != null) {
+        return inMemoryComposePreviewToolEventBuilder_.getMessageOrBuilder();
+      } else {
+        return inMemoryComposePreviewToolEvent_ == null ?
+            com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.getDefaultInstance() : inMemoryComposePreviewToolEvent_;
+      }
+    }
+    /**
+     * <pre>
+     * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+     * </pre>
+     *
+     * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.Builder, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder> 
+        getInMemoryComposePreviewToolEventFieldBuilder() {
+      if (inMemoryComposePreviewToolEventBuilder_ == null) {
+        inMemoryComposePreviewToolEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent.Builder, com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder>(
+                getInMemoryComposePreviewToolEvent(),
+                getParentForChildren(),
+                isClean());
+        inMemoryComposePreviewToolEvent_ = null;
+      }
+      return inMemoryComposePreviewToolEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

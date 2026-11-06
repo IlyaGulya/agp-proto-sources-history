@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
   private RenderToolEvent() {
     renderError_ = 0;
     primaryExceptionClass_ = "";
+    toolType_ = 0;
   }
 
   @java.lang.Override
@@ -274,6 +275,129 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.RenderToolEvent.RenderError)
+  }
+
+  /**
+   * Protobuf enum {@code android_studio.RenderToolEvent.ToolType}
+   */
+  public enum ToolType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_TOOL_TYPE = 0;</code>
+     */
+    UNKNOWN_TOOL_TYPE(0),
+    /**
+     * <pre>
+     * File-backed render_compose_preview tool (RenderComposePreviewTool).
+     * </pre>
+     *
+     * <code>RENDER_COMPOSE_PREVIEW = 1;</code>
+     */
+    RENDER_COMPOSE_PREVIEW(1),
+    /**
+     * <pre>
+     * In-memory show_in_memory_compose_preview tool
+     * (ShowInMemoryComposePreviewTool).
+     * </pre>
+     *
+     * <code>SHOW_IN_MEMORY_COMPOSE_PREVIEW = 2;</code>
+     */
+    SHOW_IN_MEMORY_COMPOSE_PREVIEW(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_TOOL_TYPE = 0;</code>
+     */
+    public static final int UNKNOWN_TOOL_TYPE_VALUE = 0;
+    /**
+     * <pre>
+     * File-backed render_compose_preview tool (RenderComposePreviewTool).
+     * </pre>
+     *
+     * <code>RENDER_COMPOSE_PREVIEW = 1;</code>
+     */
+    public static final int RENDER_COMPOSE_PREVIEW_VALUE = 1;
+    /**
+     * <pre>
+     * In-memory show_in_memory_compose_preview tool
+     * (ShowInMemoryComposePreviewTool).
+     * </pre>
+     *
+     * <code>SHOW_IN_MEMORY_COMPOSE_PREVIEW = 2;</code>
+     */
+    public static final int SHOW_IN_MEMORY_COMPOSE_PREVIEW_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ToolType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ToolType forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_TOOL_TYPE;
+        case 1: return RENDER_COMPOSE_PREVIEW;
+        case 2: return SHOW_IN_MEMORY_COMPOSE_PREVIEW;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ToolType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ToolType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ToolType>() {
+            public ToolType findValueByNumber(int number) {
+              return ToolType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.RenderToolEvent.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final ToolType[] VALUES = values();
+
+    public static ToolType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ToolType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.RenderToolEvent.ToolType)
   }
 
   private int bitField0_;
@@ -607,6 +731,38 @@ private static final long serialVersionUID = 0L;
     return brokenClassesCount_;
   }
 
+  public static final int TOOL_TYPE_FIELD_NUMBER = 13;
+  private int toolType_ = 0;
+  /**
+   * <pre>
+   * Which Compose render tool produced this event.
+   * Deprecated in favor of InMemoryComposePreviewToolEvent.
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+   * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+   *     See studio_stats.proto;l=13853
+   * @return Whether the toolType field is set.
+   */
+  @java.lang.Override @java.lang.Deprecated public boolean hasToolType() {
+    return ((bitField0_ & 0x00001000) != 0);
+  }
+  /**
+   * <pre>
+   * Which Compose render tool produced this event.
+   * Deprecated in favor of InMemoryComposePreviewToolEvent.
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+   * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+   *     See studio_stats.proto;l=13853
+   * @return The toolType.
+   */
+  @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType getToolType() {
+    com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType result = com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType.forNumber(toolType_);
+    return result == null ? com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType.UNKNOWN_TOOL_TYPE : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -656,6 +812,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000800) != 0)) {
       output.writeInt32(12, brokenClassesCount_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      output.writeEnum(13, toolType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -712,6 +871,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(12, brokenClassesCount_);
+    }
+    if (((bitField0_ & 0x00001000) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(13, toolType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -788,6 +951,10 @@ private static final long serialVersionUID = 0L;
       if (getBrokenClassesCount()
           != other.getBrokenClassesCount()) return false;
     }
+    if (hasToolType() != other.hasToolType()) return false;
+    if (hasToolType()) {
+      if (toolType_ != other.toolType_) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -854,6 +1021,10 @@ private static final long serialVersionUID = 0L;
     if (hasBrokenClassesCount()) {
       hash = (37 * hash) + BROKEN_CLASSES_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getBrokenClassesCount();
+    }
+    if (hasToolType()) {
+      hash = (37 * hash) + TOOL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + toolType_;
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -998,6 +1169,7 @@ private static final long serialVersionUID = 0L;
       primaryExceptionClass_ = "";
       missingClassesCount_ = 0;
       brokenClassesCount_ = 0;
+      toolType_ = 0;
       return this;
     }
 
@@ -1079,6 +1251,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000800) != 0)) {
         result.brokenClassesCount_ = brokenClassesCount_;
         to_bitField0_ |= 0x00000800;
+      }
+      if (((from_bitField0_ & 0x00001000) != 0)) {
+        result.toolType_ = toolType_;
+        to_bitField0_ |= 0x00001000;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1164,6 +1340,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBrokenClassesCount()) {
         setBrokenClassesCount(other.getBrokenClassesCount());
+      }
+      if (other.hasToolType()) {
+        setToolType(other.getToolType());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1258,6 +1437,18 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000800;
               break;
             } // case 96
+            case 104: {
+              int tmpRaw = input.readEnum();
+              com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType tmpValue =
+                  com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType.forNumber(tmpRaw);
+              if (tmpValue == null) {
+                mergeUnknownVarintField(13, tmpRaw);
+              } else {
+                toolType_ = tmpRaw;
+                bitField0_ |= 0x00001000;
+              }
+              break;
+            } // case 104
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1939,6 +2130,76 @@ private static final long serialVersionUID = 0L;
     public Builder clearBrokenClassesCount() {
       bitField0_ = (bitField0_ & ~0x00000800);
       brokenClassesCount_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int toolType_ = 0;
+    /**
+     * <pre>
+     * Which Compose render tool produced this event.
+     * Deprecated in favor of InMemoryComposePreviewToolEvent.
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+     * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+     *     See studio_stats.proto;l=13853
+     * @return Whether the toolType field is set.
+     */
+    @java.lang.Override @java.lang.Deprecated public boolean hasToolType() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Which Compose render tool produced this event.
+     * Deprecated in favor of InMemoryComposePreviewToolEvent.
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+     * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+     *     See studio_stats.proto;l=13853
+     * @return The toolType.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated public com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType getToolType() {
+      com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType result = com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType.forNumber(toolType_);
+      return result == null ? com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType.UNKNOWN_TOOL_TYPE : result;
+    }
+    /**
+     * <pre>
+     * Which Compose render tool produced this event.
+     * Deprecated in favor of InMemoryComposePreviewToolEvent.
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+     * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+     *     See studio_stats.proto;l=13853
+     * @param value The toolType to set.
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder setToolType(com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00001000;
+      toolType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Which Compose render tool produced this event.
+     * Deprecated in favor of InMemoryComposePreviewToolEvent.
+     * </pre>
+     *
+     * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+     * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+     *     See studio_stats.proto;l=13853
+     * @return This builder for chaining.
+     */
+    @java.lang.Deprecated public Builder clearToolType() {
+      bitField0_ = (bitField0_ & ~0x00001000);
+      toolType_ = 0;
       onChanged();
       return this;
     }

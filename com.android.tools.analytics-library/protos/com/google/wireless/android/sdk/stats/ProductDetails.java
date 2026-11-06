@@ -1493,7 +1493,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2926
+   *     See studio_stats.proto;l=2933
    * @return Whether the preview field is set.
    */
   @java.lang.Override
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional bool preview = 4 [deprecated = true];</code>
    * @deprecated android_studio.ProductDetails.preview is deprecated.
-   *     See studio_stats.proto;l=2926
+   *     See studio_stats.proto;l=2933
    * @return The preview.
    */
   @java.lang.Override
@@ -2771,7 +2771,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2926
+     *     See studio_stats.proto;l=2933
      * @return Whether the preview field is set.
      */
     @java.lang.Override
@@ -2786,7 +2786,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2926
+     *     See studio_stats.proto;l=2933
      * @return The preview.
      */
     @java.lang.Override
@@ -2801,7 +2801,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2926
+     *     See studio_stats.proto;l=2933
      * @param value The preview to set.
      * @return This builder for chaining.
      */
@@ -2820,7 +2820,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional bool preview = 4 [deprecated = true];</code>
      * @deprecated android_studio.ProductDetails.preview is deprecated.
-     *     See studio_stats.proto;l=2926
+     *     See studio_stats.proto;l=2933
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearPreview() {

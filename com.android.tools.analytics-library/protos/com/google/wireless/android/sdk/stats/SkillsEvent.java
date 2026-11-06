@@ -72,6 +72,14 @@ private static final long serialVersionUID = 0L;
      * <code>USER_DEFINED = 2;</code>
      */
     USER_DEFINED(2),
+    /**
+     * <pre>
+     * Skills installed from a user-configured custom catalog.
+     * </pre>
+     *
+     * <code>CUSTOM_CATALOG = 3;</code>
+     */
+    CUSTOM_CATALOG(3),
     ;
 
     /**
@@ -94,6 +102,14 @@ private static final long serialVersionUID = 0L;
      * <code>USER_DEFINED = 2;</code>
      */
     public static final int USER_DEFINED_VALUE = 2;
+    /**
+     * <pre>
+     * Skills installed from a user-configured custom catalog.
+     * </pre>
+     *
+     * <code>CUSTOM_CATALOG = 3;</code>
+     */
+    public static final int CUSTOM_CATALOG_VALUE = 3;
 
 
     public final int getNumber() {
@@ -119,6 +135,7 @@ private static final long serialVersionUID = 0L;
         case 0: return UNKNOWN;
         case 1: return PRE_BUILT;
         case 2: return USER_DEFINED;
+        case 3: return CUSTOM_CATALOG;
         default: return null;
       }
     }
@@ -323,6 +340,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPLOAD = 6;</code>
      */
     UPLOAD(6),
+    /**
+     * <code>ADD_CATALOG = 7;</code>
+     */
+    ADD_CATALOG(7),
+    /**
+     * <code>REMOVE_CATALOG = 8;</code>
+     */
+    REMOVE_CATALOG(8),
     ;
 
     /**
@@ -353,6 +378,14 @@ private static final long serialVersionUID = 0L;
      * <code>UPLOAD = 6;</code>
      */
     public static final int UPLOAD_VALUE = 6;
+    /**
+     * <code>ADD_CATALOG = 7;</code>
+     */
+    public static final int ADD_CATALOG_VALUE = 7;
+    /**
+     * <code>REMOVE_CATALOG = 8;</code>
+     */
+    public static final int REMOVE_CATALOG_VALUE = 8;
 
 
     public final int getNumber() {
@@ -382,6 +415,8 @@ private static final long serialVersionUID = 0L;
         case 4: return UNINSTALL;
         case 5: return INSTALL;
         case 6: return UPLOAD;
+        case 7: return ADD_CATALOG;
+        case 8: return REMOVE_CATALOG;
         default: return null;
       }
     }
@@ -429,6 +464,131 @@ private static final long serialVersionUID = 0L;
     }
 
     // @@protoc_insertion_point(enum_scope:android_studio.SkillsEvent.ActionType)
+  }
+
+  /**
+   * <pre>
+   * Outcome status for Skills Management user actions.
+   * </pre>
+   *
+   * Protobuf enum {@code android_studio.SkillsEvent.ActionStatus}
+   */
+  public enum ActionStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>UNKNOWN_ACTION_STATUS = 0;</code>
+     */
+    UNKNOWN_ACTION_STATUS(0),
+    /**
+     * <pre>
+     * Emitted when the user action succeeds.
+     * </pre>
+     *
+     * <code>ACTION_STATUS_SUCCESS = 1;</code>
+     */
+    ACTION_STATUS_SUCCESS(1),
+    /**
+     * <pre>
+     * Emitted when the user action fails.
+     * </pre>
+     *
+     * <code>ACTION_STATUS_FAILED = 2;</code>
+     */
+    ACTION_STATUS_FAILED(2),
+    ;
+
+    /**
+     * <code>UNKNOWN_ACTION_STATUS = 0;</code>
+     */
+    public static final int UNKNOWN_ACTION_STATUS_VALUE = 0;
+    /**
+     * <pre>
+     * Emitted when the user action succeeds.
+     * </pre>
+     *
+     * <code>ACTION_STATUS_SUCCESS = 1;</code>
+     */
+    public static final int ACTION_STATUS_SUCCESS_VALUE = 1;
+    /**
+     * <pre>
+     * Emitted when the user action fails.
+     * </pre>
+     *
+     * <code>ACTION_STATUS_FAILED = 2;</code>
+     */
+    public static final int ACTION_STATUS_FAILED_VALUE = 2;
+
+
+    public final int getNumber() {
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static ActionStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static ActionStatus forNumber(int value) {
+      switch (value) {
+        case 0: return UNKNOWN_ACTION_STATUS;
+        case 1: return ACTION_STATUS_SUCCESS;
+        case 2: return ACTION_STATUS_FAILED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ActionStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        ActionStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ActionStatus>() {
+            public ActionStatus findValueByNumber(int number) {
+              return ActionStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.SkillsEvent.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final ActionStatus[] VALUES = values();
+
+    public static ActionStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private ActionStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:android_studio.SkillsEvent.ActionStatus)
   }
 
   /**
@@ -535,7 +695,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SkillsEvent.getDescriptor().getEnumTypes().get(3);
+      return com.google.wireless.android.sdk.stats.SkillsEvent.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final EntryPoint[] VALUES = values();
@@ -1004,7 +1164,7 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.google.wireless.android.sdk.stats.SkillsEvent.getDescriptor().getEnumTypes().get(4);
+      return com.google.wireless.android.sdk.stats.SkillsEvent.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final SkillName[] VALUES = values();
@@ -2877,6 +3037,25 @@ private static final long serialVersionUID = 0L;
      * @return The isConflictResolution.
      */
     boolean getIsConflictResolution();
+
+    /**
+     * <pre>
+     * Outcome status of a Skills Management user action.
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+     * @return Whether the actionStatus field is set.
+     */
+    boolean hasActionStatus();
+    /**
+     * <pre>
+     * Outcome status of a Skills Management user action.
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+     * @return The actionStatus.
+     */
+    com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus getActionStatus();
   }
   /**
    * <pre>
@@ -2902,6 +3081,7 @@ private static final long serialVersionUID = 0L;
       sourceScope_ = 0;
       targetScope_ = 0;
       entryPoint_ = 0;
+      actionStatus_ = 0;
     }
 
     @java.lang.Override
@@ -3089,6 +3269,32 @@ private static final long serialVersionUID = 0L;
       return isConflictResolution_;
     }
 
+    public static final int ACTION_STATUS_FIELD_NUMBER = 9;
+    private int actionStatus_ = 0;
+    /**
+     * <pre>
+     * Outcome status of a Skills Management user action.
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+     * @return Whether the actionStatus field is set.
+     */
+    @java.lang.Override public boolean hasActionStatus() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * Outcome status of a Skills Management user action.
+     * </pre>
+     *
+     * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+     * @return The actionStatus.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus getActionStatus() {
+      com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus result = com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus.forNumber(actionStatus_);
+      return result == null ? com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus.UNKNOWN_ACTION_STATUS : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3126,6 +3332,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000080) != 0)) {
         output.writeBool(8, isConflictResolution_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        output.writeEnum(9, actionStatus_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3167,6 +3376,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000080) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(8, isConflictResolution_);
+      }
+      if (((bitField0_ & 0x00000100) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, actionStatus_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3217,6 +3430,10 @@ private static final long serialVersionUID = 0L;
         if (getIsConflictResolution()
             != other.getIsConflictResolution()) return false;
       }
+      if (hasActionStatus() != other.hasActionStatus()) return false;
+      if (hasActionStatus()) {
+        if (actionStatus_ != other.actionStatus_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3261,6 +3478,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + IS_CONFLICT_RESOLUTION_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
             getIsConflictResolution());
+      }
+      if (hasActionStatus()) {
+        hash = (37 * hash) + ACTION_STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + actionStatus_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3406,6 +3627,7 @@ private static final long serialVersionUID = 0L;
         enabled_ = false;
         entryPoint_ = 0;
         isConflictResolution_ = false;
+        actionStatus_ = 0;
         return this;
       }
 
@@ -3471,6 +3693,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000080) != 0)) {
           result.isConflictResolution_ = isConflictResolution_;
           to_bitField0_ |= 0x00000080;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.actionStatus_ = actionStatus_;
+          to_bitField0_ |= 0x00000100;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -3542,6 +3768,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasIsConflictResolution()) {
           setIsConflictResolution(other.getIsConflictResolution());
+        }
+        if (other.hasActionStatus()) {
+          setActionStatus(other.getActionStatus());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3651,6 +3880,18 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000080;
                 break;
               } // case 64
+              case 72: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus tmpValue =
+                    com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(9, tmpRaw);
+                } else {
+                  actionStatus_ = tmpRaw;
+                  bitField0_ |= 0x00000100;
+                }
+                break;
+              } // case 72
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4032,6 +4273,64 @@ private static final long serialVersionUID = 0L;
       public Builder clearIsConflictResolution() {
         bitField0_ = (bitField0_ & ~0x00000080);
         isConflictResolution_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int actionStatus_ = 0;
+      /**
+       * <pre>
+       * Outcome status of a Skills Management user action.
+       * </pre>
+       *
+       * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+       * @return Whether the actionStatus field is set.
+       */
+      @java.lang.Override public boolean hasActionStatus() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * Outcome status of a Skills Management user action.
+       * </pre>
+       *
+       * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+       * @return The actionStatus.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus getActionStatus() {
+        com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus result = com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus.forNumber(actionStatus_);
+        return result == null ? com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus.UNKNOWN_ACTION_STATUS : result;
+      }
+      /**
+       * <pre>
+       * Outcome status of a Skills Management user action.
+       * </pre>
+       *
+       * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+       * @param value The actionStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActionStatus(com.google.wireless.android.sdk.stats.SkillsEvent.ActionStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000100;
+        actionStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Outcome status of a Skills Management user action.
+       * </pre>
+       *
+       * <code>optional .android_studio.SkillsEvent.ActionStatus action_status = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActionStatus() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        actionStatus_ = 0;
         onChanged();
         return this;
       }

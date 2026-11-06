@@ -7429,4 +7429,31 @@ public interface AndroidStudioEventOrBuilder extends
    * <code>optional .android_studio.ExternalUpdateManagerEvent external_update_manager_event = 266 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.ExternalUpdateManagerEventOrBuilder getExternalUpdateManagerEventOrBuilder();
+
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   * @return Whether the inMemoryComposePreviewToolEvent field is set.
+   */
+  boolean hasInMemoryComposePreviewToolEvent();
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   * @return The inMemoryComposePreviewToolEvent.
+   */
+  com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEvent getInMemoryComposePreviewToolEvent();
+  /**
+   * <pre>
+   * set when kind = IN_MEMORY_COMPOSE_PREVIEW_TOOL_EVENT
+   * </pre>
+   *
+   * <code>optional .android_studio.InMemoryComposePreviewToolEvent in_memory_compose_preview_tool_event = 267 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.InMemoryComposePreviewToolEventOrBuilder getInMemoryComposePreviewToolEventOrBuilder();
 }

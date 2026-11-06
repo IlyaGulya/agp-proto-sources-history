@@ -997,6 +997,10 @@ public enum BooleanOption
    * <code>ENABLE_BACKUP_TEST = 243;</code>
    */
   ENABLE_BACKUP_TEST(243),
+  /**
+   * <code>SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES = 244;</code>
+   */
+  SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES(244),
   UNRECOGNIZED(-1),
   ;
 
@@ -1976,6 +1980,10 @@ public enum BooleanOption
    * <code>ENABLE_BACKUP_TEST = 243;</code>
    */
   public static final int ENABLE_BACKUP_TEST_VALUE = 243;
+  /**
+   * <code>SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES = 244;</code>
+   */
+  public static final int SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES_VALUE = 244;
 
 
   public final int getNumber() {
@@ -2246,6 +2254,7 @@ public enum BooleanOption
       case 241: return ENFORCE_DYNAMIC_FEATURE_VARIANT_MATCHING;
       case 242: return R8_PLUGIN_SUPPORT;
       case 243: return ENABLE_BACKUP_TEST;
+      case 244: return SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES;
       default: return null;
     }
   }

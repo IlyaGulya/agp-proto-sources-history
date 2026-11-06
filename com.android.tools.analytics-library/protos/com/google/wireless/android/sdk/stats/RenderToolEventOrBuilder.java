@@ -218,4 +218,29 @@ public interface RenderToolEventOrBuilder extends
    * @return The brokenClassesCount.
    */
   int getBrokenClassesCount();
+
+  /**
+   * <pre>
+   * Which Compose render tool produced this event.
+   * Deprecated in favor of InMemoryComposePreviewToolEvent.
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+   * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+   *     See studio_stats.proto;l=13853
+   * @return Whether the toolType field is set.
+   */
+  @java.lang.Deprecated boolean hasToolType();
+  /**
+   * <pre>
+   * Which Compose render tool produced this event.
+   * Deprecated in favor of InMemoryComposePreviewToolEvent.
+   * </pre>
+   *
+   * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
+   * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
+   *     See studio_stats.proto;l=13853
+   * @return The toolType.
+   */
+  @java.lang.Deprecated com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType getToolType();
 }
