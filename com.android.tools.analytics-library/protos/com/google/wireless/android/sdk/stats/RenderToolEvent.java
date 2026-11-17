@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
    * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-   *     See studio_stats.proto;l=13853
+   *     See studio_stats.proto;l=13854
    * @return Whether the toolType field is set.
    */
   @java.lang.Override @java.lang.Deprecated public boolean hasToolType() {
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
    *
    * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
    * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-   *     See studio_stats.proto;l=13853
+   *     See studio_stats.proto;l=13854
    * @return The toolType.
    */
   @java.lang.Override @java.lang.Deprecated public com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType getToolType() {
@@ -2143,7 +2143,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
      * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-     *     See studio_stats.proto;l=13853
+     *     See studio_stats.proto;l=13854
      * @return Whether the toolType field is set.
      */
     @java.lang.Override @java.lang.Deprecated public boolean hasToolType() {
@@ -2157,7 +2157,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
      * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-     *     See studio_stats.proto;l=13853
+     *     See studio_stats.proto;l=13854
      * @return The toolType.
      */
     @java.lang.Override
@@ -2173,7 +2173,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
      * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-     *     See studio_stats.proto;l=13853
+     *     See studio_stats.proto;l=13854
      * @param value The toolType to set.
      * @return This builder for chaining.
      */
@@ -2194,7 +2194,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
      * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-     *     See studio_stats.proto;l=13853
+     *     See studio_stats.proto;l=13854
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearToolType() {

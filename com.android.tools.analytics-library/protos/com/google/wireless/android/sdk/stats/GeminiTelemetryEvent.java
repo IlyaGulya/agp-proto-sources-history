@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return Whether the modelId field is set.
      */
     @java.lang.Deprecated boolean hasModelId();
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return The modelId.
      */
     @java.lang.Deprecated java.lang.String getModelId();
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return The bytes for modelId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -389,6 +389,37 @@ private static final long serialVersionUID = 0L;
      * @return The model.
      */
     com.google.wireless.android.sdk.stats.Model getModel();
+
+    /**
+     * <pre>
+     * Surface the conversation turn this event belongs to was started from.
+     * Set by the timeline when it interacts with the conversation (submitting
+     * a query, approving a plan or force-sending a steer message) and carried
+     * by every agent event in that turn: model requests, tool calls and
+     * permissions. Sub-agents inherit their parent's surface. A conversation
+     * open in both the tool window and an agent tab is attributed per turn,
+     * to whichever timeline started it.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+     * @return Whether the activitySurface field is set.
+     */
+    boolean hasActivitySurface();
+    /**
+     * <pre>
+     * Surface the conversation turn this event belongs to was started from.
+     * Set by the timeline when it interacts with the conversation (submitting
+     * a query, approving a plan or force-sending a steer message) and carried
+     * by every agent event in that turn: model requests, tool calls and
+     * permissions. Sub-agents inherit their parent's surface. A conversation
+     * open in both the tool window and an agent tab is attributed per turn,
+     * to whichever timeline started it.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+     * @return The activitySurface.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface getActivitySurface();
   }
   /**
    * <pre>
@@ -425,6 +456,7 @@ private static final long serialVersionUID = 0L;
       modelId_ = "";
       userQueryId_ = "";
       model_ = 0;
+      activitySurface_ = 0;
     }
 
     @java.lang.Override
@@ -445,6 +477,141 @@ private static final long serialVersionUID = 0L;
       return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_GeminiTelemetryEvent_EventEnvelope_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.class, com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.Builder.class);
+    }
+
+    /**
+     * <pre>
+     * The conversation timeline that drove an agent turn. This records where
+     * the conversation was interacted with, as opposed to UiEvent, which
+     * records how individual UI controls were used.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface}
+     */
+    public enum ActivitySurface
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Default unset value.
+       * </pre>
+       *
+       * <code>ACTIVITY_SURFACE_UNSPECIFIED = 0;</code>
+       */
+      ACTIVITY_SURFACE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Conversation timeline in the agent tool window.
+       * </pre>
+       *
+       * <code>TOOL_WINDOW = 1;</code>
+       */
+      TOOL_WINDOW(1),
+      /**
+       * <pre>
+       * Conversation timeline in an agent editor tab.
+       * </pre>
+       *
+       * <code>AGENT_TAB = 2;</code>
+       */
+      AGENT_TAB(2),
+      ;
+
+      /**
+       * <pre>
+       * Default unset value.
+       * </pre>
+       *
+       * <code>ACTIVITY_SURFACE_UNSPECIFIED = 0;</code>
+       */
+      public static final int ACTIVITY_SURFACE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Conversation timeline in the agent tool window.
+       * </pre>
+       *
+       * <code>TOOL_WINDOW = 1;</code>
+       */
+      public static final int TOOL_WINDOW_VALUE = 1;
+      /**
+       * <pre>
+       * Conversation timeline in an agent editor tab.
+       * </pre>
+       *
+       * <code>AGENT_TAB = 2;</code>
+       */
+      public static final int AGENT_TAB_VALUE = 2;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ActivitySurface valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ActivitySurface forNumber(int value) {
+        switch (value) {
+          case 0: return ACTIVITY_SURFACE_UNSPECIFIED;
+          case 1: return TOOL_WINDOW;
+          case 2: return AGENT_TAB;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ActivitySurface>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ActivitySurface> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ActivitySurface>() {
+              public ActivitySurface findValueByNumber(int number) {
+                return ActivitySurface.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final ActivitySurface[] VALUES = values();
+
+      public static ActivitySurface valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ActivitySurface(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface)
     }
 
     private int bitField0_;
@@ -857,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return Whether the modelId field is set.
      */
     @java.lang.Override
@@ -871,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return The modelId.
      */
     @java.lang.Override
@@ -896,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18328
+     *     See studio_stats.proto;l=18329
      * @return The bytes for modelId.
      */
     @java.lang.Override
@@ -1085,6 +1252,44 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.Model.MODEL_UNKNOWN : result;
     }
 
+    public static final int ACTIVITY_SURFACE_FIELD_NUMBER = 13;
+    private int activitySurface_ = 0;
+    /**
+     * <pre>
+     * Surface the conversation turn this event belongs to was started from.
+     * Set by the timeline when it interacts with the conversation (submitting
+     * a query, approving a plan or force-sending a steer message) and carried
+     * by every agent event in that turn: model requests, tool calls and
+     * permissions. Sub-agents inherit their parent's surface. A conversation
+     * open in both the tool window and an agent tab is attributed per turn,
+     * to whichever timeline started it.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+     * @return Whether the activitySurface field is set.
+     */
+    @java.lang.Override public boolean hasActivitySurface() {
+      return ((bitField0_ & 0x00001000) != 0);
+    }
+    /**
+     * <pre>
+     * Surface the conversation turn this event belongs to was started from.
+     * Set by the timeline when it interacts with the conversation (submitting
+     * a query, approving a plan or force-sending a steer message) and carried
+     * by every agent event in that turn: model requests, tool calls and
+     * permissions. Sub-agents inherit their parent's surface. A conversation
+     * open in both the tool window and an agent tab is attributed per turn,
+     * to whichever timeline started it.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+     * @return The activitySurface.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface getActivitySurface() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.forNumber(activitySurface_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.ACTIVITY_SURFACE_UNSPECIFIED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1135,6 +1340,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000800) != 0)) {
         output.writeEnum(12, model_);
       }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        output.writeEnum(13, activitySurface_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1183,6 +1391,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000800) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, model_);
+      }
+      if (((bitField0_ & 0x00001000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(13, activitySurface_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1258,6 +1470,10 @@ private static final long serialVersionUID = 0L;
       if (hasModel()) {
         if (model_ != other.model_) return false;
       }
+      if (hasActivitySurface() != other.hasActivitySurface()) return false;
+      if (hasActivitySurface()) {
+        if (activitySurface_ != other.activitySurface_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1318,6 +1534,10 @@ private static final long serialVersionUID = 0L;
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + model_;
+      }
+      if (hasActivitySurface()) {
+        hash = (37 * hash) + ACTIVITY_SURFACE_FIELD_NUMBER;
+        hash = (53 * hash) + activitySurface_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1485,6 +1705,7 @@ private static final long serialVersionUID = 0L;
           agentInfoBuilder_ = null;
         }
         model_ = 0;
+        activitySurface_ = 0;
         return this;
       }
 
@@ -1568,6 +1789,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000800) != 0)) {
           result.model_ = model_;
           to_bitField0_ |= 0x00000800;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.activitySurface_ = activitySurface_;
+          to_bitField0_ |= 0x00001000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1668,6 +1893,9 @@ private static final long serialVersionUID = 0L;
         if (other.hasModel()) {
           setModel(other.getModel());
         }
+        if (other.hasActivitySurface()) {
+          setActivitySurface(other.getActivitySurface());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1763,6 +1991,18 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 96
+              case 104: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(13, tmpRaw);
+                } else {
+                  activitySurface_ = tmpRaw;
+                  bitField0_ |= 0x00001000;
+                }
+                break;
+              } // case 104
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2480,7 +2720,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @return Whether the modelId field is set.
        */
       @java.lang.Deprecated public boolean hasModelId() {
@@ -2493,7 +2733,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @return The modelId.
        */
       @java.lang.Deprecated public java.lang.String getModelId() {
@@ -2517,7 +2757,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @return The bytes for modelId.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2540,7 +2780,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @param value The modelId to set.
        * @return This builder for chaining.
        */
@@ -2559,7 +2799,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearModelId() {
@@ -2575,7 +2815,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18328
+       *     See studio_stats.proto;l=18329
        * @param value The bytes for modelId to set.
        * @return This builder for chaining.
        */
@@ -2997,6 +3237,88 @@ private static final long serialVersionUID = 0L;
       public Builder clearModel() {
         bitField0_ = (bitField0_ & ~0x00000800);
         model_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int activitySurface_ = 0;
+      /**
+       * <pre>
+       * Surface the conversation turn this event belongs to was started from.
+       * Set by the timeline when it interacts with the conversation (submitting
+       * a query, approving a plan or force-sending a steer message) and carried
+       * by every agent event in that turn: model requests, tool calls and
+       * permissions. Sub-agents inherit their parent's surface. A conversation
+       * open in both the tool window and an agent tab is attributed per turn,
+       * to whichever timeline started it.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+       * @return Whether the activitySurface field is set.
+       */
+      @java.lang.Override public boolean hasActivitySurface() {
+        return ((bitField0_ & 0x00001000) != 0);
+      }
+      /**
+       * <pre>
+       * Surface the conversation turn this event belongs to was started from.
+       * Set by the timeline when it interacts with the conversation (submitting
+       * a query, approving a plan or force-sending a steer message) and carried
+       * by every agent event in that turn: model requests, tool calls and
+       * permissions. Sub-agents inherit their parent's surface. A conversation
+       * open in both the tool window and an agent tab is attributed per turn,
+       * to whichever timeline started it.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+       * @return The activitySurface.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface getActivitySurface() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.forNumber(activitySurface_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.ACTIVITY_SURFACE_UNSPECIFIED : result;
+      }
+      /**
+       * <pre>
+       * Surface the conversation turn this event belongs to was started from.
+       * Set by the timeline when it interacts with the conversation (submitting
+       * a query, approving a plan or force-sending a steer message) and carried
+       * by every agent event in that turn: model requests, tool calls and
+       * permissions. Sub-agents inherit their parent's surface. A conversation
+       * open in both the tool window and an agent tab is attributed per turn,
+       * to whichever timeline started it.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+       * @param value The activitySurface to set.
+       * @return This builder for chaining.
+       */
+      public Builder setActivitySurface(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00001000;
+        activitySurface_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Surface the conversation turn this event belongs to was started from.
+       * Set by the timeline when it interacts with the conversation (submitting
+       * a query, approving a plan or force-sending a steer message) and carried
+       * by every agent event in that turn: model requests, tool calls and
+       * permissions. Sub-agents inherit their parent's surface. A conversation
+       * open in both the tool window and an agent tab is attributed per turn,
+       * to whichever timeline started it.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface activity_surface = 13;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearActivitySurface() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        activitySurface_ = 0;
         onChanged();
         return this;
       }
@@ -5301,7 +5623,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Deprecated boolean hasActualModelId();
@@ -5313,7 +5635,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return The actualModelId.
        */
       @java.lang.Deprecated java.lang.String getActualModelId();
@@ -5325,7 +5647,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return The bytes for actualModelId.
        */
       @java.lang.Deprecated com.google.protobuf.ByteString
@@ -7139,7 +7461,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Override
@@ -7154,7 +7476,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return The actualModelId.
        */
       @java.lang.Override
@@ -7180,7 +7502,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18441
+       *     See studio_stats.proto;l=18463
        * @return The bytes for actualModelId.
        */
       @java.lang.Override
@@ -8409,7 +8731,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @return Whether the actualModelId field is set.
          */
         @java.lang.Deprecated public boolean hasActualModelId() {
@@ -8423,7 +8745,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @return The actualModelId.
          */
         @java.lang.Deprecated public java.lang.String getActualModelId() {
@@ -8448,7 +8770,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @return The bytes for actualModelId.
          */
         @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8472,7 +8794,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @param value The actualModelId to set.
          * @return This builder for chaining.
          */
@@ -8492,7 +8814,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearActualModelId() {
@@ -8509,7 +8831,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18441
+         *     See studio_stats.proto;l=18463
          * @param value The bytes for actualModelId to set.
          * @return This builder for chaining.
          */

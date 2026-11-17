@@ -1001,6 +1001,10 @@ public enum BooleanOption
    * <code>SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES = 244;</code>
    */
   SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES(244),
+  /**
+   * <code>ENABLE_MARKDOWN_TEST_REPORT = 245;</code>
+   */
+  ENABLE_MARKDOWN_TEST_REPORT(245),
   UNRECOGNIZED(-1),
   ;
 
@@ -1984,6 +1988,10 @@ public enum BooleanOption
    * <code>SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES = 244;</code>
    */
   public static final int SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES_VALUE = 244;
+  /**
+   * <code>ENABLE_MARKDOWN_TEST_REPORT = 245;</code>
+   */
+  public static final int ENABLE_MARKDOWN_TEST_REPORT_VALUE = 245;
 
 
   public final int getNumber() {
@@ -2255,6 +2263,7 @@ public enum BooleanOption
       case 242: return R8_PLUGIN_SUPPORT;
       case 243: return ENABLE_BACKUP_TEST;
       case 244: return SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES;
+      case 245: return ENABLE_MARKDOWN_TEST_REPORT;
       default: return null;
     }
   }

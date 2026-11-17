@@ -454,6 +454,10 @@ public enum Model
    */
   MODEL_GOOGLE_GEMINI38_FLASH(1827),
   /**
+   * <code>MODEL_GOOGLE_GEMINI35_FLASH_LITE = 1828;</code>
+   */
+  MODEL_GOOGLE_GEMINI35_FLASH_LITE(1828),
+  /**
    * <pre>
    * LiquidAI (1900 - 1999)
    * </pre>
@@ -1672,6 +1676,10 @@ public enum Model
    */
   public static final int MODEL_GOOGLE_GEMINI38_FLASH_VALUE = 1827;
   /**
+   * <code>MODEL_GOOGLE_GEMINI35_FLASH_LITE = 1828;</code>
+   */
+  public static final int MODEL_GOOGLE_GEMINI35_FLASH_LITE_VALUE = 1828;
+  /**
    * <pre>
    * LiquidAI (1900 - 1999)
    * </pre>
@@ -2570,6 +2578,7 @@ public enum Model
       case 1825: return MODEL_GOOGLE_GEMMA;
       case 1826: return MODEL_GOOGLE_GEMINI37_FLASH;
       case 1827: return MODEL_GOOGLE_GEMINI38_FLASH;
+      case 1828: return MODEL_GOOGLE_GEMINI35_FLASH_LITE;
       case 1900: return MODEL_LIQUID_AI_UNKNOWN;
       case 1901: return MODEL_LIQUID_AI_LFM224B_A2B;
       case 1902: return MODEL_LIQUID_AI_LFM28B_A1B;
