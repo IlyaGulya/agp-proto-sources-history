@@ -143,6 +143,14 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY = 10;</code>
      */
     KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY(10),
+    /**
+     * <pre>
+     * The 'com.android.report-aggregation' plugin
+     * </pre>
+     *
+     * <code>REPORT_AGGREGATION = 11;</code>
+     */
+    REPORT_AGGREGATION(11),
     ;
 
     /**
@@ -229,6 +237,14 @@ private static final long serialVersionUID = 0L;
      * <code>KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY = 10;</code>
      */
     public static final int KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY_VALUE = 10;
+    /**
+     * <pre>
+     * The 'com.android.report-aggregation' plugin
+     * </pre>
+     *
+     * <code>REPORT_AGGREGATION = 11;</code>
+     */
+    public static final int REPORT_AGGREGATION_VALUE = 11;
 
 
     public final int getNumber() {
@@ -262,6 +278,7 @@ private static final long serialVersionUID = 0L;
         case 8: return FUSED_LIBRARY;
         case 9: return PRIVACY_SANDBOX_SDK;
         case 10: return KOTLIN_MULTIPLATFORM_ANDROID_LIBRARY;
+        case 11: return REPORT_AGGREGATION;
         default: return null;
       }
     }

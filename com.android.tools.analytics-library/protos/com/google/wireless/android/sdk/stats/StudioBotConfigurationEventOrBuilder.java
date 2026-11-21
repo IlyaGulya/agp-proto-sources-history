@@ -24,17 +24,34 @@ public interface StudioBotConfigurationEventOrBuilder extends
   com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelopeOrBuilder getEnvelopeOrBuilder();
 
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    * @return Whether the onboardingEvent field is set.
    */
   boolean hasOnboardingEvent();
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    * @return The onboardingEvent.
    */
   com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent getOnboardingEvent();
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    */
   com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder getOnboardingEventOrBuilder();
+
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   * @return Whether the authenticationEvent field is set.
+   */
+  boolean hasAuthenticationEvent();
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   * @return The authenticationEvent.
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getAuthenticationEvent();
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   */
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder getAuthenticationEventOrBuilder();
+
+  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventCase getEventCase();
 }

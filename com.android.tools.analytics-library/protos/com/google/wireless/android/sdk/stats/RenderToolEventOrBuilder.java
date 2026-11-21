@@ -227,7 +227,7 @@ public interface RenderToolEventOrBuilder extends
    *
    * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
    * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-   *     See studio_stats.proto;l=13854
+   *     See studio_stats.proto;l=13885
    * @return Whether the toolType field is set.
    */
   @java.lang.Deprecated boolean hasToolType();
@@ -239,7 +239,7 @@ public interface RenderToolEventOrBuilder extends
    *
    * <code>optional .android_studio.RenderToolEvent.ToolType tool_type = 13 [deprecated = true];</code>
    * @deprecated android_studio.RenderToolEvent.tool_type is deprecated.
-   *     See studio_stats.proto;l=13854
+   *     See studio_stats.proto;l=13885
    * @return The toolType.
    */
   @java.lang.Deprecated com.google.wireless.android.sdk.stats.RenderToolEvent.ToolType getToolType();

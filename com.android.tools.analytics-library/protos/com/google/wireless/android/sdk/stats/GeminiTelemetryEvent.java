@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return Whether the modelId field is set.
      */
     @java.lang.Deprecated boolean hasModelId();
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return The modelId.
      */
     @java.lang.Deprecated java.lang.String getModelId();
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return The bytes for modelId.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return Whether the modelId field is set.
      */
     @java.lang.Override
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return The modelId.
      */
     @java.lang.Override
@@ -1063,7 +1063,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>optional string model_id = 8 [deprecated = true];</code>
      * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-     *     See studio_stats.proto;l=18329
+     *     See studio_stats.proto;l=18360
      * @return The bytes for modelId.
      */
     @java.lang.Override
@@ -2720,7 +2720,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @return Whether the modelId field is set.
        */
       @java.lang.Deprecated public boolean hasModelId() {
@@ -2733,7 +2733,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @return The modelId.
        */
       @java.lang.Deprecated public java.lang.String getModelId() {
@@ -2757,7 +2757,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @return The bytes for modelId.
        */
       @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -2780,7 +2780,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @param value The modelId to set.
        * @return This builder for chaining.
        */
@@ -2799,7 +2799,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearModelId() {
@@ -2815,7 +2815,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.EventEnvelope.model_id is deprecated.
-       *     See studio_stats.proto;l=18329
+       *     See studio_stats.proto;l=18360
        * @param value The bytes for modelId to set.
        * @return This builder for chaining.
        */
@@ -5623,7 +5623,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Deprecated boolean hasActualModelId();
@@ -5635,7 +5635,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return The actualModelId.
        */
       @java.lang.Deprecated java.lang.String getActualModelId();
@@ -5647,7 +5647,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return The bytes for actualModelId.
        */
       @java.lang.Deprecated com.google.protobuf.ByteString
@@ -7461,7 +7461,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Override
@@ -7476,7 +7476,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return The actualModelId.
        */
       @java.lang.Override
@@ -7502,7 +7502,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18463
+       *     See studio_stats.proto;l=18494
        * @return The bytes for actualModelId.
        */
       @java.lang.Override
@@ -8731,7 +8731,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @return Whether the actualModelId field is set.
          */
         @java.lang.Deprecated public boolean hasActualModelId() {
@@ -8745,7 +8745,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @return The actualModelId.
          */
         @java.lang.Deprecated public java.lang.String getActualModelId() {
@@ -8770,7 +8770,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @return The bytes for actualModelId.
          */
         @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8794,7 +8794,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @param value The actualModelId to set.
          * @return This builder for chaining.
          */
@@ -8814,7 +8814,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearActualModelId() {
@@ -8831,7 +8831,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18463
+         *     See studio_stats.proto;l=18494
          * @param value The bytes for actualModelId to set.
          * @return This builder for chaining.
          */

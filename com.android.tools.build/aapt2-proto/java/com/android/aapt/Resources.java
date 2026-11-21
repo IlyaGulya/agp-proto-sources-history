@@ -3244,6 +3244,1568 @@ public final class Resources {
 
   }
 
+  public interface ByNameMapOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:aapt.pb.ByNameMap)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string target_package = 1;</code>
+     * @return The targetPackage.
+     */
+    java.lang.String getTargetPackage();
+    /**
+     * <code>string target_package = 1;</code>
+     * @return The bytes for targetPackage.
+     */
+    com.google.protobuf.ByteString
+        getTargetPackageBytes();
+
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    java.util.List<com.android.aapt.Resources.ByNameMap.Entry> 
+        getEntryList();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    com.android.aapt.Resources.ByNameMap.Entry getEntry(int index);
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    int getEntryCount();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    java.util.List<? extends com.android.aapt.Resources.ByNameMap.EntryOrBuilder> 
+        getEntryOrBuilderList();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    com.android.aapt.Resources.ByNameMap.EntryOrBuilder getEntryOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Map of compile-time resource IDs to external resource names ("type/entry") for a target package.
+   * </pre>
+   *
+   * Protobuf type {@code aapt.pb.ByNameMap}
+   */
+  public static final class ByNameMap extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:aapt.pb.ByNameMap)
+      ByNameMapOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ByNameMap.newBuilder() to construct.
+    private ByNameMap(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ByNameMap() {
+      targetPackage_ = "";
+      entry_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ByNameMap();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.android.aapt.Resources.ByNameMap.class, com.android.aapt.Resources.ByNameMap.Builder.class);
+    }
+
+    public interface EntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:aapt.pb.ByNameMap.Entry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>uint32 compile_time_id = 1;</code>
+       * @return The compileTimeId.
+       */
+      int getCompileTimeId();
+
+      /**
+       * <code>string resource_name = 2;</code>
+       * @return The resourceName.
+       */
+      java.lang.String getResourceName();
+      /**
+       * <code>string resource_name = 2;</code>
+       * @return The bytes for resourceName.
+       */
+      com.google.protobuf.ByteString
+          getResourceNameBytes();
+    }
+    /**
+     * Protobuf type {@code aapt.pb.ByNameMap.Entry}
+     */
+    public static final class Entry extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:aapt.pb.ByNameMap.Entry)
+        EntryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Entry.newBuilder() to construct.
+      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Entry() {
+        resourceName_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Entry();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_Entry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_Entry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.android.aapt.Resources.ByNameMap.Entry.class, com.android.aapt.Resources.ByNameMap.Entry.Builder.class);
+      }
+
+      public static final int COMPILE_TIME_ID_FIELD_NUMBER = 1;
+      private int compileTimeId_ = 0;
+      /**
+       * <code>uint32 compile_time_id = 1;</code>
+       * @return The compileTimeId.
+       */
+      @java.lang.Override
+      public int getCompileTimeId() {
+        return compileTimeId_;
+      }
+
+      public static final int RESOURCE_NAME_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object resourceName_ = "";
+      /**
+       * <code>string resource_name = 2;</code>
+       * @return The resourceName.
+       */
+      @java.lang.Override
+      public java.lang.String getResourceName() {
+        java.lang.Object ref = resourceName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string resource_name = 2;</code>
+       * @return The bytes for resourceName.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getResourceNameBytes() {
+        java.lang.Object ref = resourceName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (compileTimeId_ != 0) {
+          output.writeUInt32(1, compileTimeId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourceName_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (compileTimeId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, compileTimeId_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourceName_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.android.aapt.Resources.ByNameMap.Entry)) {
+          return super.equals(obj);
+        }
+        com.android.aapt.Resources.ByNameMap.Entry other = (com.android.aapt.Resources.ByNameMap.Entry) obj;
+
+        if (getCompileTimeId()
+            != other.getCompileTimeId()) return false;
+        if (!getResourceName()
+            .equals(other.getResourceName())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + COMPILE_TIME_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCompileTimeId();
+        hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getResourceName().hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.android.aapt.Resources.ByNameMap.Entry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.android.aapt.Resources.ByNameMap.Entry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.android.aapt.Resources.ByNameMap.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.android.aapt.Resources.ByNameMap.Entry prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code aapt.pb.ByNameMap.Entry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:aapt.pb.ByNameMap.Entry)
+          com.android.aapt.Resources.ByNameMap.EntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_Entry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.android.aapt.Resources.ByNameMap.Entry.class, com.android.aapt.Resources.ByNameMap.Entry.Builder.class);
+        }
+
+        // Construct using com.android.aapt.Resources.ByNameMap.Entry.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          compileTimeId_ = 0;
+          resourceName_ = "";
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        public com.android.aapt.Resources.ByNameMap.Entry getDefaultInstanceForType() {
+          return com.android.aapt.Resources.ByNameMap.Entry.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.android.aapt.Resources.ByNameMap.Entry build() {
+          com.android.aapt.Resources.ByNameMap.Entry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.android.aapt.Resources.ByNameMap.Entry buildPartial() {
+          com.android.aapt.Resources.ByNameMap.Entry result = new com.android.aapt.Resources.ByNameMap.Entry(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.android.aapt.Resources.ByNameMap.Entry result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.compileTimeId_ = compileTimeId_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.resourceName_ = resourceName_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.android.aapt.Resources.ByNameMap.Entry) {
+            return mergeFrom((com.android.aapt.Resources.ByNameMap.Entry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.android.aapt.Resources.ByNameMap.Entry other) {
+          if (other == com.android.aapt.Resources.ByNameMap.Entry.getDefaultInstance()) return this;
+          if (other.getCompileTimeId() != 0) {
+            setCompileTimeId(other.getCompileTimeId());
+          }
+          if (!other.getResourceName().isEmpty()) {
+            resourceName_ = other.resourceName_;
+            bitField0_ |= 0x00000002;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  compileTimeId_ = input.readUInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 18: {
+                  resourceName_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 18
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int compileTimeId_ ;
+        /**
+         * <code>uint32 compile_time_id = 1;</code>
+         * @return The compileTimeId.
+         */
+        @java.lang.Override
+        public int getCompileTimeId() {
+          return compileTimeId_;
+        }
+        /**
+         * <code>uint32 compile_time_id = 1;</code>
+         * @param value The compileTimeId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCompileTimeId(int value) {
+
+          compileTimeId_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>uint32 compile_time_id = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCompileTimeId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          compileTimeId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object resourceName_ = "";
+        /**
+         * <code>string resource_name = 2;</code>
+         * @return The resourceName.
+         */
+        public java.lang.String getResourceName() {
+          java.lang.Object ref = resourceName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            resourceName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string resource_name = 2;</code>
+         * @return The bytes for resourceName.
+         */
+        public com.google.protobuf.ByteString
+            getResourceNameBytes() {
+          java.lang.Object ref = resourceName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            resourceName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string resource_name = 2;</code>
+         * @param value The resourceName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setResourceName(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          resourceName_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string resource_name = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearResourceName() {
+          resourceName_ = getDefaultInstance().getResourceName();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string resource_name = 2;</code>
+         * @param value The bytes for resourceName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setResourceNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          resourceName_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:aapt.pb.ByNameMap.Entry)
+      }
+
+      // @@protoc_insertion_point(class_scope:aapt.pb.ByNameMap.Entry)
+      private static final com.android.aapt.Resources.ByNameMap.Entry DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.android.aapt.Resources.ByNameMap.Entry();
+      }
+
+      public static com.android.aapt.Resources.ByNameMap.Entry getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Entry>
+          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
+        @java.lang.Override
+        public Entry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Entry> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Entry> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.android.aapt.Resources.ByNameMap.Entry getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int TARGET_PACKAGE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object targetPackage_ = "";
+    /**
+     * <code>string target_package = 1;</code>
+     * @return The targetPackage.
+     */
+    @java.lang.Override
+    public java.lang.String getTargetPackage() {
+      java.lang.Object ref = targetPackage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        targetPackage_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string target_package = 1;</code>
+     * @return The bytes for targetPackage.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTargetPackageBytes() {
+      java.lang.Object ref = targetPackage_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        targetPackage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTRY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.android.aapt.Resources.ByNameMap.Entry> entry_;
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.android.aapt.Resources.ByNameMap.Entry> getEntryList() {
+      return entry_;
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.android.aapt.Resources.ByNameMap.EntryOrBuilder> 
+        getEntryOrBuilderList() {
+      return entry_;
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    @java.lang.Override
+    public int getEntryCount() {
+      return entry_.size();
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ByNameMap.Entry getEntry(int index) {
+      return entry_.get(index);
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ByNameMap.EntryOrBuilder getEntryOrBuilder(
+        int index) {
+      return entry_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetPackage_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, targetPackage_);
+      }
+      for (int i = 0; i < entry_.size(); i++) {
+        output.writeMessage(2, entry_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(targetPackage_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, targetPackage_);
+      }
+      for (int i = 0; i < entry_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, entry_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.android.aapt.Resources.ByNameMap)) {
+        return super.equals(obj);
+      }
+      com.android.aapt.Resources.ByNameMap other = (com.android.aapt.Resources.ByNameMap) obj;
+
+      if (!getTargetPackage()
+          .equals(other.getTargetPackage())) return false;
+      if (!getEntryList()
+          .equals(other.getEntryList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TARGET_PACKAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetPackage().hashCode();
+      if (getEntryCount() > 0) {
+        hash = (37 * hash) + ENTRY_FIELD_NUMBER;
+        hash = (53 * hash) + getEntryList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.android.aapt.Resources.ByNameMap parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.android.aapt.Resources.ByNameMap parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.android.aapt.Resources.ByNameMap parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.android.aapt.Resources.ByNameMap prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Map of compile-time resource IDs to external resource names ("type/entry") for a target package.
+     * </pre>
+     *
+     * Protobuf type {@code aapt.pb.ByNameMap}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:aapt.pb.ByNameMap)
+        com.android.aapt.Resources.ByNameMapOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.android.aapt.Resources.ByNameMap.class, com.android.aapt.Resources.ByNameMap.Builder.class);
+      }
+
+      // Construct using com.android.aapt.Resources.ByNameMap.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        targetPackage_ = "";
+        if (entryBuilder_ == null) {
+          entry_ = java.util.Collections.emptyList();
+        } else {
+          entry_ = null;
+          entryBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.android.aapt.Resources.internal_static_aapt_pb_ByNameMap_descriptor;
+      }
+
+      @java.lang.Override
+      public com.android.aapt.Resources.ByNameMap getDefaultInstanceForType() {
+        return com.android.aapt.Resources.ByNameMap.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.android.aapt.Resources.ByNameMap build() {
+        com.android.aapt.Resources.ByNameMap result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.android.aapt.Resources.ByNameMap buildPartial() {
+        com.android.aapt.Resources.ByNameMap result = new com.android.aapt.Resources.ByNameMap(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.android.aapt.Resources.ByNameMap result) {
+        if (entryBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            entry_ = java.util.Collections.unmodifiableList(entry_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.entry_ = entry_;
+        } else {
+          result.entry_ = entryBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.android.aapt.Resources.ByNameMap result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.targetPackage_ = targetPackage_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.android.aapt.Resources.ByNameMap) {
+          return mergeFrom((com.android.aapt.Resources.ByNameMap)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.android.aapt.Resources.ByNameMap other) {
+        if (other == com.android.aapt.Resources.ByNameMap.getDefaultInstance()) return this;
+        if (!other.getTargetPackage().isEmpty()) {
+          targetPackage_ = other.targetPackage_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (entryBuilder_ == null) {
+          if (!other.entry_.isEmpty()) {
+            if (entry_.isEmpty()) {
+              entry_ = other.entry_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEntryIsMutable();
+              entry_.addAll(other.entry_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entry_.isEmpty()) {
+            if (entryBuilder_.isEmpty()) {
+              entryBuilder_.dispose();
+              entryBuilder_ = null;
+              entry_ = other.entry_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              entryBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntryFieldBuilder() : null;
+            } else {
+              entryBuilder_.addAllMessages(other.entry_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                targetPackage_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.android.aapt.Resources.ByNameMap.Entry m =
+                    input.readMessage(
+                        com.android.aapt.Resources.ByNameMap.Entry.parser(),
+                        extensionRegistry);
+                if (entryBuilder_ == null) {
+                  ensureEntryIsMutable();
+                  entry_.add(m);
+                } else {
+                  entryBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object targetPackage_ = "";
+      /**
+       * <code>string target_package = 1;</code>
+       * @return The targetPackage.
+       */
+      public java.lang.String getTargetPackage() {
+        java.lang.Object ref = targetPackage_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          targetPackage_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string target_package = 1;</code>
+       * @return The bytes for targetPackage.
+       */
+      public com.google.protobuf.ByteString
+          getTargetPackageBytes() {
+        java.lang.Object ref = targetPackage_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          targetPackage_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string target_package = 1;</code>
+       * @param value The targetPackage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetPackage(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        targetPackage_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string target_package = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetPackage() {
+        targetPackage_ = getDefaultInstance().getTargetPackage();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string target_package = 1;</code>
+       * @param value The bytes for targetPackage to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetPackageBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        targetPackage_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.android.aapt.Resources.ByNameMap.Entry> entry_ =
+        java.util.Collections.emptyList();
+      private void ensureEntryIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          entry_ = new java.util.ArrayList<com.android.aapt.Resources.ByNameMap.Entry>(entry_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ByNameMap.Entry, com.android.aapt.Resources.ByNameMap.Entry.Builder, com.android.aapt.Resources.ByNameMap.EntryOrBuilder> entryBuilder_;
+
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ByNameMap.Entry> getEntryList() {
+        if (entryBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entry_);
+        } else {
+          return entryBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public int getEntryCount() {
+        if (entryBuilder_ == null) {
+          return entry_.size();
+        } else {
+          return entryBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Entry getEntry(int index) {
+        if (entryBuilder_ == null) {
+          return entry_.get(index);
+        } else {
+          return entryBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder setEntry(
+          int index, com.android.aapt.Resources.ByNameMap.Entry value) {
+        if (entryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntryIsMutable();
+          entry_.set(index, value);
+          onChanged();
+        } else {
+          entryBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder setEntry(
+          int index, com.android.aapt.Resources.ByNameMap.Entry.Builder builderForValue) {
+        if (entryBuilder_ == null) {
+          ensureEntryIsMutable();
+          entry_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entryBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder addEntry(com.android.aapt.Resources.ByNameMap.Entry value) {
+        if (entryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntryIsMutable();
+          entry_.add(value);
+          onChanged();
+        } else {
+          entryBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder addEntry(
+          int index, com.android.aapt.Resources.ByNameMap.Entry value) {
+        if (entryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntryIsMutable();
+          entry_.add(index, value);
+          onChanged();
+        } else {
+          entryBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder addEntry(
+          com.android.aapt.Resources.ByNameMap.Entry.Builder builderForValue) {
+        if (entryBuilder_ == null) {
+          ensureEntryIsMutable();
+          entry_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entryBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder addEntry(
+          int index, com.android.aapt.Resources.ByNameMap.Entry.Builder builderForValue) {
+        if (entryBuilder_ == null) {
+          ensureEntryIsMutable();
+          entry_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entryBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder addAllEntry(
+          java.lang.Iterable<? extends com.android.aapt.Resources.ByNameMap.Entry> values) {
+        if (entryBuilder_ == null) {
+          ensureEntryIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entry_);
+          onChanged();
+        } else {
+          entryBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder clearEntry() {
+        if (entryBuilder_ == null) {
+          entry_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          entryBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public Builder removeEntry(int index) {
+        if (entryBuilder_ == null) {
+          ensureEntryIsMutable();
+          entry_.remove(index);
+          onChanged();
+        } else {
+          entryBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Entry.Builder getEntryBuilder(
+          int index) {
+        return getEntryFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.EntryOrBuilder getEntryOrBuilder(
+          int index) {
+        if (entryBuilder_ == null) {
+          return entry_.get(index);  } else {
+          return entryBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public java.util.List<? extends com.android.aapt.Resources.ByNameMap.EntryOrBuilder> 
+           getEntryOrBuilderList() {
+        if (entryBuilder_ != null) {
+          return entryBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entry_);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Entry.Builder addEntryBuilder() {
+        return getEntryFieldBuilder().addBuilder(
+            com.android.aapt.Resources.ByNameMap.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Entry.Builder addEntryBuilder(
+          int index) {
+        return getEntryFieldBuilder().addBuilder(
+            index, com.android.aapt.Resources.ByNameMap.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap.Entry entry = 2;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ByNameMap.Entry.Builder> 
+           getEntryBuilderList() {
+        return getEntryFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ByNameMap.Entry, com.android.aapt.Resources.ByNameMap.Entry.Builder, com.android.aapt.Resources.ByNameMap.EntryOrBuilder> 
+          getEntryFieldBuilder() {
+        if (entryBuilder_ == null) {
+          entryBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.android.aapt.Resources.ByNameMap.Entry, com.android.aapt.Resources.ByNameMap.Entry.Builder, com.android.aapt.Resources.ByNameMap.EntryOrBuilder>(
+                  entry_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        return entryBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:aapt.pb.ByNameMap)
+    }
+
+    // @@protoc_insertion_point(class_scope:aapt.pb.ByNameMap)
+    private static final com.android.aapt.Resources.ByNameMap DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.android.aapt.Resources.ByNameMap();
+    }
+
+    public static com.android.aapt.Resources.ByNameMap getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ByNameMap>
+        PARSER = new com.google.protobuf.AbstractParser<ByNameMap>() {
+      @java.lang.Override
+      public ByNameMap parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ByNameMap> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ByNameMap> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.android.aapt.Resources.ByNameMap getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ResourceTableOrBuilder extends
       // @@protoc_insertion_point(interface_extends:aapt.pb.ResourceTable)
       com.google.protobuf.MessageOrBuilder {
@@ -3433,6 +4995,30 @@ public final class Resources {
      */
     com.android.aapt.Resources.DynamicRefTableOrBuilder getDynamicRefTableOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    java.util.List<com.android.aapt.Resources.ByNameMap> 
+        getByNameMapList();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    com.android.aapt.Resources.ByNameMap getByNameMap(int index);
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    int getByNameMapCount();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    java.util.List<? extends com.android.aapt.Resources.ByNameMapOrBuilder> 
+        getByNameMapOrBuilderList();
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    com.android.aapt.Resources.ByNameMapOrBuilder getByNameMapOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -3455,6 +5041,7 @@ public final class Resources {
       overlayable_ = java.util.Collections.emptyList();
       toolFingerprint_ = java.util.Collections.emptyList();
       dynamicRefTable_ = java.util.Collections.emptyList();
+      byNameMap_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3743,6 +5330,47 @@ public final class Resources {
       return dynamicRefTable_.get(index);
     }
 
+    public static final int BY_NAME_MAP_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.android.aapt.Resources.ByNameMap> byNameMap_;
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.android.aapt.Resources.ByNameMap> getByNameMapList() {
+      return byNameMap_;
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.android.aapt.Resources.ByNameMapOrBuilder> 
+        getByNameMapOrBuilderList() {
+      return byNameMap_;
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    @java.lang.Override
+    public int getByNameMapCount() {
+      return byNameMap_.size();
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ByNameMap getByNameMap(int index) {
+      return byNameMap_.get(index);
+    }
+    /**
+     * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+     */
+    @java.lang.Override
+    public com.android.aapt.Resources.ByNameMapOrBuilder getByNameMapOrBuilder(
+        int index) {
+      return byNameMap_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3771,6 +5399,9 @@ public final class Resources {
       }
       for (int i = 0; i < dynamicRefTable_.size(); i++) {
         output.writeMessage(5, dynamicRefTable_.get(i));
+      }
+      for (int i = 0; i < byNameMap_.size(); i++) {
+        output.writeMessage(6, byNameMap_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -3801,6 +5432,10 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, dynamicRefTable_.get(i));
       }
+      for (int i = 0; i < byNameMap_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, byNameMap_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3829,6 +5464,8 @@ public final class Resources {
           .equals(other.getToolFingerprintList())) return false;
       if (!getDynamicRefTableList()
           .equals(other.getDynamicRefTableList())) return false;
+      if (!getByNameMapList()
+          .equals(other.getByNameMapList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3859,6 +5496,10 @@ public final class Resources {
       if (getDynamicRefTableCount() > 0) {
         hash = (37 * hash) + DYNAMIC_REF_TABLE_FIELD_NUMBER;
         hash = (53 * hash) + getDynamicRefTableList().hashCode();
+      }
+      if (getByNameMapCount() > 0) {
+        hash = (37 * hash) + BY_NAME_MAP_FIELD_NUMBER;
+        hash = (53 * hash) + getByNameMapList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3999,6 +5640,7 @@ public final class Resources {
           getOverlayableFieldBuilder();
           getToolFingerprintFieldBuilder();
           getDynamicRefTableFieldBuilder();
+          getByNameMapFieldBuilder();
         }
       }
       @java.lang.Override
@@ -4038,6 +5680,13 @@ public final class Resources {
           dynamicRefTableBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (byNameMapBuilder_ == null) {
+          byNameMap_ = java.util.Collections.emptyList();
+        } else {
+          byNameMap_ = null;
+          byNameMapBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -4106,6 +5755,15 @@ public final class Resources {
           result.dynamicRefTable_ = dynamicRefTable_;
         } else {
           result.dynamicRefTable_ = dynamicRefTableBuilder_.build();
+        }
+        if (byNameMapBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            byNameMap_ = java.util.Collections.unmodifiableList(byNameMap_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.byNameMap_ = byNameMap_;
+        } else {
+          result.byNameMap_ = byNameMapBuilder_.build();
         }
       }
 
@@ -4272,6 +5930,32 @@ public final class Resources {
             }
           }
         }
+        if (byNameMapBuilder_ == null) {
+          if (!other.byNameMap_.isEmpty()) {
+            if (byNameMap_.isEmpty()) {
+              byNameMap_ = other.byNameMap_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureByNameMapIsMutable();
+              byNameMap_.addAll(other.byNameMap_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.byNameMap_.isEmpty()) {
+            if (byNameMapBuilder_.isEmpty()) {
+              byNameMapBuilder_.dispose();
+              byNameMapBuilder_ = null;
+              byNameMap_ = other.byNameMap_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              byNameMapBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getByNameMapFieldBuilder() : null;
+            } else {
+              byNameMapBuilder_.addAllMessages(other.byNameMap_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4357,6 +6041,19 @@ public final class Resources {
                 }
                 break;
               } // case 42
+              case 50: {
+                com.android.aapt.Resources.ByNameMap m =
+                    input.readMessage(
+                        com.android.aapt.Resources.ByNameMap.parser(),
+                        extensionRegistry);
+                if (byNameMapBuilder_ == null) {
+                  ensureByNameMapIsMutable();
+                  byNameMap_.add(m);
+                } else {
+                  byNameMapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5714,6 +7411,246 @@ public final class Resources {
           dynamicRefTable_ = null;
         }
         return dynamicRefTableBuilder_;
+      }
+
+      private java.util.List<com.android.aapt.Resources.ByNameMap> byNameMap_ =
+        java.util.Collections.emptyList();
+      private void ensureByNameMapIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          byNameMap_ = new java.util.ArrayList<com.android.aapt.Resources.ByNameMap>(byNameMap_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ByNameMap, com.android.aapt.Resources.ByNameMap.Builder, com.android.aapt.Resources.ByNameMapOrBuilder> byNameMapBuilder_;
+
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ByNameMap> getByNameMapList() {
+        if (byNameMapBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(byNameMap_);
+        } else {
+          return byNameMapBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public int getByNameMapCount() {
+        if (byNameMapBuilder_ == null) {
+          return byNameMap_.size();
+        } else {
+          return byNameMapBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap getByNameMap(int index) {
+        if (byNameMapBuilder_ == null) {
+          return byNameMap_.get(index);
+        } else {
+          return byNameMapBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder setByNameMap(
+          int index, com.android.aapt.Resources.ByNameMap value) {
+        if (byNameMapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureByNameMapIsMutable();
+          byNameMap_.set(index, value);
+          onChanged();
+        } else {
+          byNameMapBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder setByNameMap(
+          int index, com.android.aapt.Resources.ByNameMap.Builder builderForValue) {
+        if (byNameMapBuilder_ == null) {
+          ensureByNameMapIsMutable();
+          byNameMap_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          byNameMapBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder addByNameMap(com.android.aapt.Resources.ByNameMap value) {
+        if (byNameMapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureByNameMapIsMutable();
+          byNameMap_.add(value);
+          onChanged();
+        } else {
+          byNameMapBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder addByNameMap(
+          int index, com.android.aapt.Resources.ByNameMap value) {
+        if (byNameMapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureByNameMapIsMutable();
+          byNameMap_.add(index, value);
+          onChanged();
+        } else {
+          byNameMapBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder addByNameMap(
+          com.android.aapt.Resources.ByNameMap.Builder builderForValue) {
+        if (byNameMapBuilder_ == null) {
+          ensureByNameMapIsMutable();
+          byNameMap_.add(builderForValue.build());
+          onChanged();
+        } else {
+          byNameMapBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder addByNameMap(
+          int index, com.android.aapt.Resources.ByNameMap.Builder builderForValue) {
+        if (byNameMapBuilder_ == null) {
+          ensureByNameMapIsMutable();
+          byNameMap_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          byNameMapBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder addAllByNameMap(
+          java.lang.Iterable<? extends com.android.aapt.Resources.ByNameMap> values) {
+        if (byNameMapBuilder_ == null) {
+          ensureByNameMapIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, byNameMap_);
+          onChanged();
+        } else {
+          byNameMapBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder clearByNameMap() {
+        if (byNameMapBuilder_ == null) {
+          byNameMap_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          byNameMapBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public Builder removeByNameMap(int index) {
+        if (byNameMapBuilder_ == null) {
+          ensureByNameMapIsMutable();
+          byNameMap_.remove(index);
+          onChanged();
+        } else {
+          byNameMapBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Builder getByNameMapBuilder(
+          int index) {
+        return getByNameMapFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public com.android.aapt.Resources.ByNameMapOrBuilder getByNameMapOrBuilder(
+          int index) {
+        if (byNameMapBuilder_ == null) {
+          return byNameMap_.get(index);  } else {
+          return byNameMapBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public java.util.List<? extends com.android.aapt.Resources.ByNameMapOrBuilder> 
+           getByNameMapOrBuilderList() {
+        if (byNameMapBuilder_ != null) {
+          return byNameMapBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(byNameMap_);
+        }
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Builder addByNameMapBuilder() {
+        return getByNameMapFieldBuilder().addBuilder(
+            com.android.aapt.Resources.ByNameMap.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public com.android.aapt.Resources.ByNameMap.Builder addByNameMapBuilder(
+          int index) {
+        return getByNameMapFieldBuilder().addBuilder(
+            index, com.android.aapt.Resources.ByNameMap.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .aapt.pb.ByNameMap by_name_map = 6;</code>
+       */
+      public java.util.List<com.android.aapt.Resources.ByNameMap.Builder> 
+           getByNameMapBuilderList() {
+        return getByNameMapFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.android.aapt.Resources.ByNameMap, com.android.aapt.Resources.ByNameMap.Builder, com.android.aapt.Resources.ByNameMapOrBuilder> 
+          getByNameMapFieldBuilder() {
+        if (byNameMapBuilder_ == null) {
+          byNameMapBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.android.aapt.Resources.ByNameMap, com.android.aapt.Resources.ByNameMap.Builder, com.android.aapt.Resources.ByNameMapOrBuilder>(
+                  byNameMap_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          byNameMap_ = null;
+        }
+        return byNameMapBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -26340,6 +28277,16 @@ public final class Resources {
      * @return The allowRaw.
      */
     boolean getAllowRaw();
+
+    /**
+     * <pre>
+     * Whether this reference targets a pinned public resource.
+     * </pre>
+     *
+     * <code>bool is_public = 8;</code>
+     * @return The isPublic.
+     */
+    boolean getIsPublic();
   }
   /**
    * <pre>
@@ -26671,6 +28618,21 @@ public final class Resources {
       return allowRaw_;
     }
 
+    public static final int IS_PUBLIC_FIELD_NUMBER = 8;
+    private boolean isPublic_ = false;
+    /**
+     * <pre>
+     * Whether this reference targets a pinned public resource.
+     * </pre>
+     *
+     * <code>bool is_public = 8;</code>
+     * @return The isPublic.
+     */
+    @java.lang.Override
+    public boolean getIsPublic() {
+      return isPublic_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -26705,6 +28667,9 @@ public final class Resources {
       }
       if (allowRaw_ != false) {
         output.writeBool(7, allowRaw_);
+      }
+      if (isPublic_ != false) {
+        output.writeBool(8, isPublic_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -26742,6 +28707,10 @@ public final class Resources {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, allowRaw_);
       }
+      if (isPublic_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isPublic_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -26773,6 +28742,8 @@ public final class Resources {
           != other.getTypeFlags()) return false;
       if (getAllowRaw()
           != other.getAllowRaw()) return false;
+      if (getIsPublic()
+          != other.getIsPublic()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -26802,6 +28773,9 @@ public final class Resources {
       hash = (37 * hash) + ALLOW_RAW_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getAllowRaw());
+      hash = (37 * hash) + IS_PUBLIC_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsPublic());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -26954,6 +28928,7 @@ public final class Resources {
         }
         typeFlags_ = 0;
         allowRaw_ = false;
+        isPublic_ = false;
         return this;
       }
 
@@ -27011,6 +28986,9 @@ public final class Resources {
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.allowRaw_ = allowRaw_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.isPublic_ = isPublic_;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -27082,6 +29060,9 @@ public final class Resources {
         if (other.getAllowRaw() != false) {
           setAllowRaw(other.getAllowRaw());
         }
+        if (other.getIsPublic() != false) {
+          setIsPublic(other.getIsPublic());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -27145,6 +29126,11 @@ public final class Resources {
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
+              case 64: {
+                isPublic_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -27639,6 +29625,50 @@ public final class Resources {
       public Builder clearAllowRaw() {
         bitField0_ = (bitField0_ & ~0x00000040);
         allowRaw_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isPublic_ ;
+      /**
+       * <pre>
+       * Whether this reference targets a pinned public resource.
+       * </pre>
+       *
+       * <code>bool is_public = 8;</code>
+       * @return The isPublic.
+       */
+      @java.lang.Override
+      public boolean getIsPublic() {
+        return isPublic_;
+      }
+      /**
+       * <pre>
+       * Whether this reference targets a pinned public resource.
+       * </pre>
+       *
+       * <code>bool is_public = 8;</code>
+       * @param value The isPublic to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsPublic(boolean value) {
+
+        isPublic_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether this reference targets a pinned public resource.
+       * </pre>
+       *
+       * <code>bool is_public = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsPublic() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isPublic_ = false;
         onChanged();
         return this;
       }
@@ -32019,14 +34049,14 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=441
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasDimensionValueDeprecated();
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=441
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Deprecated float getDimensionValueDeprecated();
@@ -32034,14 +34064,14 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=442
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Deprecated boolean hasFractionValueDeprecated();
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=442
      * @return The fractionValueDeprecated.
      */
     @java.lang.Deprecated float getFractionValueDeprecated();
@@ -33224,7 +35254,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=441
      * @return Whether the dimensionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -33234,7 +35264,7 @@ public final class Resources {
     /**
      * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-     *     See Resources.proto;l=427
+     *     See Resources.proto;l=441
      * @return The dimensionValueDeprecated.
      */
     @java.lang.Override
@@ -33249,7 +35279,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=442
      * @return Whether the fractionValueDeprecated field is set.
      */
     @java.lang.Override
@@ -33259,7 +35289,7 @@ public final class Resources {
     /**
      * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
      * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-     *     See Resources.proto;l=428
+     *     See Resources.proto;l=442
      * @return The fractionValueDeprecated.
      */
     @java.lang.Override
@@ -34706,7 +36736,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=441
        * @return Whether the dimensionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasDimensionValueDeprecated() {
@@ -34715,7 +36745,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=441
        * @return The dimensionValueDeprecated.
        */
       @java.lang.Deprecated public float getDimensionValueDeprecated() {
@@ -34727,7 +36757,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=441
        * @param value The dimensionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -34741,7 +36771,7 @@ public final class Resources {
       /**
        * <code>float dimension_value_deprecated = 4 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.dimension_value_deprecated is deprecated.
-       *     See Resources.proto;l=427
+       *     See Resources.proto;l=441
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearDimensionValueDeprecated() {
@@ -34756,7 +36786,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=442
        * @return Whether the fractionValueDeprecated field is set.
        */
       @java.lang.Deprecated public boolean hasFractionValueDeprecated() {
@@ -34765,7 +36795,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=442
        * @return The fractionValueDeprecated.
        */
       @java.lang.Deprecated public float getFractionValueDeprecated() {
@@ -34777,7 +36807,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=442
        * @param value The fractionValueDeprecated to set.
        * @return This builder for chaining.
        */
@@ -34791,7 +36821,7 @@ public final class Resources {
       /**
        * <code>float fraction_value_deprecated = 5 [deprecated = true];</code>
        * @deprecated aapt.pb.Primitive.fraction_value_deprecated is deprecated.
-       *     See Resources.proto;l=428
+       *     See Resources.proto;l=442
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearFractionValueDeprecated() {
@@ -57724,6 +59754,16 @@ public final class Resources {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_aapt_pb_DynamicRefTable_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aapt_pb_ByNameMap_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aapt_pb_ByNameMap_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_aapt_pb_ByNameMap_Entry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_aapt_pb_ByNameMap_Entry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_aapt_pb_ResourceTable_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -57970,154 +60010,159 @@ public final class Resources {
       "Position\"0\n\017ToolFingerprint\022\014\n\004tool\030\001 \001(" +
       "\t\022\017\n\007version\030\002 \001(\t\"O\n\017DynamicRefTable\022&\n" +
       "\npackage_id\030\001 \001(\0132\022.aapt.pb.PackageId\022\024\n" +
-      "\014package_name\030\002 \001(\t\"\360\001\n\rResourceTable\022(\n" +
-      "\013source_pool\030\001 \001(\0132\023.aapt.pb.StringPool\022" +
-      "!\n\007package\030\002 \003(\0132\020.aapt.pb.Package\022)\n\013ov" +
-      "erlayable\030\003 \003(\0132\024.aapt.pb.Overlayable\0222\n" +
-      "\020tool_fingerprint\030\004 \003(\0132\030.aapt.pb.ToolFi" +
-      "ngerprint\0223\n\021dynamic_ref_table\030\005 \003(\0132\030.a" +
-      "apt.pb.DynamicRefTable\"\027\n\tPackageId\022\n\n\002i" +
-      "d\030\001 \001(\r\"d\n\007Package\022&\n\npackage_id\030\001 \001(\0132\022" +
-      ".aapt.pb.PackageId\022\024\n\014package_name\030\002 \001(\t" +
-      "\022\033\n\004type\030\003 \003(\0132\r.aapt.pb.Type\"\024\n\006TypeId\022" +
-      "\n\n\002id\030\001 \001(\r\"U\n\004Type\022 \n\007type_id\030\001 \001(\0132\017.a" +
-      "apt.pb.TypeId\022\014\n\004name\030\002 \001(\t\022\035\n\005entry\030\003 \003" +
-      "(\0132\016.aapt.pb.Entry\"\253\001\n\nVisibility\022(\n\005lev" +
-      "el\030\001 \001(\0162\031.aapt.pb.Visibility.Level\022\037\n\006s" +
-      "ource\030\002 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030" +
-      "\003 \001(\t\022\022\n\nstaged_api\030\004 \001(\010\"-\n\005Level\022\013\n\007UN" +
-      "KNOWN\020\000\022\013\n\007PRIVATE\020\001\022\n\n\006PUBLIC\020\002\"<\n\010Allo" +
-      "wNew\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n" +
-      "\007comment\030\002 \001(\t\"K\n\013Overlayable\022\014\n\004name\030\001 " +
-      "\001(\t\022\037\n\006source\030\002 \001(\0132\017.aapt.pb.Source\022\r\n\005" +
-      "actor\030\003 \001(\t\"\225\002\n\017OverlayableItem\022\037\n\006sourc" +
-      "e\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(" +
-      "\t\022/\n\006policy\030\003 \003(\0162\037.aapt.pb.OverlayableI" +
-      "tem.Policy\022\027\n\017overlayable_idx\030\004 \001(\r\"\205\001\n\006" +
-      "Policy\022\010\n\004NONE\020\000\022\n\n\006PUBLIC\020\001\022\n\n\006SYSTEM\020\002" +
-      "\022\n\n\006VENDOR\020\003\022\013\n\007PRODUCT\020\004\022\r\n\tSIGNATURE\020\005" +
-      "\022\007\n\003ODM\020\006\022\007\n\003OEM\020\007\022\t\n\005ACTOR\020\010\022\024\n\020CONFIG_" +
-      "SIGNATURE\020\t\">\n\010StagedId\022\037\n\006source\030\001 \001(\0132" +
-      "\017.aapt.pb.Source\022\021\n\tstaged_id\030\002 \001(\r\"\025\n\007E" +
-      "ntryId\022\n\n\002id\030\001 \001(\r\"\203\003\n\005Entry\022\"\n\010entry_id" +
-      "\030\001 \001(\0132\020.aapt.pb.EntryId\022\014\n\004name\030\002 \001(\t\022\'" +
-      "\n\nvisibility\030\003 \001(\0132\023.aapt.pb.Visibility\022" +
-      "$\n\tallow_new\030\004 \001(\0132\021.aapt.pb.AllowNew\0222\n" +
-      "\020overlayable_item\030\005 \001(\0132\030.aapt.pb.Overla" +
-      "yableItem\022*\n\014config_value\030\006 \003(\0132\024.aapt.p" +
-      "b.ConfigValue\022$\n\tstaged_id\030\007 \001(\0132\021.aapt." +
-      "pb.StagedId\0228\n\032flag_disabled_config_valu" +
-      "e\030\010 \003(\0132\024.aapt.pb.ConfigValue\0229\n\033readwri" +
-      "te_flag_config_value\030\t \003(\0132\024.aapt.pb.Con" +
-      "figValue\"\200\001\n\013ConfigValue\022&\n\006config\030\001 \001(\013" +
-      "2\026.aapt.pb.Configuration\022\035\n\005value\030\002 \001(\0132" +
-      "\016.aapt.pb.Value\022$\n\034uses_readwrite_featur" +
-      "e_flags\030\004 \001(\010J\004\010\003\020\004\"\241\001\n\005Value\022\037\n\006source\030" +
-      "\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022" +
-      "\014\n\004weak\030\003 \001(\010\022\035\n\004item\030\004 \001(\0132\r.aapt.pb.It" +
-      "emH\000\0220\n\016compound_value\030\005 \001(\0132\026.aapt.pb.C" +
-      "ompoundValueH\000B\007\n\005value\"\313\002\n\004Item\022!\n\003ref\030" +
-      "\001 \001(\0132\022.aapt.pb.ReferenceH\000\022\036\n\003str\030\002 \001(\013" +
-      "2\017.aapt.pb.StringH\000\022%\n\007raw_str\030\003 \001(\0132\022.a" +
-      "apt.pb.RawStringH\000\022+\n\nstyled_str\030\004 \001(\0132\025" +
-      ".aapt.pb.StyledStringH\000\022&\n\004file\030\005 \001(\0132\026." +
-      "aapt.pb.FileReferenceH\000\022\031\n\002id\030\006 \001(\0132\013.aa" +
-      "pt.pb.IdH\000\022\"\n\004prim\030\007 \001(\0132\022.aapt.pb.Primi" +
-      "tiveH\000\022\023\n\013flag_status\030\010 \001(\r\022\024\n\014flag_nega" +
-      "ted\030\t \001(\010\022\021\n\tflag_name\030\n \001(\tB\007\n\005value\"\255\002" +
-      "\n\rCompoundValue\022\"\n\004attr\030\001 \001(\0132\022.aapt.pb." +
-      "AttributeH\000\022\037\n\005style\030\002 \001(\0132\016.aapt.pb.Sty" +
-      "leH\000\022\'\n\tstyleable\030\003 \001(\0132\022.aapt.pb.Stylea" +
-      "bleH\000\022\037\n\005array\030\004 \001(\0132\016.aapt.pb.ArrayH\000\022!" +
-      "\n\006plural\030\005 \001(\0132\017.aapt.pb.PluralH\000\022#\n\005mac" +
-      "ro\030\006 \001(\0132\022.aapt.pb.MacroBodyH\000\022\023\n\013flag_s" +
-      "tatus\030\007 \001(\r\022\024\n\014flag_negated\030\010 \001(\010\022\021\n\tfla" +
-      "g_name\030\t \001(\tB\007\n\005value\"\030\n\007Boolean\022\r\n\005valu" +
-      "e\030\001 \001(\010\"\320\001\n\tReference\022%\n\004type\030\001 \001(\0162\027.aa" +
-      "pt.pb.Reference.Type\022\n\n\002id\030\002 \001(\r\022\014\n\004name" +
-      "\030\003 \001(\t\022\017\n\007private\030\004 \001(\010\022$\n\nis_dynamic\030\005 " +
-      "\001(\0132\020.aapt.pb.Boolean\022\022\n\ntype_flags\030\006 \001(" +
-      "\r\022\021\n\tallow_raw\030\007 \001(\010\"$\n\004Type\022\r\n\tREFERENC" +
-      "E\020\000\022\r\n\tATTRIBUTE\020\001\"\004\n\002Id\"\027\n\006String\022\r\n\005va" +
-      "lue\030\001 \001(\t\"\032\n\tRawString\022\r\n\005value\030\001 \001(\t\"\203\001" +
-      "\n\014StyledString\022\r\n\005value\030\001 \001(\t\022(\n\004span\030\002 " +
-      "\003(\0132\032.aapt.pb.StyledString.Span\032:\n\004Span\022" +
-      "\013\n\003tag\030\001 \001(\t\022\022\n\nfirst_char\030\002 \001(\r\022\021\n\tlast" +
-      "_char\030\003 \001(\r\"\205\001\n\rFileReference\022\014\n\004path\030\001 " +
-      "\001(\t\022)\n\004type\030\002 \001(\0162\033.aapt.pb.FileReferenc" +
-      "e.Type\";\n\004Type\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n\n" +
-      "BINARY_XML\020\002\022\r\n\tPROTO_XML\020\003\"\203\004\n\tPrimitiv" +
-      "e\0221\n\nnull_value\030\001 \001(\0132\033.aapt.pb.Primitiv" +
-      "e.NullTypeH\000\0223\n\013empty_value\030\002 \001(\0132\034.aapt" +
-      ".pb.Primitive.EmptyTypeH\000\022\025\n\013float_value" +
-      "\030\003 \001(\002H\000\022\031\n\017dimension_value\030\r \001(\rH\000\022\030\n\016f" +
-      "raction_value\030\016 \001(\rH\000\022\033\n\021int_decimal_val" +
-      "ue\030\006 \001(\005H\000\022\037\n\025int_hexadecimal_value\030\007 \001(" +
-      "\rH\000\022\027\n\rboolean_value\030\010 \001(\010H\000\022\033\n\021color_ar" +
-      "gb8_value\030\t \001(\rH\000\022\032\n\020color_rgb8_value\030\n " +
-      "\001(\rH\000\022\033\n\021color_argb4_value\030\013 \001(\rH\000\022\032\n\020co" +
-      "lor_rgb4_value\030\014 \001(\rH\000\022(\n\032dimension_valu" +
-      "e_deprecated\030\004 \001(\002B\002\030\001H\000\022\'\n\031fraction_val" +
-      "ue_deprecated\030\005 \001(\002B\002\030\001H\000\032\n\n\010NullType\032\013\n" +
-      "\tEmptyTypeB\r\n\013oneof_value\"\220\003\n\tAttribute\022" +
-      "\024\n\014format_flags\030\001 \001(\r\022\017\n\007min_int\030\002 \001(\005\022\017" +
-      "\n\007max_int\030\003 \001(\005\022)\n\006symbol\030\004 \003(\0132\031.aapt.p" +
-      "b.Attribute.Symbol\032y\n\006Symbol\022\037\n\006source\030\001" +
-      " \001(\0132\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022 " +
-      "\n\004name\030\003 \001(\0132\022.aapt.pb.Reference\022\r\n\005valu" +
-      "e\030\004 \001(\r\022\014\n\004type\030\005 \001(\r\"\244\001\n\013FormatFlags\022\010\n" +
-      "\004NONE\020\000\022\t\n\003ANY\020\377\377\003\022\r\n\tREFERENCE\020\001\022\n\n\006STR" +
-      "ING\020\002\022\013\n\007INTEGER\020\004\022\013\n\007BOOLEAN\020\010\022\t\n\005COLOR" +
-      "\020\020\022\t\n\005FLOAT\020 \022\r\n\tDIMENSION\020@\022\r\n\010FRACTION" +
-      "\020\200\001\022\n\n\004ENUM\020\200\200\004\022\013\n\005FLAGS\020\200\200\010\"\361\001\n\005Style\022\"" +
-      "\n\006parent\030\001 \001(\0132\022.aapt.pb.Reference\022&\n\rpa" +
-      "rent_source\030\002 \001(\0132\017.aapt.pb.Source\022#\n\005en" +
-      "try\030\003 \003(\0132\024.aapt.pb.Style.Entry\032w\n\005Entry" +
-      "\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007com" +
-      "ment\030\002 \001(\t\022\037\n\003key\030\003 \001(\0132\022.aapt.pb.Refere" +
-      "nce\022\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"\221\001\n\tSty" +
-      "leable\022\'\n\005entry\030\001 \003(\0132\030.aapt.pb.Styleabl" +
-      "e.Entry\032[\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt." +
-      "pb.Source\022\017\n\007comment\030\002 \001(\t\022 \n\004attr\030\003 \001(\013" +
-      "2\022.aapt.pb.Reference\"\212\001\n\005Array\022\'\n\007elemen" +
-      "t\030\001 \003(\0132\026.aapt.pb.Array.Element\032X\n\007Eleme" +
-      "nt\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007c" +
-      "omment\030\002 \001(\t\022\033\n\004item\030\003 \001(\0132\r.aapt.pb.Ite" +
-      "m\"\357\001\n\006Plural\022$\n\005entry\030\001 \003(\0132\025.aapt.pb.Pl" +
-      "ural.Entry\032|\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aa" +
-      "pt.pb.Source\022\017\n\007comment\030\002 \001(\t\022$\n\005arity\030\003" +
-      " \001(\0162\025.aapt.pb.Plural.Arity\022\033\n\004item\030\004 \001(" +
-      "\0132\r.aapt.pb.Item\"A\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003O" +
-      "NE\020\001\022\007\n\003TWO\020\002\022\007\n\003FEW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTHE" +
-      "R\020\005\"r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt.p" +
-      "b.XmlElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006source" +
-      "\030\003 \001(\0132\027.aapt.pb.SourcePositionB\006\n\004node\"" +
-      "\333\001\n\nXmlElement\0224\n\025namespace_declaration\030" +
-      "\001 \003(\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespac" +
-      "e_uri\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030\004" +
-      " \003(\0132\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 \003" +
-      "(\0132\020.aapt.pb.XmlNode\022\024\n\014flag_negated\030\006 \001" +
-      "(\010\022\021\n\tflag_name\030\007 \001(\t\"T\n\014XmlNamespace\022\016\n" +
-      "\006prefix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001" +
-      "(\0132\027.aapt.pb.SourcePosition\"\246\001\n\014XmlAttri" +
-      "bute\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
-      "\t\022\r\n\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt." +
-      "pb.SourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$" +
-      "\n\rcompiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n" +
-      "\tMacroBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_" +
-      "string\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027un" +
-      "translatable_sections\030\003 \003(\0132\036.aapt.pb.Un" +
-      "translatableSection\0220\n\017namespace_stack\030\004" +
-      " \003(\0132\027.aapt.pb.NamespaceAlias\022\'\n\006source\030" +
-      "\005 \001(\0132\027.aapt.pb.SourcePosition\"J\n\016Namesp" +
-      "aceAlias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name" +
-      "\030\002 \001(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleStri" +
-      "ng\022\013\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb" +
-      ".StyleString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022" +
-      "\023\n\013start_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"" +
-      "?\n\025UntranslatableSection\022\023\n\013start_index\030" +
-      "\001 \001(\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android." +
-      "aaptb\006proto3"
+      "\014package_name\030\002 \001(\t\"\205\001\n\tByNameMap\022\026\n\016tar" +
+      "get_package\030\001 \001(\t\022\'\n\005entry\030\002 \003(\0132\030.aapt." +
+      "pb.ByNameMap.Entry\0327\n\005Entry\022\027\n\017compile_t" +
+      "ime_id\030\001 \001(\r\022\025\n\rresource_name\030\002 \001(\t\"\231\002\n\r" +
+      "ResourceTable\022(\n\013source_pool\030\001 \001(\0132\023.aap" +
+      "t.pb.StringPool\022!\n\007package\030\002 \003(\0132\020.aapt." +
+      "pb.Package\022)\n\013overlayable\030\003 \003(\0132\024.aapt.p" +
+      "b.Overlayable\0222\n\020tool_fingerprint\030\004 \003(\0132" +
+      "\030.aapt.pb.ToolFingerprint\0223\n\021dynamic_ref" +
+      "_table\030\005 \003(\0132\030.aapt.pb.DynamicRefTable\022\'" +
+      "\n\013by_name_map\030\006 \003(\0132\022.aapt.pb.ByNameMap\"" +
+      "\027\n\tPackageId\022\n\n\002id\030\001 \001(\r\"d\n\007Package\022&\n\np" +
+      "ackage_id\030\001 \001(\0132\022.aapt.pb.PackageId\022\024\n\014p" +
+      "ackage_name\030\002 \001(\t\022\033\n\004type\030\003 \003(\0132\r.aapt.p" +
+      "b.Type\"\024\n\006TypeId\022\n\n\002id\030\001 \001(\r\"U\n\004Type\022 \n\007" +
+      "type_id\030\001 \001(\0132\017.aapt.pb.TypeId\022\014\n\004name\030\002" +
+      " \001(\t\022\035\n\005entry\030\003 \003(\0132\016.aapt.pb.Entry\"\253\001\n\n" +
+      "Visibility\022(\n\005level\030\001 \001(\0162\031.aapt.pb.Visi" +
+      "bility.Level\022\037\n\006source\030\002 \001(\0132\017.aapt.pb.S" +
+      "ource\022\017\n\007comment\030\003 \001(\t\022\022\n\nstaged_api\030\004 \001" +
+      "(\010\"-\n\005Level\022\013\n\007UNKNOWN\020\000\022\013\n\007PRIVATE\020\001\022\n\n" +
+      "\006PUBLIC\020\002\"<\n\010AllowNew\022\037\n\006source\030\001 \001(\0132\017." +
+      "aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\"K\n\013Overl" +
+      "ayable\022\014\n\004name\030\001 \001(\t\022\037\n\006source\030\002 \001(\0132\017.a" +
+      "apt.pb.Source\022\r\n\005actor\030\003 \001(\t\"\225\002\n\017Overlay" +
+      "ableItem\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Sourc" +
+      "e\022\017\n\007comment\030\002 \001(\t\022/\n\006policy\030\003 \003(\0162\037.aap" +
+      "t.pb.OverlayableItem.Policy\022\027\n\017overlayab" +
+      "le_idx\030\004 \001(\r\"\205\001\n\006Policy\022\010\n\004NONE\020\000\022\n\n\006PUB" +
+      "LIC\020\001\022\n\n\006SYSTEM\020\002\022\n\n\006VENDOR\020\003\022\013\n\007PRODUCT" +
+      "\020\004\022\r\n\tSIGNATURE\020\005\022\007\n\003ODM\020\006\022\007\n\003OEM\020\007\022\t\n\005A" +
+      "CTOR\020\010\022\024\n\020CONFIG_SIGNATURE\020\t\">\n\010StagedId" +
+      "\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\021\n\tsta" +
+      "ged_id\030\002 \001(\r\"\025\n\007EntryId\022\n\n\002id\030\001 \001(\r\"\203\003\n\005" +
+      "Entry\022\"\n\010entry_id\030\001 \001(\0132\020.aapt.pb.EntryI" +
+      "d\022\014\n\004name\030\002 \001(\t\022\'\n\nvisibility\030\003 \001(\0132\023.aa" +
+      "pt.pb.Visibility\022$\n\tallow_new\030\004 \001(\0132\021.aa" +
+      "pt.pb.AllowNew\0222\n\020overlayable_item\030\005 \001(\013" +
+      "2\030.aapt.pb.OverlayableItem\022*\n\014config_val" +
+      "ue\030\006 \003(\0132\024.aapt.pb.ConfigValue\022$\n\tstaged" +
+      "_id\030\007 \001(\0132\021.aapt.pb.StagedId\0228\n\032flag_dis" +
+      "abled_config_value\030\010 \003(\0132\024.aapt.pb.Confi" +
+      "gValue\0229\n\033readwrite_flag_config_value\030\t " +
+      "\003(\0132\024.aapt.pb.ConfigValue\"\200\001\n\013ConfigValu" +
+      "e\022&\n\006config\030\001 \001(\0132\026.aapt.pb.Configuratio" +
+      "n\022\035\n\005value\030\002 \001(\0132\016.aapt.pb.Value\022$\n\034uses" +
+      "_readwrite_feature_flags\030\004 \001(\010J\004\010\003\020\004\"\241\001\n" +
+      "\005Value\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022" +
+      "\017\n\007comment\030\002 \001(\t\022\014\n\004weak\030\003 \001(\010\022\035\n\004item\030\004" +
+      " \001(\0132\r.aapt.pb.ItemH\000\0220\n\016compound_value\030" +
+      "\005 \001(\0132\026.aapt.pb.CompoundValueH\000B\007\n\005value" +
+      "\"\313\002\n\004Item\022!\n\003ref\030\001 \001(\0132\022.aapt.pb.Referen" +
+      "ceH\000\022\036\n\003str\030\002 \001(\0132\017.aapt.pb.StringH\000\022%\n\007" +
+      "raw_str\030\003 \001(\0132\022.aapt.pb.RawStringH\000\022+\n\ns" +
+      "tyled_str\030\004 \001(\0132\025.aapt.pb.StyledStringH\000" +
+      "\022&\n\004file\030\005 \001(\0132\026.aapt.pb.FileReferenceH\000" +
+      "\022\031\n\002id\030\006 \001(\0132\013.aapt.pb.IdH\000\022\"\n\004prim\030\007 \001(" +
+      "\0132\022.aapt.pb.PrimitiveH\000\022\023\n\013flag_status\030\010" +
+      " \001(\r\022\024\n\014flag_negated\030\t \001(\010\022\021\n\tflag_name\030" +
+      "\n \001(\tB\007\n\005value\"\255\002\n\rCompoundValue\022\"\n\004attr" +
+      "\030\001 \001(\0132\022.aapt.pb.AttributeH\000\022\037\n\005style\030\002 " +
+      "\001(\0132\016.aapt.pb.StyleH\000\022\'\n\tstyleable\030\003 \001(\013" +
+      "2\022.aapt.pb.StyleableH\000\022\037\n\005array\030\004 \001(\0132\016." +
+      "aapt.pb.ArrayH\000\022!\n\006plural\030\005 \001(\0132\017.aapt.p" +
+      "b.PluralH\000\022#\n\005macro\030\006 \001(\0132\022.aapt.pb.Macr" +
+      "oBodyH\000\022\023\n\013flag_status\030\007 \001(\r\022\024\n\014flag_neg" +
+      "ated\030\010 \001(\010\022\021\n\tflag_name\030\t \001(\tB\007\n\005value\"\030" +
+      "\n\007Boolean\022\r\n\005value\030\001 \001(\010\"\343\001\n\tReference\022%" +
+      "\n\004type\030\001 \001(\0162\027.aapt.pb.Reference.Type\022\n\n" +
+      "\002id\030\002 \001(\r\022\014\n\004name\030\003 \001(\t\022\017\n\007private\030\004 \001(\010" +
+      "\022$\n\nis_dynamic\030\005 \001(\0132\020.aapt.pb.Boolean\022\022" +
+      "\n\ntype_flags\030\006 \001(\r\022\021\n\tallow_raw\030\007 \001(\010\022\021\n" +
+      "\tis_public\030\010 \001(\010\"$\n\004Type\022\r\n\tREFERENCE\020\000\022" +
+      "\r\n\tATTRIBUTE\020\001\"\004\n\002Id\"\027\n\006String\022\r\n\005value\030" +
+      "\001 \001(\t\"\032\n\tRawString\022\r\n\005value\030\001 \001(\t\"\203\001\n\014St" +
+      "yledString\022\r\n\005value\030\001 \001(\t\022(\n\004span\030\002 \003(\0132" +
+      "\032.aapt.pb.StyledString.Span\032:\n\004Span\022\013\n\003t" +
+      "ag\030\001 \001(\t\022\022\n\nfirst_char\030\002 \001(\r\022\021\n\tlast_cha" +
+      "r\030\003 \001(\r\"\205\001\n\rFileReference\022\014\n\004path\030\001 \001(\t\022" +
+      ")\n\004type\030\002 \001(\0162\033.aapt.pb.FileReference.Ty" +
+      "pe\";\n\004Type\022\013\n\007UNKNOWN\020\000\022\007\n\003PNG\020\001\022\016\n\nBINA" +
+      "RY_XML\020\002\022\r\n\tPROTO_XML\020\003\"\203\004\n\tPrimitive\0221\n" +
+      "\nnull_value\030\001 \001(\0132\033.aapt.pb.Primitive.Nu" +
+      "llTypeH\000\0223\n\013empty_value\030\002 \001(\0132\034.aapt.pb." +
+      "Primitive.EmptyTypeH\000\022\025\n\013float_value\030\003 \001" +
+      "(\002H\000\022\031\n\017dimension_value\030\r \001(\rH\000\022\030\n\016fract" +
+      "ion_value\030\016 \001(\rH\000\022\033\n\021int_decimal_value\030\006" +
+      " \001(\005H\000\022\037\n\025int_hexadecimal_value\030\007 \001(\rH\000\022" +
+      "\027\n\rboolean_value\030\010 \001(\010H\000\022\033\n\021color_argb8_" +
+      "value\030\t \001(\rH\000\022\032\n\020color_rgb8_value\030\n \001(\rH" +
+      "\000\022\033\n\021color_argb4_value\030\013 \001(\rH\000\022\032\n\020color_" +
+      "rgb4_value\030\014 \001(\rH\000\022(\n\032dimension_value_de" +
+      "precated\030\004 \001(\002B\002\030\001H\000\022\'\n\031fraction_value_d" +
+      "eprecated\030\005 \001(\002B\002\030\001H\000\032\n\n\010NullType\032\013\n\tEmp" +
+      "tyTypeB\r\n\013oneof_value\"\220\003\n\tAttribute\022\024\n\014f" +
+      "ormat_flags\030\001 \001(\r\022\017\n\007min_int\030\002 \001(\005\022\017\n\007ma" +
+      "x_int\030\003 \001(\005\022)\n\006symbol\030\004 \003(\0132\031.aapt.pb.At" +
+      "tribute.Symbol\032y\n\006Symbol\022\037\n\006source\030\001 \001(\013" +
+      "2\017.aapt.pb.Source\022\017\n\007comment\030\002 \001(\t\022 \n\004na" +
+      "me\030\003 \001(\0132\022.aapt.pb.Reference\022\r\n\005value\030\004 " +
+      "\001(\r\022\014\n\004type\030\005 \001(\r\"\244\001\n\013FormatFlags\022\010\n\004NON" +
+      "E\020\000\022\t\n\003ANY\020\377\377\003\022\r\n\tREFERENCE\020\001\022\n\n\006STRING\020" +
+      "\002\022\013\n\007INTEGER\020\004\022\013\n\007BOOLEAN\020\010\022\t\n\005COLOR\020\020\022\t" +
+      "\n\005FLOAT\020 \022\r\n\tDIMENSION\020@\022\r\n\010FRACTION\020\200\001\022" +
+      "\n\n\004ENUM\020\200\200\004\022\013\n\005FLAGS\020\200\200\010\"\361\001\n\005Style\022\"\n\006pa" +
+      "rent\030\001 \001(\0132\022.aapt.pb.Reference\022&\n\rparent" +
+      "_source\030\002 \001(\0132\017.aapt.pb.Source\022#\n\005entry\030" +
+      "\003 \003(\0132\024.aapt.pb.Style.Entry\032w\n\005Entry\022\037\n\006" +
+      "source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comment" +
+      "\030\002 \001(\t\022\037\n\003key\030\003 \001(\0132\022.aapt.pb.Reference\022" +
+      "\033\n\004item\030\004 \001(\0132\r.aapt.pb.Item\"\221\001\n\tStyleab" +
+      "le\022\'\n\005entry\030\001 \003(\0132\030.aapt.pb.Styleable.En" +
+      "try\032[\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt.pb.S" +
+      "ource\022\017\n\007comment\030\002 \001(\t\022 \n\004attr\030\003 \001(\0132\022.a" +
+      "apt.pb.Reference\"\212\001\n\005Array\022\'\n\007element\030\001 " +
+      "\003(\0132\026.aapt.pb.Array.Element\032X\n\007Element\022\037" +
+      "\n\006source\030\001 \001(\0132\017.aapt.pb.Source\022\017\n\007comme" +
+      "nt\030\002 \001(\t\022\033\n\004item\030\003 \001(\0132\r.aapt.pb.Item\"\357\001" +
+      "\n\006Plural\022$\n\005entry\030\001 \003(\0132\025.aapt.pb.Plural" +
+      ".Entry\032|\n\005Entry\022\037\n\006source\030\001 \001(\0132\017.aapt.p" +
+      "b.Source\022\017\n\007comment\030\002 \001(\t\022$\n\005arity\030\003 \001(\016" +
+      "2\025.aapt.pb.Plural.Arity\022\033\n\004item\030\004 \001(\0132\r." +
+      "aapt.pb.Item\"A\n\005Arity\022\010\n\004ZERO\020\000\022\007\n\003ONE\020\001" +
+      "\022\007\n\003TWO\020\002\022\007\n\003FEW\020\003\022\010\n\004MANY\020\004\022\t\n\005OTHER\020\005\"" +
+      "r\n\007XmlNode\022&\n\007element\030\001 \001(\0132\023.aapt.pb.Xm" +
+      "lElementH\000\022\016\n\004text\030\002 \001(\tH\000\022\'\n\006source\030\003 \001" +
+      "(\0132\027.aapt.pb.SourcePositionB\006\n\004node\"\333\001\n\n" +
+      "XmlElement\0224\n\025namespace_declaration\030\001 \003(" +
+      "\0132\025.aapt.pb.XmlNamespace\022\025\n\rnamespace_ur" +
+      "i\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022(\n\tattribute\030\004 \003(\013" +
+      "2\025.aapt.pb.XmlAttribute\022\037\n\005child\030\005 \003(\0132\020" +
+      ".aapt.pb.XmlNode\022\024\n\014flag_negated\030\006 \001(\010\022\021" +
+      "\n\tflag_name\030\007 \001(\t\"T\n\014XmlNamespace\022\016\n\006pre" +
+      "fix\030\001 \001(\t\022\013\n\003uri\030\002 \001(\t\022\'\n\006source\030\003 \001(\0132\027" +
+      ".aapt.pb.SourcePosition\"\246\001\n\014XmlAttribute" +
+      "\022\025\n\rnamespace_uri\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n" +
+      "\005value\030\003 \001(\t\022\'\n\006source\030\004 \001(\0132\027.aapt.pb.S" +
+      "ourcePosition\022\023\n\013resource_id\030\005 \001(\r\022$\n\rco" +
+      "mpiled_item\030\006 \001(\0132\r.aapt.pb.Item\"\347\001\n\tMac" +
+      "roBody\022\022\n\nraw_string\030\001 \001(\t\022*\n\014style_stri" +
+      "ng\030\002 \001(\0132\024.aapt.pb.StyleString\022?\n\027untran" +
+      "slatable_sections\030\003 \003(\0132\036.aapt.pb.Untran" +
+      "slatableSection\0220\n\017namespace_stack\030\004 \003(\013" +
+      "2\027.aapt.pb.NamespaceAlias\022\'\n\006source\030\005 \001(" +
+      "\0132\027.aapt.pb.SourcePosition\"J\n\016NamespaceA" +
+      "lias\022\016\n\006prefix\030\001 \001(\t\022\024\n\014package_name\030\002 \001" +
+      "(\t\022\022\n\nis_private\030\003 \001(\010\"\202\001\n\013StyleString\022\013" +
+      "\n\003str\030\001 \001(\t\022(\n\005spans\030\002 \003(\0132\031.aapt.pb.Sty" +
+      "leString.Span\032<\n\004Span\022\014\n\004name\030\001 \001(\t\022\023\n\013s" +
+      "tart_index\030\002 \001(\r\022\021\n\tend_index\030\003 \001(\r\"?\n\025U" +
+      "ntranslatableSection\022\023\n\013start_index\030\001 \001(" +
+      "\004\022\021\n\tend_index\030\002 \001(\004B\022\n\020com.android.aapt" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -58154,134 +60199,146 @@ public final class Resources {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_DynamicRefTable_descriptor,
         new java.lang.String[] { "PackageId", "PackageName", });
-    internal_static_aapt_pb_ResourceTable_descriptor =
+    internal_static_aapt_pb_ByNameMap_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_aapt_pb_ByNameMap_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aapt_pb_ByNameMap_descriptor,
+        new java.lang.String[] { "TargetPackage", "Entry", });
+    internal_static_aapt_pb_ByNameMap_Entry_descriptor =
+      internal_static_aapt_pb_ByNameMap_descriptor.getNestedTypes().get(0);
+    internal_static_aapt_pb_ByNameMap_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_aapt_pb_ByNameMap_Entry_descriptor,
+        new java.lang.String[] { "CompileTimeId", "ResourceName", });
+    internal_static_aapt_pb_ResourceTable_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_aapt_pb_ResourceTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_ResourceTable_descriptor,
-        new java.lang.String[] { "SourcePool", "Package", "Overlayable", "ToolFingerprint", "DynamicRefTable", });
+        new java.lang.String[] { "SourcePool", "Package", "Overlayable", "ToolFingerprint", "DynamicRefTable", "ByNameMap", });
     internal_static_aapt_pb_PackageId_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_aapt_pb_PackageId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_PackageId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_aapt_pb_Package_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_aapt_pb_Package_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Package_descriptor,
         new java.lang.String[] { "PackageId", "PackageName", "Type", });
     internal_static_aapt_pb_TypeId_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_aapt_pb_TypeId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_TypeId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_aapt_pb_Type_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_aapt_pb_Type_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Type_descriptor,
         new java.lang.String[] { "TypeId", "Name", "Entry", });
     internal_static_aapt_pb_Visibility_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_aapt_pb_Visibility_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Visibility_descriptor,
         new java.lang.String[] { "Level", "Source", "Comment", "StagedApi", });
     internal_static_aapt_pb_AllowNew_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_aapt_pb_AllowNew_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_AllowNew_descriptor,
         new java.lang.String[] { "Source", "Comment", });
     internal_static_aapt_pb_Overlayable_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_aapt_pb_Overlayable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Overlayable_descriptor,
         new java.lang.String[] { "Name", "Source", "Actor", });
     internal_static_aapt_pb_OverlayableItem_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_aapt_pb_OverlayableItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_OverlayableItem_descriptor,
         new java.lang.String[] { "Source", "Comment", "Policy", "OverlayableIdx", });
     internal_static_aapt_pb_StagedId_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_aapt_pb_StagedId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_StagedId_descriptor,
         new java.lang.String[] { "Source", "StagedId", });
     internal_static_aapt_pb_EntryId_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_aapt_pb_EntryId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_EntryId_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_aapt_pb_Entry_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_aapt_pb_Entry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Entry_descriptor,
         new java.lang.String[] { "EntryId", "Name", "Visibility", "AllowNew", "OverlayableItem", "ConfigValue", "StagedId", "FlagDisabledConfigValue", "ReadwriteFlagConfigValue", });
     internal_static_aapt_pb_ConfigValue_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_aapt_pb_ConfigValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_ConfigValue_descriptor,
         new java.lang.String[] { "Config", "Value", "UsesReadwriteFeatureFlags", });
     internal_static_aapt_pb_Value_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_aapt_pb_Value_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Value_descriptor,
         new java.lang.String[] { "Source", "Comment", "Weak", "Item", "CompoundValue", "Value", });
     internal_static_aapt_pb_Item_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_aapt_pb_Item_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Item_descriptor,
         new java.lang.String[] { "Ref", "Str", "RawStr", "StyledStr", "File", "Id", "Prim", "FlagStatus", "FlagNegated", "FlagName", "Value", });
     internal_static_aapt_pb_CompoundValue_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_aapt_pb_CompoundValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_CompoundValue_descriptor,
         new java.lang.String[] { "Attr", "Style", "Styleable", "Array", "Plural", "Macro", "FlagStatus", "FlagNegated", "FlagName", "Value", });
     internal_static_aapt_pb_Boolean_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_aapt_pb_Boolean_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Boolean_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_aapt_pb_Reference_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_aapt_pb_Reference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Reference_descriptor,
-        new java.lang.String[] { "Type", "Id", "Name", "Private", "IsDynamic", "TypeFlags", "AllowRaw", });
+        new java.lang.String[] { "Type", "Id", "Name", "Private", "IsDynamic", "TypeFlags", "AllowRaw", "IsPublic", });
     internal_static_aapt_pb_Id_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_aapt_pb_Id_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Id_descriptor,
         new java.lang.String[] { });
     internal_static_aapt_pb_String_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_aapt_pb_String_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_String_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_aapt_pb_RawString_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_aapt_pb_RawString_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_RawString_descriptor,
         new java.lang.String[] { "Value", });
     internal_static_aapt_pb_StyledString_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_aapt_pb_StyledString_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_StyledString_descriptor,
@@ -58293,13 +60350,13 @@ public final class Resources {
         internal_static_aapt_pb_StyledString_Span_descriptor,
         new java.lang.String[] { "Tag", "FirstChar", "LastChar", });
     internal_static_aapt_pb_FileReference_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_aapt_pb_FileReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_FileReference_descriptor,
         new java.lang.String[] { "Path", "Type", });
     internal_static_aapt_pb_Primitive_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_aapt_pb_Primitive_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Primitive_descriptor,
@@ -58317,7 +60374,7 @@ public final class Resources {
         internal_static_aapt_pb_Primitive_EmptyType_descriptor,
         new java.lang.String[] { });
     internal_static_aapt_pb_Attribute_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_aapt_pb_Attribute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Attribute_descriptor,
@@ -58329,7 +60386,7 @@ public final class Resources {
         internal_static_aapt_pb_Attribute_Symbol_descriptor,
         new java.lang.String[] { "Source", "Comment", "Name", "Value", "Type", });
     internal_static_aapt_pb_Style_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_aapt_pb_Style_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Style_descriptor,
@@ -58341,7 +60398,7 @@ public final class Resources {
         internal_static_aapt_pb_Style_Entry_descriptor,
         new java.lang.String[] { "Source", "Comment", "Key", "Item", });
     internal_static_aapt_pb_Styleable_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_aapt_pb_Styleable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Styleable_descriptor,
@@ -58353,7 +60410,7 @@ public final class Resources {
         internal_static_aapt_pb_Styleable_Entry_descriptor,
         new java.lang.String[] { "Source", "Comment", "Attr", });
     internal_static_aapt_pb_Array_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_aapt_pb_Array_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Array_descriptor,
@@ -58365,7 +60422,7 @@ public final class Resources {
         internal_static_aapt_pb_Array_Element_descriptor,
         new java.lang.String[] { "Source", "Comment", "Item", });
     internal_static_aapt_pb_Plural_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_aapt_pb_Plural_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_Plural_descriptor,
@@ -58377,43 +60434,43 @@ public final class Resources {
         internal_static_aapt_pb_Plural_Entry_descriptor,
         new java.lang.String[] { "Source", "Comment", "Arity", "Item", });
     internal_static_aapt_pb_XmlNode_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_aapt_pb_XmlNode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_XmlNode_descriptor,
         new java.lang.String[] { "Element", "Text", "Source", "Node", });
     internal_static_aapt_pb_XmlElement_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_aapt_pb_XmlElement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_XmlElement_descriptor,
         new java.lang.String[] { "NamespaceDeclaration", "NamespaceUri", "Name", "Attribute", "Child", "FlagNegated", "FlagName", });
     internal_static_aapt_pb_XmlNamespace_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_aapt_pb_XmlNamespace_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_XmlNamespace_descriptor,
         new java.lang.String[] { "Prefix", "Uri", "Source", });
     internal_static_aapt_pb_XmlAttribute_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_aapt_pb_XmlAttribute_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_XmlAttribute_descriptor,
         new java.lang.String[] { "NamespaceUri", "Name", "Value", "Source", "ResourceId", "CompiledItem", });
     internal_static_aapt_pb_MacroBody_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_aapt_pb_MacroBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_MacroBody_descriptor,
         new java.lang.String[] { "RawString", "StyleString", "UntranslatableSections", "NamespaceStack", "Source", });
     internal_static_aapt_pb_NamespaceAlias_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_aapt_pb_NamespaceAlias_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_NamespaceAlias_descriptor,
         new java.lang.String[] { "Prefix", "PackageName", "IsPrivate", });
     internal_static_aapt_pb_StyleString_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_aapt_pb_StyleString_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_StyleString_descriptor,
@@ -58425,7 +60482,7 @@ public final class Resources {
         internal_static_aapt_pb_StyleString_Span_descriptor,
         new java.lang.String[] { "Name", "StartIndex", "EndIndex", });
     internal_static_aapt_pb_UntranslatableSection_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_aapt_pb_UntranslatableSection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_aapt_pb_UntranslatableSection_descriptor,

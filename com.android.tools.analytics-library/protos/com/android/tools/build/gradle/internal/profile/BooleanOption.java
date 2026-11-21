@@ -1005,6 +1005,10 @@ public enum BooleanOption
    * <code>ENABLE_MARKDOWN_TEST_REPORT = 245;</code>
    */
   ENABLE_MARKDOWN_TEST_REPORT(245),
+  /**
+   * <code>ENABLE_SHARED_LIBRARIES = 246;</code>
+   */
+  ENABLE_SHARED_LIBRARIES(246),
   UNRECOGNIZED(-1),
   ;
 
@@ -1992,6 +1996,10 @@ public enum BooleanOption
    * <code>ENABLE_MARKDOWN_TEST_REPORT = 245;</code>
    */
   public static final int ENABLE_MARKDOWN_TEST_REPORT_VALUE = 245;
+  /**
+   * <code>ENABLE_SHARED_LIBRARIES = 246;</code>
+   */
+  public static final int ENABLE_SHARED_LIBRARIES_VALUE = 246;
 
 
   public final int getNumber() {
@@ -2264,6 +2272,7 @@ public enum BooleanOption
       case 243: return ENABLE_BACKUP_TEST;
       case 244: return SCREENSHOT_TEST_USE_SOURCE_REFERENCE_DIRECTORIES;
       case 245: return ENABLE_MARKDOWN_TEST_REPORT;
+      case 246: return ENABLE_SHARED_LIBRARIES;
       default: return null;
     }
   }

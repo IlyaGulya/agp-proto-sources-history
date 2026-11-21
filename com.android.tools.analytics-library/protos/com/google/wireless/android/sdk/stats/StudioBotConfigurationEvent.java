@@ -5830,6 +5830,4199 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface AuthenticationEventOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.AuthenticationEvent)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     * @return Whether the authStarted field is set.
+     */
+    boolean hasAuthStarted();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     * @return The authStarted.
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getAuthStarted();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder getAuthStartedOrBuilder();
+
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     * @return Whether the authStep field is set.
+     */
+    boolean hasAuthStep();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     * @return The authStep.
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getAuthStep();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder getAuthStepOrBuilder();
+
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     * @return Whether the authCompleted field is set.
+     */
+    boolean hasAuthCompleted();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     * @return The authCompleted.
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getAuthCompleted();
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     */
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder getAuthCompletedOrBuilder();
+
+    com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.EventCase getEventCase();
+  }
+  /**
+   * <pre>
+   * Tracks the authentication funnel for an agent (e.g. ACP agents).
+   * </pre>
+   *
+   * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent}
+   */
+  public static final class AuthenticationEvent extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent)
+      AuthenticationEventOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AuthenticationEvent.newBuilder() to construct.
+    private AuthenticationEvent(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AuthenticationEvent() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AuthenticationEvent();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod}
+     */
+    public enum AuthMethod
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <pre>
+       * Personal / consumer OAuth (e.g. Google OAuth, ChatGPT subscription,
+       * GitHub Copilot).
+       * </pre>
+       *
+       * <code>OAUTH_PERSONAL = 1;</code>
+       */
+      OAUTH_PERSONAL(1),
+      /**
+       * <pre>
+       * Enterprise / cloud OAuth (e.g. Vertex AI, Anthropic Console,
+       * Enterprise Agent Platform).
+       * </pre>
+       *
+       * <code>OAUTH_BUSINESS = 2;</code>
+       */
+      OAUTH_BUSINESS(2),
+      /**
+       * <pre>
+       * API key or token entered via IDE secrets / environment variables.
+       * </pre>
+       *
+       * <code>API_KEY = 3;</code>
+       */
+      API_KEY(3),
+      /**
+       * <code>OTHER = 4;</code>
+       */
+      OTHER(4),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <pre>
+       * Personal / consumer OAuth (e.g. Google OAuth, ChatGPT subscription,
+       * GitHub Copilot).
+       * </pre>
+       *
+       * <code>OAUTH_PERSONAL = 1;</code>
+       */
+      public static final int OAUTH_PERSONAL_VALUE = 1;
+      /**
+       * <pre>
+       * Enterprise / cloud OAuth (e.g. Vertex AI, Anthropic Console,
+       * Enterprise Agent Platform).
+       * </pre>
+       *
+       * <code>OAUTH_BUSINESS = 2;</code>
+       */
+      public static final int OAUTH_BUSINESS_VALUE = 2;
+      /**
+       * <pre>
+       * API key or token entered via IDE secrets / environment variables.
+       * </pre>
+       *
+       * <code>API_KEY = 3;</code>
+       */
+      public static final int API_KEY_VALUE = 3;
+      /**
+       * <code>OTHER = 4;</code>
+       */
+      public static final int OTHER_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AuthMethod valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AuthMethod forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return OAUTH_PERSONAL;
+          case 2: return OAUTH_BUSINESS;
+          case 3: return API_KEY;
+          case 4: return OTHER;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AuthMethod>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AuthMethod> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AuthMethod>() {
+              public AuthMethod findValueByNumber(int number) {
+                return AuthMethod.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final AuthMethod[] VALUES = values();
+
+      public static AuthMethod valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AuthMethod(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod)
+    }
+
+    public interface AuthStartedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+       * @return Whether the entryPoint field is set.
+       */
+      boolean hasEntryPoint();
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+       * @return The entryPoint.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint getEntryPoint();
+    }
+    /**
+     * <pre>
+     * Logged when an authentication flow is initiated by the user.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted}
+     */
+    public static final class AuthStarted extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)
+        AuthStartedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuthStarted.newBuilder() to construct.
+      private AuthStarted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuthStarted() {
+        entryPoint_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuthStarted();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStarted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStarted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint}
+       */
+      public enum EntryPoint
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        UNKNOWN(0),
+        /**
+         * <pre>
+         * Inline authentication prompt card in the chat timeline.
+         * </pre>
+         *
+         * <code>CHAT_TIMELINE = 1;</code>
+         */
+        CHAT_TIMELINE(1),
+        /**
+         * <pre>
+         * Sign-in / re-authenticate button in Agent Registry settings.
+         * </pre>
+         *
+         * <code>SETTINGS = 2;</code>
+         */
+        SETTINGS(2),
+        /**
+         * <code>OTHER = 3;</code>
+         */
+        OTHER(3),
+        ;
+
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        public static final int UNKNOWN_VALUE = 0;
+        /**
+         * <pre>
+         * Inline authentication prompt card in the chat timeline.
+         * </pre>
+         *
+         * <code>CHAT_TIMELINE = 1;</code>
+         */
+        public static final int CHAT_TIMELINE_VALUE = 1;
+        /**
+         * <pre>
+         * Sign-in / re-authenticate button in Agent Registry settings.
+         * </pre>
+         *
+         * <code>SETTINGS = 2;</code>
+         */
+        public static final int SETTINGS_VALUE = 2;
+        /**
+         * <code>OTHER = 3;</code>
+         */
+        public static final int OTHER_VALUE = 3;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static EntryPoint valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static EntryPoint forNumber(int value) {
+          switch (value) {
+            case 0: return UNKNOWN;
+            case 1: return CHAT_TIMELINE;
+            case 2: return SETTINGS;
+            case 3: return OTHER;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<EntryPoint>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            EntryPoint> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<EntryPoint>() {
+                public EntryPoint findValueByNumber(int number) {
+                  return EntryPoint.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final EntryPoint[] VALUES = values();
+
+        public static EntryPoint valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private EntryPoint(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint)
+      }
+
+      private int bitField0_;
+      public static final int ENTRY_POINT_FIELD_NUMBER = 1;
+      private int entryPoint_ = 0;
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+       * @return Whether the entryPoint field is set.
+       */
+      @java.lang.Override public boolean hasEntryPoint() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+       * @return The entryPoint.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint getEntryPoint() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint.forNumber(entryPoint_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint.UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, entryPoint_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, entryPoint_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) obj;
+
+        if (hasEntryPoint() != other.hasEntryPoint()) return false;
+        if (hasEntryPoint()) {
+          if (entryPoint_ != other.entryPoint_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasEntryPoint()) {
+          hash = (37 * hash) + ENTRY_POINT_FIELD_NUMBER;
+          hash = (53 * hash) + entryPoint_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Logged when an authentication flow is initiated by the user.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStarted_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStarted_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          entryPoint_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStarted_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted build() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted buildPartial() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.entryPoint_ = entryPoint_;
+            to_bitField0_ |= 0x00000001;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted other) {
+          if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance()) return this;
+          if (other.hasEntryPoint()) {
+            setEntryPoint(other.getEntryPoint());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(1, tmpRaw);
+                  } else {
+                    entryPoint_ = tmpRaw;
+                    bitField0_ |= 0x00000001;
+                  }
+                  break;
+                } // case 8
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int entryPoint_ = 0;
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+         * @return Whether the entryPoint field is set.
+         */
+        @java.lang.Override public boolean hasEntryPoint() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+         * @return The entryPoint.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint getEntryPoint() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint.forNumber(entryPoint_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint.UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+         * @param value The entryPoint to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEntryPoint(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          entryPoint_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.EntryPoint entry_point = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEntryPoint() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          entryPoint_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted)
+      private static final com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted();
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<AuthStarted>
+          PARSER = new com.google.protobuf.AbstractParser<AuthStarted>() {
+        @java.lang.Override
+        public AuthStarted parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuthStarted> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuthStarted> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AuthStepOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+       * @return Whether the page field is set.
+       */
+      boolean hasPage();
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+       * @return The page.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page getPage();
+
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+       * @return Whether the type field is set.
+       */
+      boolean hasType();
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+       * @return The type.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType getType();
+
+      /**
+       * <pre>
+       * Auth method selected or being configured on this step.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+       * @return Whether the selectedMethod field is set.
+       */
+      boolean hasSelectedMethod();
+      /**
+       * <pre>
+       * Auth method selected or being configured on this step.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+       * @return The selectedMethod.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getSelectedMethod();
+    }
+    /**
+     * <pre>
+     * Logged when the user performs an action on an authentication step.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep}
+     */
+    public static final class AuthStep extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)
+        AuthStepOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuthStep.newBuilder() to construct.
+      private AuthStep(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuthStep() {
+        page_ = 0;
+        type_ = 0;
+        selectedMethod_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuthStep();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStep_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStep_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page}
+       */
+      public enum Page
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        UNKNOWN(0),
+        /**
+         * <pre>
+         * Auth method selector (inline chat prompt or Settings dropdown).
+         * </pre>
+         *
+         * <code>METHOD_SELECTION = 1;</code>
+         */
+        METHOD_SELECTION(1),
+        /**
+         * <pre>
+         * In-flight authentication spinner with Cancel action.
+         * </pre>
+         *
+         * <code>AUTHENTICATING = 2;</code>
+         */
+        AUTHENTICATING(2),
+        /**
+         * <pre>
+         * Secret / environment variable editor dialog for API keys.
+         * </pre>
+         *
+         * <code>ENV_VAR_EDITOR = 3;</code>
+         */
+        ENV_VAR_EDITOR(3),
+        /**
+         * <code>OTHER = 4;</code>
+         */
+        OTHER(4),
+        ;
+
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        public static final int UNKNOWN_VALUE = 0;
+        /**
+         * <pre>
+         * Auth method selector (inline chat prompt or Settings dropdown).
+         * </pre>
+         *
+         * <code>METHOD_SELECTION = 1;</code>
+         */
+        public static final int METHOD_SELECTION_VALUE = 1;
+        /**
+         * <pre>
+         * In-flight authentication spinner with Cancel action.
+         * </pre>
+         *
+         * <code>AUTHENTICATING = 2;</code>
+         */
+        public static final int AUTHENTICATING_VALUE = 2;
+        /**
+         * <pre>
+         * Secret / environment variable editor dialog for API keys.
+         * </pre>
+         *
+         * <code>ENV_VAR_EDITOR = 3;</code>
+         */
+        public static final int ENV_VAR_EDITOR_VALUE = 3;
+        /**
+         * <code>OTHER = 4;</code>
+         */
+        public static final int OTHER_VALUE = 4;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Page valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Page forNumber(int value) {
+          switch (value) {
+            case 0: return UNKNOWN;
+            case 1: return METHOD_SELECTION;
+            case 2: return AUTHENTICATING;
+            case 3: return ENV_VAR_EDITOR;
+            case 4: return OTHER;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Page>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Page> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Page>() {
+                public Page findValueByNumber(int number) {
+                  return Page.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Page[] VALUES = values();
+
+        public static Page valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Page(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page)
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType}
+       */
+      public enum ActionType
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>ACTION_UNKNOWN = 0;</code>
+         */
+        ACTION_UNKNOWN(0),
+        /**
+         * <pre>
+         * User clicked an auth method button, "Sign In", or saved API keys.
+         * </pre>
+         *
+         * <code>COMPLETED = 1;</code>
+         */
+        COMPLETED(1),
+        /**
+         * <pre>
+         * User clicked "Cancel" / dismissed the auth prompt or in-flight auth.
+         * </pre>
+         *
+         * <code>CANCELLED = 2;</code>
+         */
+        CANCELLED(2),
+        /**
+         * <code>ACTION_OTHER = 3;</code>
+         */
+        ACTION_OTHER(3),
+        ;
+
+        /**
+         * <code>ACTION_UNKNOWN = 0;</code>
+         */
+        public static final int ACTION_UNKNOWN_VALUE = 0;
+        /**
+         * <pre>
+         * User clicked an auth method button, "Sign In", or saved API keys.
+         * </pre>
+         *
+         * <code>COMPLETED = 1;</code>
+         */
+        public static final int COMPLETED_VALUE = 1;
+        /**
+         * <pre>
+         * User clicked "Cancel" / dismissed the auth prompt or in-flight auth.
+         * </pre>
+         *
+         * <code>CANCELLED = 2;</code>
+         */
+        public static final int CANCELLED_VALUE = 2;
+        /**
+         * <code>ACTION_OTHER = 3;</code>
+         */
+        public static final int ACTION_OTHER_VALUE = 3;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ActionType valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static ActionType forNumber(int value) {
+          switch (value) {
+            case 0: return ACTION_UNKNOWN;
+            case 1: return COMPLETED;
+            case 2: return CANCELLED;
+            case 3: return ACTION_OTHER;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<ActionType>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            ActionType> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<ActionType>() {
+                public ActionType findValueByNumber(int number) {
+                  return ActionType.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDescriptor().getEnumTypes().get(1);
+        }
+
+        private static final ActionType[] VALUES = values();
+
+        public static ActionType valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private ActionType(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType)
+      }
+
+      private int bitField0_;
+      public static final int PAGE_FIELD_NUMBER = 1;
+      private int page_ = 0;
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+       * @return Whether the page field is set.
+       */
+      @java.lang.Override public boolean hasPage() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+       * @return The page.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page getPage() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page.forNumber(page_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page.UNKNOWN : result;
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 2;
+      private int type_ = 0;
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override public boolean hasType() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+       * @return The type.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType getType() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType.forNumber(type_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType.ACTION_UNKNOWN : result;
+      }
+
+      public static final int SELECTED_METHOD_FIELD_NUMBER = 3;
+      private int selectedMethod_ = 0;
+      /**
+       * <pre>
+       * Auth method selected or being configured on this step.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+       * @return Whether the selectedMethod field is set.
+       */
+      @java.lang.Override public boolean hasSelectedMethod() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Auth method selected or being configured on this step.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+       * @return The selectedMethod.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getSelectedMethod() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(selectedMethod_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, page_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, type_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeEnum(3, selectedMethod_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, page_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, type_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, selectedMethod_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) obj;
+
+        if (hasPage() != other.hasPage()) return false;
+        if (hasPage()) {
+          if (page_ != other.page_) return false;
+        }
+        if (hasType() != other.hasType()) return false;
+        if (hasType()) {
+          if (type_ != other.type_) return false;
+        }
+        if (hasSelectedMethod() != other.hasSelectedMethod()) return false;
+        if (hasSelectedMethod()) {
+          if (selectedMethod_ != other.selectedMethod_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasPage()) {
+          hash = (37 * hash) + PAGE_FIELD_NUMBER;
+          hash = (53 * hash) + page_;
+        }
+        if (hasType()) {
+          hash = (37 * hash) + TYPE_FIELD_NUMBER;
+          hash = (53 * hash) + type_;
+        }
+        if (hasSelectedMethod()) {
+          hash = (37 * hash) + SELECTED_METHOD_FIELD_NUMBER;
+          hash = (53 * hash) + selectedMethod_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Logged when the user performs an action on an authentication step.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStep_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStep_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          page_ = 0;
+          type_ = 0;
+          selectedMethod_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthStep_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep build() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep buildPartial() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.page_ = page_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.type_ = type_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.selectedMethod_ = selectedMethod_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep other) {
+          if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance()) return this;
+          if (other.hasPage()) {
+            setPage(other.getPage());
+          }
+          if (other.hasType()) {
+            setType(other.getType());
+          }
+          if (other.hasSelectedMethod()) {
+            setSelectedMethod(other.getSelectedMethod());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(1, tmpRaw);
+                  } else {
+                    page_ = tmpRaw;
+                    bitField0_ |= 0x00000001;
+                  }
+                  break;
+                } // case 8
+                case 16: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(2, tmpRaw);
+                  } else {
+                    type_ = tmpRaw;
+                    bitField0_ |= 0x00000002;
+                  }
+                  break;
+                } // case 16
+                case 24: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    selectedMethod_ = tmpRaw;
+                    bitField0_ |= 0x00000004;
+                  }
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int page_ = 0;
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+         * @return Whether the page field is set.
+         */
+        @java.lang.Override public boolean hasPage() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+         * @return The page.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page getPage() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page.forNumber(page_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page.UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+         * @param value The page to set.
+         * @return This builder for chaining.
+         */
+        public Builder setPage(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          page_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Page page = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearPage() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          page_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int type_ = 0;
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+         * @return Whether the type field is set.
+         */
+        @java.lang.Override public boolean hasType() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType getType() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType.forNumber(type_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType.ACTION_UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.ActionType type = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int selectedMethod_ = 0;
+        /**
+         * <pre>
+         * Auth method selected or being configured on this step.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+         * @return Whether the selectedMethod field is set.
+         */
+        @java.lang.Override public boolean hasSelectedMethod() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Auth method selected or being configured on this step.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+         * @return The selectedMethod.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getSelectedMethod() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(selectedMethod_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * Auth method selected or being configured on this step.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+         * @param value The selectedMethod to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSelectedMethod(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          selectedMethod_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Auth method selected or being configured on this step.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod selected_method = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSelectedMethod() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          selectedMethod_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep)
+      private static final com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep();
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<AuthStep>
+          PARSER = new com.google.protobuf.AbstractParser<AuthStep>() {
+        @java.lang.Override
+        public AuthStep parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuthStep> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuthStep> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AuthCompletedOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+       * @return Whether the method field is set.
+       */
+      boolean hasMethod();
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+       * @return The method.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getMethod();
+
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+       * @return Whether the outcome field is set.
+       */
+      boolean hasOutcome();
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+       * @return The outcome.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome getOutcome();
+
+      /**
+       * <pre>
+       * Populated when outcome == FAILED.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+       * @return Whether the errorCode field is set.
+       */
+      boolean hasErrorCode();
+      /**
+       * <pre>
+       * Populated when outcome == FAILED.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+       * @return The errorCode.
+       */
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode getErrorCode();
+    }
+    /**
+     * <pre>
+     * Logged when an authentication attempt finishes.
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted}
+     */
+    public static final class AuthCompleted extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)
+        AuthCompletedOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AuthCompleted.newBuilder() to construct.
+      private AuthCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AuthCompleted() {
+        method_ = 0;
+        outcome_ = 0;
+        errorCode_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AuthCompleted();
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthCompleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder.class);
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome}
+       */
+      public enum Outcome
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        UNKNOWN(0),
+        /**
+         * <code>SUCCESS = 1;</code>
+         */
+        SUCCESS(1),
+        /**
+         * <pre>
+         * User cancelled while authentication was in progress.
+         * </pre>
+         *
+         * <code>CANCELLED = 2;</code>
+         */
+        CANCELLED(2),
+        /**
+         * <pre>
+         * Authentication attempt failed (see error_code for the cause).
+         * </pre>
+         *
+         * <code>FAILED = 3;</code>
+         */
+        FAILED(3),
+        /**
+         * <code>OTHER = 4;</code>
+         */
+        OTHER(4),
+        ;
+
+        /**
+         * <code>UNKNOWN = 0;</code>
+         */
+        public static final int UNKNOWN_VALUE = 0;
+        /**
+         * <code>SUCCESS = 1;</code>
+         */
+        public static final int SUCCESS_VALUE = 1;
+        /**
+         * <pre>
+         * User cancelled while authentication was in progress.
+         * </pre>
+         *
+         * <code>CANCELLED = 2;</code>
+         */
+        public static final int CANCELLED_VALUE = 2;
+        /**
+         * <pre>
+         * Authentication attempt failed (see error_code for the cause).
+         * </pre>
+         *
+         * <code>FAILED = 3;</code>
+         */
+        public static final int FAILED_VALUE = 3;
+        /**
+         * <code>OTHER = 4;</code>
+         */
+        public static final int OTHER_VALUE = 4;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static Outcome valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static Outcome forNumber(int value) {
+          switch (value) {
+            case 0: return UNKNOWN;
+            case 1: return SUCCESS;
+            case 2: return CANCELLED;
+            case 3: return FAILED;
+            case 4: return OTHER;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<Outcome>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            Outcome> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Outcome>() {
+                public Outcome findValueByNumber(int number) {
+                  return Outcome.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDescriptor().getEnumTypes().get(0);
+        }
+
+        private static final Outcome[] VALUES = values();
+
+        public static Outcome valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private Outcome(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome)
+      }
+
+      /**
+       * Protobuf enum {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode}
+       */
+      public enum ErrorCode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>ERROR_UNKNOWN = 0;</code>
+         */
+        ERROR_UNKNOWN(0),
+        /**
+         * <pre>
+         * Required API key or secret environment variable is not configured in
+         * IDE secrets / acp.json.
+         * </pre>
+         *
+         * <code>MISSING_SECRET = 1;</code>
+         */
+        MISSING_SECRET(1),
+        /**
+         * <pre>
+         * Requested auth method is not advertised or supported by the agent.
+         * </pre>
+         *
+         * <code>UNSUPPORTED_AUTH_METHOD = 2;</code>
+         */
+        UNSUPPORTED_AUTH_METHOD(2),
+        /**
+         * <pre>
+         * Agent binary is not installed or launch command is missing in
+         * acp.json.
+         * </pre>
+         *
+         * <code>AGENT_NOT_INSTALLED = 3;</code>
+         */
+        AGENT_NOT_INSTALLED(3),
+        /**
+         * <pre>
+         * Agent process exited prematurely or failed to start (e.g. npm
+         * ETARGET, bad binary path).
+         * </pre>
+         *
+         * <code>PROCESS_STARTUP_FAILED = 4;</code>
+         */
+        PROCESS_STARTUP_FAILED(4),
+        /**
+         * <pre>
+         * ACP `initialize` handshake timed out (60s deadline).
+         * </pre>
+         *
+         * <code>HANDSHAKE_TIMEOUT = 5;</code>
+         */
+        HANDSHAKE_TIMEOUT(5),
+        /**
+         * <pre>
+         * Transport pipe/socket disconnected or connection refused during auth.
+         * </pre>
+         *
+         * <code>CONNECTION_FAILED = 6;</code>
+         */
+        CONNECTION_FAILED(6),
+        /**
+         * <pre>
+         * Out-of-band CLI login command (`TerminalAuth`, e.g. `claude auth
+         * login`, `copilot login`) exited non-zero.
+         * </pre>
+         *
+         * <code>TERMINAL_AUTH_FAILED = 7;</code>
+         */
+        TERMINAL_AUTH_FAILED(7),
+        /**
+         * <pre>
+         * Reconnect after a successful terminal auth command failed.
+         * </pre>
+         *
+         * <code>RECONNECT_FAILED = 8;</code>
+         */
+        RECONNECT_FAILED(8),
+        /**
+         * <pre>
+         * Agent requires authentication or rejected credentials (e.g. 401
+         * Unauthorized, invalid API key, expired token, unsupported
+         * subscription tier).
+         * </pre>
+         *
+         * <code>AUTH_REQUIRED = 9;</code>
+         */
+        AUTH_REQUIRED(9),
+        /**
+         * <pre>
+         * Agent returned a JSON-RPC protocol/internal error (-32000, -32603)
+         * during `authenticate` / `auth/login`.
+         * </pre>
+         *
+         * <code>PROTOCOL_ERROR = 10;</code>
+         */
+        PROTOCOL_ERROR(10),
+        /**
+         * <code>ERROR_OTHER = 11;</code>
+         */
+        ERROR_OTHER(11),
+        ;
+
+        /**
+         * <code>ERROR_UNKNOWN = 0;</code>
+         */
+        public static final int ERROR_UNKNOWN_VALUE = 0;
+        /**
+         * <pre>
+         * Required API key or secret environment variable is not configured in
+         * IDE secrets / acp.json.
+         * </pre>
+         *
+         * <code>MISSING_SECRET = 1;</code>
+         */
+        public static final int MISSING_SECRET_VALUE = 1;
+        /**
+         * <pre>
+         * Requested auth method is not advertised or supported by the agent.
+         * </pre>
+         *
+         * <code>UNSUPPORTED_AUTH_METHOD = 2;</code>
+         */
+        public static final int UNSUPPORTED_AUTH_METHOD_VALUE = 2;
+        /**
+         * <pre>
+         * Agent binary is not installed or launch command is missing in
+         * acp.json.
+         * </pre>
+         *
+         * <code>AGENT_NOT_INSTALLED = 3;</code>
+         */
+        public static final int AGENT_NOT_INSTALLED_VALUE = 3;
+        /**
+         * <pre>
+         * Agent process exited prematurely or failed to start (e.g. npm
+         * ETARGET, bad binary path).
+         * </pre>
+         *
+         * <code>PROCESS_STARTUP_FAILED = 4;</code>
+         */
+        public static final int PROCESS_STARTUP_FAILED_VALUE = 4;
+        /**
+         * <pre>
+         * ACP `initialize` handshake timed out (60s deadline).
+         * </pre>
+         *
+         * <code>HANDSHAKE_TIMEOUT = 5;</code>
+         */
+        public static final int HANDSHAKE_TIMEOUT_VALUE = 5;
+        /**
+         * <pre>
+         * Transport pipe/socket disconnected or connection refused during auth.
+         * </pre>
+         *
+         * <code>CONNECTION_FAILED = 6;</code>
+         */
+        public static final int CONNECTION_FAILED_VALUE = 6;
+        /**
+         * <pre>
+         * Out-of-band CLI login command (`TerminalAuth`, e.g. `claude auth
+         * login`, `copilot login`) exited non-zero.
+         * </pre>
+         *
+         * <code>TERMINAL_AUTH_FAILED = 7;</code>
+         */
+        public static final int TERMINAL_AUTH_FAILED_VALUE = 7;
+        /**
+         * <pre>
+         * Reconnect after a successful terminal auth command failed.
+         * </pre>
+         *
+         * <code>RECONNECT_FAILED = 8;</code>
+         */
+        public static final int RECONNECT_FAILED_VALUE = 8;
+        /**
+         * <pre>
+         * Agent requires authentication or rejected credentials (e.g. 401
+         * Unauthorized, invalid API key, expired token, unsupported
+         * subscription tier).
+         * </pre>
+         *
+         * <code>AUTH_REQUIRED = 9;</code>
+         */
+        public static final int AUTH_REQUIRED_VALUE = 9;
+        /**
+         * <pre>
+         * Agent returned a JSON-RPC protocol/internal error (-32000, -32603)
+         * during `authenticate` / `auth/login`.
+         * </pre>
+         *
+         * <code>PROTOCOL_ERROR = 10;</code>
+         */
+        public static final int PROTOCOL_ERROR_VALUE = 10;
+        /**
+         * <code>ERROR_OTHER = 11;</code>
+         */
+        public static final int ERROR_OTHER_VALUE = 11;
+
+
+        public final int getNumber() {
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static ErrorCode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static ErrorCode forNumber(int value) {
+          switch (value) {
+            case 0: return ERROR_UNKNOWN;
+            case 1: return MISSING_SECRET;
+            case 2: return UNSUPPORTED_AUTH_METHOD;
+            case 3: return AGENT_NOT_INSTALLED;
+            case 4: return PROCESS_STARTUP_FAILED;
+            case 5: return HANDSHAKE_TIMEOUT;
+            case 6: return CONNECTION_FAILED;
+            case 7: return TERMINAL_AUTH_FAILED;
+            case 8: return RECONNECT_FAILED;
+            case 9: return AUTH_REQUIRED;
+            case 10: return PROTOCOL_ERROR;
+            case 11: return ERROR_OTHER;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<ErrorCode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            ErrorCode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<ErrorCode>() {
+                public ErrorCode findValueByNumber(int number) {
+                  return ErrorCode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDescriptor().getEnumTypes().get(1);
+        }
+
+        private static final ErrorCode[] VALUES = values();
+
+        public static ErrorCode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private ErrorCode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode)
+      }
+
+      private int bitField0_;
+      public static final int METHOD_FIELD_NUMBER = 1;
+      private int method_ = 0;
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+       * @return Whether the method field is set.
+       */
+      @java.lang.Override public boolean hasMethod() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+       * @return The method.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getMethod() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(method_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.UNKNOWN : result;
+      }
+
+      public static final int OUTCOME_FIELD_NUMBER = 2;
+      private int outcome_ = 0;
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+       * @return Whether the outcome field is set.
+       */
+      @java.lang.Override public boolean hasOutcome() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+       * @return The outcome.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome getOutcome() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome.forNumber(outcome_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome.UNKNOWN : result;
+      }
+
+      public static final int ERROR_CODE_FIELD_NUMBER = 3;
+      private int errorCode_ = 0;
+      /**
+       * <pre>
+       * Populated when outcome == FAILED.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+       * @return Whether the errorCode field is set.
+       */
+      @java.lang.Override public boolean hasErrorCode() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * Populated when outcome == FAILED.
+       * </pre>
+       *
+       * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+       * @return The errorCode.
+       */
+      @java.lang.Override public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode getErrorCode() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode.forNumber(errorCode_);
+        return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode.ERROR_UNKNOWN : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          output.writeEnum(1, method_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          output.writeEnum(2, outcome_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          output.writeEnum(3, errorCode_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(1, method_);
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, outcome_);
+        }
+        if (((bitField0_ & 0x00000004) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, errorCode_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)) {
+          return super.equals(obj);
+        }
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) obj;
+
+        if (hasMethod() != other.hasMethod()) return false;
+        if (hasMethod()) {
+          if (method_ != other.method_) return false;
+        }
+        if (hasOutcome() != other.hasOutcome()) return false;
+        if (hasOutcome()) {
+          if (outcome_ != other.outcome_) return false;
+        }
+        if (hasErrorCode() != other.hasErrorCode()) return false;
+        if (hasErrorCode()) {
+          if (errorCode_ != other.errorCode_) return false;
+        }
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (hasMethod()) {
+          hash = (37 * hash) + METHOD_FIELD_NUMBER;
+          hash = (53 * hash) + method_;
+        }
+        if (hasOutcome()) {
+          hash = (37 * hash) + OUTCOME_FIELD_NUMBER;
+          hash = (53 * hash) + outcome_;
+        }
+        if (hasErrorCode()) {
+          hash = (37 * hash) + ERROR_CODE_FIELD_NUMBER;
+          hash = (53 * hash) + errorCode_;
+        }
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * Logged when an authentication attempt finishes.
+       * </pre>
+       *
+       * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthCompleted_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthCompleted_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder.class);
+        }
+
+        // Construct using com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          method_ = 0;
+          outcome_ = 0;
+          errorCode_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_AuthCompleted_descriptor;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getDefaultInstanceForType() {
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted build() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted buildPartial() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.method_ = method_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.outcome_ = outcome_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.errorCode_ = errorCode_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) {
+            return mergeFrom((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted other) {
+          if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance()) return this;
+          if (other.hasMethod()) {
+            setMethod(other.getMethod());
+          }
+          if (other.hasOutcome()) {
+            setOutcome(other.getOutcome());
+          }
+          if (other.hasErrorCode()) {
+            setErrorCode(other.getErrorCode());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(1, tmpRaw);
+                  } else {
+                    method_ = tmpRaw;
+                    bitField0_ |= 0x00000001;
+                  }
+                  break;
+                } // case 8
+                case 16: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(2, tmpRaw);
+                  } else {
+                    outcome_ = tmpRaw;
+                    bitField0_ |= 0x00000002;
+                  }
+                  break;
+                } // case 16
+                case 24: {
+                  int tmpRaw = input.readEnum();
+                  com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode tmpValue =
+                      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    errorCode_ = tmpRaw;
+                    bitField0_ |= 0x00000004;
+                  }
+                  break;
+                } // case 24
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int method_ = 0;
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+         * @return Whether the method field is set.
+         */
+        @java.lang.Override public boolean hasMethod() {
+          return ((bitField0_ & 0x00000001) != 0);
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+         * @return The method.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod getMethod() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.forNumber(method_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod.UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+         * @param value The method to set.
+         * @return This builder for chaining.
+         */
+        public Builder setMethod(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000001;
+          method_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthMethod method = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearMethod() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          method_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int outcome_ = 0;
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+         * @return Whether the outcome field is set.
+         */
+        @java.lang.Override public boolean hasOutcome() {
+          return ((bitField0_ & 0x00000002) != 0);
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+         * @return The outcome.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome getOutcome() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome.forNumber(outcome_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome.UNKNOWN : result;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+         * @param value The outcome to set.
+         * @return This builder for chaining.
+         */
+        public Builder setOutcome(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          outcome_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Outcome outcome = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearOutcome() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          outcome_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int errorCode_ = 0;
+        /**
+         * <pre>
+         * Populated when outcome == FAILED.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+         * @return Whether the errorCode field is set.
+         */
+        @java.lang.Override public boolean hasErrorCode() {
+          return ((bitField0_ & 0x00000004) != 0);
+        }
+        /**
+         * <pre>
+         * Populated when outcome == FAILED.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+         * @return The errorCode.
+         */
+        @java.lang.Override
+        public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode getErrorCode() {
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode result = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode.forNumber(errorCode_);
+          return result == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode.ERROR_UNKNOWN : result;
+        }
+        /**
+         * <pre>
+         * Populated when outcome == FAILED.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+         * @param value The errorCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setErrorCode(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000004;
+          errorCode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Populated when outcome == FAILED.
+         * </pre>
+         *
+         * <code>optional .android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.ErrorCode error_code = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearErrorCode() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          errorCode_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)
+      }
+
+      // @@protoc_insertion_point(class_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted)
+      private static final com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted();
+      }
+
+      public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      @java.lang.Deprecated public static final com.google.protobuf.Parser<AuthCompleted>
+          PARSER = new com.google.protobuf.AbstractParser<AuthCompleted>() {
+        @java.lang.Override
+        public AuthCompleted parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<AuthCompleted> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AuthCompleted> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int eventCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object event_;
+    public enum EventCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      AUTH_STARTED(1),
+      AUTH_STEP(2),
+      AUTH_COMPLETED(3),
+      EVENT_NOT_SET(0);
+      private final int value;
+      private EventCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EventCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static EventCase forNumber(int value) {
+        switch (value) {
+          case 1: return AUTH_STARTED;
+          case 2: return AUTH_STEP;
+          case 3: return AUTH_COMPLETED;
+          case 0: return EVENT_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public EventCase
+    getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public static final int AUTH_STARTED_FIELD_NUMBER = 1;
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     * @return Whether the authStarted field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthStarted() {
+      return eventCase_ == 1;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     * @return The authStarted.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getAuthStarted() {
+      if (eventCase_ == 1) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder getAuthStartedOrBuilder() {
+      if (eventCase_ == 1) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+    }
+
+    public static final int AUTH_STEP_FIELD_NUMBER = 2;
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     * @return Whether the authStep field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthStep() {
+      return eventCase_ == 2;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     * @return The authStep.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getAuthStep() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder getAuthStepOrBuilder() {
+      if (eventCase_ == 2) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+    }
+
+    public static final int AUTH_COMPLETED_FIELD_NUMBER = 3;
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     * @return Whether the authCompleted field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthCompleted() {
+      return eventCase_ == 3;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     * @return The authCompleted.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getAuthCompleted() {
+      if (eventCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder getAuthCompletedOrBuilder() {
+      if (eventCase_ == 3) {
+         return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_;
+      }
+      return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (eventCase_ == 1) {
+        output.writeMessage(1, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_);
+      }
+      if (eventCase_ == 2) {
+        output.writeMessage(2, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_);
+      }
+      if (eventCase_ == 3) {
+        output.writeMessage(3, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (eventCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_);
+      }
+      if (eventCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_);
+      }
+      if (eventCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent)) {
+        return super.equals(obj);
+      }
+      com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent other = (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) obj;
+
+      if (!getEventCase().equals(other.getEventCase())) return false;
+      switch (eventCase_) {
+        case 1:
+          if (!getAuthStarted()
+              .equals(other.getAuthStarted())) return false;
+          break;
+        case 2:
+          if (!getAuthStep()
+              .equals(other.getAuthStep())) return false;
+          break;
+        case 3:
+          if (!getAuthCompleted()
+              .equals(other.getAuthCompleted())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (eventCase_) {
+        case 1:
+          hash = (37 * hash) + AUTH_STARTED_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthStarted().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + AUTH_STEP_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthStep().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + AUTH_COMPLETED_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthCompleted().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Tracks the authentication funnel for an agent (e.g. ACP agents).
+     * </pre>
+     *
+     * Protobuf type {@code android_studio.StudioBotConfigurationEvent.AuthenticationEvent}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:android_studio.StudioBotConfigurationEvent.AuthenticationEvent)
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.class, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder.class);
+      }
+
+      // Construct using com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (authStartedBuilder_ != null) {
+          authStartedBuilder_.clear();
+        }
+        if (authStepBuilder_ != null) {
+          authStepBuilder_.clear();
+        }
+        if (authCompletedBuilder_ != null) {
+          authCompletedBuilder_.clear();
+        }
+        eventCase_ = 0;
+        event_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.wireless.android.sdk.stats.AndroidStudioStats.internal_static_android_studio_StudioBotConfigurationEvent_AuthenticationEvent_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getDefaultInstanceForType() {
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent build() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent buildPartial() {
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent result) {
+        result.eventCase_ = eventCase_;
+        result.event_ = this.event_;
+        if (eventCase_ == 1 &&
+            authStartedBuilder_ != null) {
+          result.event_ = authStartedBuilder_.build();
+        }
+        if (eventCase_ == 2 &&
+            authStepBuilder_ != null) {
+          result.event_ = authStepBuilder_.build();
+        }
+        if (eventCase_ == 3 &&
+            authCompletedBuilder_ != null) {
+          result.event_ = authCompletedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) {
+          return mergeFrom((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent other) {
+        if (other == com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance()) return this;
+        switch (other.getEventCase()) {
+          case AUTH_STARTED: {
+            mergeAuthStarted(other.getAuthStarted());
+            break;
+          }
+          case AUTH_STEP: {
+            mergeAuthStep(other.getAuthStep());
+            break;
+          }
+          case AUTH_COMPLETED: {
+            mergeAuthCompleted(other.getAuthCompleted());
+            break;
+          }
+          case EVENT_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAuthStartedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAuthStepFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAuthCompletedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                eventCase_ = 3;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int eventCase_ = 0;
+      private java.lang.Object event_;
+      public EventCase
+          getEventCase() {
+        return EventCase.forNumber(
+            eventCase_);
+      }
+
+      public Builder clearEvent() {
+        eventCase_ = 0;
+        event_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder> authStartedBuilder_;
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       * @return Whether the authStarted field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthStarted() {
+        return eventCase_ == 1;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       * @return The authStarted.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted getAuthStarted() {
+        if (authStartedBuilder_ == null) {
+          if (eventCase_ == 1) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+        } else {
+          if (eventCase_ == 1) {
+            return authStartedBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      public Builder setAuthStarted(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted value) {
+        if (authStartedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          authStartedBuilder_.setMessage(value);
+        }
+        eventCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      public Builder setAuthStarted(
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder builderForValue) {
+        if (authStartedBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          authStartedBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      public Builder mergeAuthStarted(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted value) {
+        if (authStartedBuilder_ == null) {
+          if (eventCase_ == 1 &&
+              event_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.newBuilder((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 1) {
+            authStartedBuilder_.mergeFrom(value);
+          } else {
+            authStartedBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      public Builder clearAuthStarted() {
+        if (authStartedBuilder_ == null) {
+          if (eventCase_ == 1) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 1) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          authStartedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder getAuthStartedBuilder() {
+        return getAuthStartedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder getAuthStartedOrBuilder() {
+        if ((eventCase_ == 1) && (authStartedBuilder_ != null)) {
+          return authStartedBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 1) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted auth_started = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder> 
+          getAuthStartedFieldBuilder() {
+        if (authStartedBuilder_ == null) {
+          if (!(eventCase_ == 1)) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.getDefaultInstance();
+          }
+          authStartedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStartedOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStarted) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 1;
+        onChanged();
+        return authStartedBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder> authStepBuilder_;
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       * @return Whether the authStep field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthStep() {
+        return eventCase_ == 2;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       * @return The authStep.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep getAuthStep() {
+        if (authStepBuilder_ == null) {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+        } else {
+          if (eventCase_ == 2) {
+            return authStepBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      public Builder setAuthStep(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep value) {
+        if (authStepBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          authStepBuilder_.setMessage(value);
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      public Builder setAuthStep(
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder builderForValue) {
+        if (authStepBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          authStepBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      public Builder mergeAuthStep(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep value) {
+        if (authStepBuilder_ == null) {
+          if (eventCase_ == 2 &&
+              event_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.newBuilder((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 2) {
+            authStepBuilder_.mergeFrom(value);
+          } else {
+            authStepBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      public Builder clearAuthStep() {
+        if (authStepBuilder_ == null) {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 2) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          authStepBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder getAuthStepBuilder() {
+        return getAuthStepFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder getAuthStepOrBuilder() {
+        if ((eventCase_ == 2) && (authStepBuilder_ != null)) {
+          return authStepBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 2) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep auth_step = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder> 
+          getAuthStepFieldBuilder() {
+        if (authStepBuilder_ == null) {
+          if (!(eventCase_ == 2)) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.getDefaultInstance();
+          }
+          authStepBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStepOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthStep) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 2;
+        onChanged();
+        return authStepBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder> authCompletedBuilder_;
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       * @return Whether the authCompleted field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthCompleted() {
+        return eventCase_ == 3;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       * @return The authCompleted.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted getAuthCompleted() {
+        if (authCompletedBuilder_ == null) {
+          if (eventCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+        } else {
+          if (eventCase_ == 3) {
+            return authCompletedBuilder_.getMessage();
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      public Builder setAuthCompleted(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted value) {
+        if (authCompletedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          authCompletedBuilder_.setMessage(value);
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      public Builder setAuthCompleted(
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder builderForValue) {
+        if (authCompletedBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          authCompletedBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      public Builder mergeAuthCompleted(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted value) {
+        if (authCompletedBuilder_ == null) {
+          if (eventCase_ == 3 &&
+              event_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance()) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.newBuilder((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 3) {
+            authCompletedBuilder_.mergeFrom(value);
+          } else {
+            authCompletedBuilder_.setMessage(value);
+          }
+        }
+        eventCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      public Builder clearAuthCompleted() {
+        if (authCompletedBuilder_ == null) {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 3) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          authCompletedBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder getAuthCompletedBuilder() {
+        return getAuthCompletedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder getAuthCompletedOrBuilder() {
+        if ((eventCase_ == 3) && (authCompletedBuilder_ != null)) {
+          return authCompletedBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 3) {
+            return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_;
+          }
+          return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted auth_completed = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder> 
+          getAuthCompletedFieldBuilder() {
+        if (authCompletedBuilder_ == null) {
+          if (!(eventCase_ == 3)) {
+            event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.getDefaultInstance();
+          }
+          authCompletedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompletedOrBuilder>(
+                  (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.AuthCompleted) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 3;
+        onChanged();
+        return authCompletedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent)
+    }
+
+    // @@protoc_insertion_point(class_scope:android_studio.StudioBotConfigurationEvent.AuthenticationEvent)
+    private static final com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent();
+    }
+
+    public static com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<AuthenticationEvent>
+        PARSER = new com.google.protobuf.AbstractParser<AuthenticationEvent>() {
+      @java.lang.Override
+      public AuthenticationEvent parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AuthenticationEvent> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AuthenticationEvent> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EventEnvelopeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:android_studio.StudioBotConfigurationEvent.EventEnvelope)
       com.google.protobuf.MessageOrBuilder {
@@ -6526,6 +10719,48 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  private int eventCase_ = 0;
+  @SuppressWarnings("serial")
+  private java.lang.Object event_;
+  public enum EventCase
+      implements com.google.protobuf.Internal.EnumLite,
+          com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+    ONBOARDING_EVENT(1),
+    AUTHENTICATION_EVENT(3),
+    EVENT_NOT_SET(0);
+    private final int value;
+    private EventCase(int value) {
+      this.value = value;
+    }
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static EventCase valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static EventCase forNumber(int value) {
+      switch (value) {
+        case 1: return ONBOARDING_EVENT;
+        case 3: return AUTHENTICATION_EVENT;
+        case 0: return EVENT_NOT_SET;
+        default: return null;
+      }
+    }
+    public int getNumber() {
+      return this.value;
+    }
+  };
+
+  public EventCase
+  getEventCase() {
+    return EventCase.forNumber(
+        eventCase_);
+  }
+
   public static final int ENVELOPE_FIELD_NUMBER = 2;
   private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope envelope_;
   /**
@@ -6553,29 +10788,65 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int ONBOARDING_EVENT_FIELD_NUMBER = 1;
-  private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent onboardingEvent_;
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    * @return Whether the onboardingEvent field is set.
    */
   @java.lang.Override
   public boolean hasOnboardingEvent() {
-    return ((bitField0_ & 0x00000002) != 0);
+    return eventCase_ == 1;
   }
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    * @return The onboardingEvent.
    */
   @java.lang.Override
   public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent getOnboardingEvent() {
-    return onboardingEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance() : onboardingEvent_;
+    if (eventCase_ == 1) {
+       return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
   }
   /**
-   * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+   * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
    */
   @java.lang.Override
   public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder getOnboardingEventOrBuilder() {
-    return onboardingEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance() : onboardingEvent_;
+    if (eventCase_ == 1) {
+       return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
+  }
+
+  public static final int AUTHENTICATION_EVENT_FIELD_NUMBER = 3;
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   * @return Whether the authenticationEvent field is set.
+   */
+  @java.lang.Override
+  public boolean hasAuthenticationEvent() {
+    return eventCase_ == 3;
+  }
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   * @return The authenticationEvent.
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getAuthenticationEvent() {
+    if (eventCase_ == 3) {
+       return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+  }
+  /**
+   * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+   */
+  @java.lang.Override
+  public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder getAuthenticationEventOrBuilder() {
+    if (eventCase_ == 3) {
+       return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_;
+    }
+    return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -6592,11 +10863,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(1, getOnboardingEvent());
+    if (eventCase_ == 1) {
+      output.writeMessage(1, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(2, getEnvelope());
+    }
+    if (eventCase_ == 3) {
+      output.writeMessage(3, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -6607,13 +10881,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000002) != 0)) {
+    if (eventCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getOnboardingEvent());
+        .computeMessageSize(1, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEnvelope());
+    }
+    if (eventCase_ == 3) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -6635,10 +10913,18 @@ private static final long serialVersionUID = 0L;
       if (!getEnvelope()
           .equals(other.getEnvelope())) return false;
     }
-    if (hasOnboardingEvent() != other.hasOnboardingEvent()) return false;
-    if (hasOnboardingEvent()) {
-      if (!getOnboardingEvent()
-          .equals(other.getOnboardingEvent())) return false;
+    if (!getEventCase().equals(other.getEventCase())) return false;
+    switch (eventCase_) {
+      case 1:
+        if (!getOnboardingEvent()
+            .equals(other.getOnboardingEvent())) return false;
+        break;
+      case 3:
+        if (!getAuthenticationEvent()
+            .equals(other.getAuthenticationEvent())) return false;
+        break;
+      case 0:
+      default:
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -6655,9 +10941,17 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ENVELOPE_FIELD_NUMBER;
       hash = (53 * hash) + getEnvelope().hashCode();
     }
-    if (hasOnboardingEvent()) {
-      hash = (37 * hash) + ONBOARDING_EVENT_FIELD_NUMBER;
-      hash = (53 * hash) + getOnboardingEvent().hashCode();
+    switch (eventCase_) {
+      case 1:
+        hash = (37 * hash) + ONBOARDING_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getOnboardingEvent().hashCode();
+        break;
+      case 3:
+        hash = (37 * hash) + AUTHENTICATION_EVENT_FIELD_NUMBER;
+        hash = (53 * hash) + getAuthenticationEvent().hashCode();
+        break;
+      case 0:
+      default:
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -6794,7 +11088,6 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getEnvelopeFieldBuilder();
-        getOnboardingEventFieldBuilder();
       }
     }
     @java.lang.Override
@@ -6806,11 +11099,14 @@ private static final long serialVersionUID = 0L;
         envelopeBuilder_.dispose();
         envelopeBuilder_ = null;
       }
-      onboardingEvent_ = null;
       if (onboardingEventBuilder_ != null) {
-        onboardingEventBuilder_.dispose();
-        onboardingEventBuilder_ = null;
+        onboardingEventBuilder_.clear();
       }
+      if (authenticationEventBuilder_ != null) {
+        authenticationEventBuilder_.clear();
+      }
+      eventCase_ = 0;
+      event_ = null;
       return this;
     }
 
@@ -6838,6 +11134,7 @@ private static final long serialVersionUID = 0L;
     public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent buildPartial() {
       com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent result = new com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent(this);
       if (bitField0_ != 0) { buildPartial0(result); }
+      buildPartialOneofs(result);
       onBuilt();
       return result;
     }
@@ -6851,13 +11148,20 @@ private static final long serialVersionUID = 0L;
             : envelopeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.onboardingEvent_ = onboardingEventBuilder_ == null
-            ? onboardingEvent_
-            : onboardingEventBuilder_.build();
-        to_bitField0_ |= 0x00000002;
-      }
       result.bitField0_ |= to_bitField0_;
+    }
+
+    private void buildPartialOneofs(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent result) {
+      result.eventCase_ = eventCase_;
+      result.event_ = this.event_;
+      if (eventCase_ == 1 &&
+          onboardingEventBuilder_ != null) {
+        result.event_ = onboardingEventBuilder_.build();
+      }
+      if (eventCase_ == 3 &&
+          authenticationEventBuilder_ != null) {
+        result.event_ = authenticationEventBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -6907,8 +11211,18 @@ private static final long serialVersionUID = 0L;
       if (other.hasEnvelope()) {
         mergeEnvelope(other.getEnvelope());
       }
-      if (other.hasOnboardingEvent()) {
-        mergeOnboardingEvent(other.getOnboardingEvent());
+      switch (other.getEventCase()) {
+        case ONBOARDING_EVENT: {
+          mergeOnboardingEvent(other.getOnboardingEvent());
+          break;
+        }
+        case AUTHENTICATION_EVENT: {
+          mergeAuthenticationEvent(other.getAuthenticationEvent());
+          break;
+        }
+        case EVENT_NOT_SET: {
+          break;
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -6940,7 +11254,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getOnboardingEventFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              eventCase_ = 1;
               break;
             } // case 10
             case 18: {
@@ -6950,6 +11264,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 18
+            case 26: {
+              input.readMessage(
+                  getAuthenticationEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              eventCase_ = 3;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6965,6 +11286,21 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int eventCase_ = 0;
+    private java.lang.Object event_;
+    public EventCase
+        getEventCase() {
+      return EventCase.forNumber(
+          eventCase_);
+    }
+
+    public Builder clearEvent() {
+      eventCase_ = 0;
+      event_ = null;
+      onChanged();
+      return this;
+    }
+
     private int bitField0_;
 
     private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.EventEnvelope envelope_;
@@ -7088,125 +11424,288 @@ private static final long serialVersionUID = 0L;
       return envelopeBuilder_;
     }
 
-    private com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent onboardingEvent_;
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder> onboardingEventBuilder_;
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      * @return Whether the onboardingEvent field is set.
      */
+    @java.lang.Override
     public boolean hasOnboardingEvent() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return eventCase_ == 1;
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      * @return The onboardingEvent.
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent getOnboardingEvent() {
       if (onboardingEventBuilder_ == null) {
-        return onboardingEvent_ == null ? com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance() : onboardingEvent_;
+        if (eventCase_ == 1) {
+          return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
       } else {
-        return onboardingEventBuilder_.getMessage();
+        if (eventCase_ == 1) {
+          return onboardingEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
       }
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public Builder setOnboardingEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent value) {
       if (onboardingEventBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        onboardingEvent_ = value;
+        event_ = value;
+        onChanged();
       } else {
         onboardingEventBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      eventCase_ = 1;
       return this;
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public Builder setOnboardingEvent(
         com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder builderForValue) {
       if (onboardingEventBuilder_ == null) {
-        onboardingEvent_ = builderForValue.build();
+        event_ = builderForValue.build();
+        onChanged();
       } else {
         onboardingEventBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
-      onChanged();
+      eventCase_ = 1;
       return this;
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public Builder mergeOnboardingEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent value) {
       if (onboardingEventBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          onboardingEvent_ != null &&
-          onboardingEvent_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance()) {
-          getOnboardingEventBuilder().mergeFrom(value);
+        if (eventCase_ == 1 &&
+            event_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance()) {
+          event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.newBuilder((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_)
+              .mergeFrom(value).buildPartial();
         } else {
-          onboardingEvent_ = value;
+          event_ = value;
         }
-      } else {
-        onboardingEventBuilder_.mergeFrom(value);
-      }
-      if (onboardingEvent_ != null) {
-        bitField0_ |= 0x00000002;
         onChanged();
+      } else {
+        if (eventCase_ == 1) {
+          onboardingEventBuilder_.mergeFrom(value);
+        } else {
+          onboardingEventBuilder_.setMessage(value);
+        }
       }
+      eventCase_ = 1;
       return this;
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public Builder clearOnboardingEvent() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onboardingEvent_ = null;
-      if (onboardingEventBuilder_ != null) {
-        onboardingEventBuilder_.dispose();
-        onboardingEventBuilder_ = null;
+      if (onboardingEventBuilder_ == null) {
+        if (eventCase_ == 1) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 1) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        onboardingEventBuilder_.clear();
       }
-      onChanged();
       return this;
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder getOnboardingEventBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
       return getOnboardingEventFieldBuilder().getBuilder();
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
+    @java.lang.Override
     public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder getOnboardingEventOrBuilder() {
-      if (onboardingEventBuilder_ != null) {
+      if ((eventCase_ == 1) && (onboardingEventBuilder_ != null)) {
         return onboardingEventBuilder_.getMessageOrBuilder();
       } else {
-        return onboardingEvent_ == null ?
-            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance() : onboardingEvent_;
+        if (eventCase_ == 1) {
+          return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
       }
     }
     /**
-     * <code>optional .android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
+     * <code>.android_studio.StudioBotConfigurationEvent.OnboardingEvent onboarding_event = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder> 
         getOnboardingEventFieldBuilder() {
       if (onboardingEventBuilder_ == null) {
+        if (!(eventCase_ == 1)) {
+          event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.getDefaultInstance();
+        }
         onboardingEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEventOrBuilder>(
-                getOnboardingEvent(),
+                (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.OnboardingEvent) event_,
                 getParentForChildren(),
                 isClean());
-        onboardingEvent_ = null;
+        event_ = null;
       }
+      eventCase_ = 1;
+      onChanged();
       return onboardingEventBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder> authenticationEventBuilder_;
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     * @return Whether the authenticationEvent field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthenticationEvent() {
+      return eventCase_ == 3;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     * @return The authenticationEvent.
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent getAuthenticationEvent() {
+      if (authenticationEventBuilder_ == null) {
+        if (eventCase_ == 3) {
+          return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+      } else {
+        if (eventCase_ == 3) {
+          return authenticationEventBuilder_.getMessage();
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    public Builder setAuthenticationEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent value) {
+      if (authenticationEventBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        event_ = value;
+        onChanged();
+      } else {
+        authenticationEventBuilder_.setMessage(value);
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    public Builder setAuthenticationEvent(
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder builderForValue) {
+      if (authenticationEventBuilder_ == null) {
+        event_ = builderForValue.build();
+        onChanged();
+      } else {
+        authenticationEventBuilder_.setMessage(builderForValue.build());
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    public Builder mergeAuthenticationEvent(com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent value) {
+      if (authenticationEventBuilder_ == null) {
+        if (eventCase_ == 3 &&
+            event_ != com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance()) {
+          event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.newBuilder((com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          event_ = value;
+        }
+        onChanged();
+      } else {
+        if (eventCase_ == 3) {
+          authenticationEventBuilder_.mergeFrom(value);
+        } else {
+          authenticationEventBuilder_.setMessage(value);
+        }
+      }
+      eventCase_ = 3;
+      return this;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    public Builder clearAuthenticationEvent() {
+      if (authenticationEventBuilder_ == null) {
+        if (eventCase_ == 3) {
+          eventCase_ = 0;
+          event_ = null;
+          onChanged();
+        }
+      } else {
+        if (eventCase_ == 3) {
+          eventCase_ = 0;
+          event_ = null;
+        }
+        authenticationEventBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder getAuthenticationEventBuilder() {
+      return getAuthenticationEventFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder getAuthenticationEventOrBuilder() {
+      if ((eventCase_ == 3) && (authenticationEventBuilder_ != null)) {
+        return authenticationEventBuilder_.getMessageOrBuilder();
+      } else {
+        if (eventCase_ == 3) {
+          return (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_;
+        }
+        return com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.android_studio.StudioBotConfigurationEvent.AuthenticationEvent authentication_event = 3;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder> 
+        getAuthenticationEventFieldBuilder() {
+      if (authenticationEventBuilder_ == null) {
+        if (!(eventCase_ == 3)) {
+          event_ = com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.getDefaultInstance();
+        }
+        authenticationEventBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent.Builder, com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEventOrBuilder>(
+                (com.google.wireless.android.sdk.stats.StudioBotConfigurationEvent.AuthenticationEvent) event_,
+                getParentForChildren(),
+                isClean());
+        event_ = null;
+      }
+      eventCase_ = 3;
+      onChanged();
+      return authenticationEventBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

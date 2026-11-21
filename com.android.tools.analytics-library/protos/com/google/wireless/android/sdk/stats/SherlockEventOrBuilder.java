@@ -404,4 +404,31 @@ public interface SherlockEventOrBuilder extends
    * <code>optional .android_studio.SherlockEvent.ApkInstallMetadata apk_install_metadata = 15 [lazy = true];</code>
    */
   com.google.wireless.android.sdk.stats.SherlockEvent.ApkInstallMetadataOrBuilder getApkInstallMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Set if |type| is |UI_ELEMENT_DISPLAYED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.UiElementDisplayedMetadata ui_element_displayed_metadata = 16 [lazy = true];</code>
+   * @return Whether the uiElementDisplayedMetadata field is set.
+   */
+  boolean hasUiElementDisplayedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |UI_ELEMENT_DISPLAYED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.UiElementDisplayedMetadata ui_element_displayed_metadata = 16 [lazy = true];</code>
+   * @return The uiElementDisplayedMetadata.
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.UiElementDisplayedMetadata getUiElementDisplayedMetadata();
+  /**
+   * <pre>
+   * Set if |type| is |UI_ELEMENT_DISPLAYED|
+   * </pre>
+   *
+   * <code>optional .android_studio.SherlockEvent.UiElementDisplayedMetadata ui_element_displayed_metadata = 16 [lazy = true];</code>
+   */
+  com.google.wireless.android.sdk.stats.SherlockEvent.UiElementDisplayedMetadataOrBuilder getUiElementDisplayedMetadataOrBuilder();
 }
