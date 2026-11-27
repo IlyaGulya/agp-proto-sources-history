@@ -1505,6 +1505,10 @@ public enum GradleTaskExecutionType
    * <code>EXTRACT_JAVA_RES = 371;</code>
    */
   EXTRACT_JAVA_RES(371),
+  /**
+   * <code>COVERAGE_CLASS_LIST = 372;</code>
+   */
+  COVERAGE_CLASS_LIST(372),
   UNRECOGNIZED(-1),
   ;
 
@@ -2996,6 +3000,10 @@ public enum GradleTaskExecutionType
    * <code>EXTRACT_JAVA_RES = 371;</code>
    */
   public static final int EXTRACT_JAVA_RES_VALUE = 371;
+  /**
+   * <code>COVERAGE_CLASS_LIST = 372;</code>
+   */
+  public static final int COVERAGE_CLASS_LIST_VALUE = 372;
 
 
   public final int getNumber() {
@@ -3394,6 +3402,7 @@ public enum GradleTaskExecutionType
       case 369: return REDIRECT_IDE_BUNDLE_OUTPUTS;
       case 370: return GENERATE_COMPOSE_PREVIEW_RUNFILES;
       case 371: return EXTRACT_JAVA_RES;
+      case 372: return COVERAGE_CLASS_LIST;
       default: return null;
     }
   }

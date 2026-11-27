@@ -420,6 +420,31 @@ private static final long serialVersionUID = 0L;
      * @return The activitySurface.
      */
     com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface getActivitySurface();
+
+    /**
+     * <pre>
+     * Where in Studio the conversation this event belongs to was started. Set
+     * on every event with root_trajectory_id and always the same for a given
+     * root_trajectory_id. Stored with the conversation, so it survives IDE
+     * restarts. Applies to both the built-in agent and ACP agents.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+     * @return Whether the conversationOrigin field is set.
+     */
+    boolean hasConversationOrigin();
+    /**
+     * <pre>
+     * Where in Studio the conversation this event belongs to was started. Set
+     * on every event with root_trajectory_id and always the same for a given
+     * root_trajectory_id. Stored with the conversation, so it survives IDE
+     * restarts. Applies to both the built-in agent and ACP agents.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+     * @return The conversationOrigin.
+     */
+    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin getConversationOrigin();
   }
   /**
    * <pre>
@@ -457,6 +482,7 @@ private static final long serialVersionUID = 0L;
       userQueryId_ = "";
       model_ = 0;
       activitySurface_ = 0;
+      conversationOrigin_ = 0;
     }
 
     @java.lang.Override
@@ -612,6 +638,175 @@ private static final long serialVersionUID = 0L;
       }
 
       // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.EventEnvelope.ActivitySurface)
+    }
+
+    /**
+     * <pre>
+     * Where in Studio the conversation was started.
+     * </pre>
+     *
+     * Protobuf enum {@code android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin}
+     */
+    public enum ConversationOrigin
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Default unset value.
+       * </pre>
+       *
+       * <code>CONVERSATION_ORIGIN_UNSPECIFIED = 0;</code>
+       */
+      CONVERSATION_ORIGIN_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Started by the user from the agent chat.
+       * </pre>
+       *
+       * <code>CHAT = 1;</code>
+       */
+      CHAT(1),
+      /**
+       * <pre>
+       * Started by the New Project Agent from the new project wizard.
+       * </pre>
+       *
+       * <code>NEW_PROJECT_AGENT = 2;</code>
+       */
+      NEW_PROJECT_AGENT(2),
+      /**
+       * <pre>
+       * Started by the Import Project flow.
+       * </pre>
+       *
+       * <code>IMPORT_PROJECT = 3;</code>
+       */
+      IMPORT_PROJECT(3),
+      /**
+       * <pre>
+       * Started from another entry point that does not have its own value
+       * yet, such as "Fix with AI", Logcat or a deep link.
+       * </pre>
+       *
+       * <code>OTHER_ORIGIN = 4;</code>
+       */
+      OTHER_ORIGIN(4),
+      ;
+
+      /**
+       * <pre>
+       * Default unset value.
+       * </pre>
+       *
+       * <code>CONVERSATION_ORIGIN_UNSPECIFIED = 0;</code>
+       */
+      public static final int CONVERSATION_ORIGIN_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Started by the user from the agent chat.
+       * </pre>
+       *
+       * <code>CHAT = 1;</code>
+       */
+      public static final int CHAT_VALUE = 1;
+      /**
+       * <pre>
+       * Started by the New Project Agent from the new project wizard.
+       * </pre>
+       *
+       * <code>NEW_PROJECT_AGENT = 2;</code>
+       */
+      public static final int NEW_PROJECT_AGENT_VALUE = 2;
+      /**
+       * <pre>
+       * Started by the Import Project flow.
+       * </pre>
+       *
+       * <code>IMPORT_PROJECT = 3;</code>
+       */
+      public static final int IMPORT_PROJECT_VALUE = 3;
+      /**
+       * <pre>
+       * Started from another entry point that does not have its own value
+       * yet, such as "Fix with AI", Logcat or a deep link.
+       * </pre>
+       *
+       * <code>OTHER_ORIGIN = 4;</code>
+       */
+      public static final int OTHER_ORIGIN_VALUE = 4;
+
+
+      public final int getNumber() {
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static ConversationOrigin valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static ConversationOrigin forNumber(int value) {
+        switch (value) {
+          case 0: return CONVERSATION_ORIGIN_UNSPECIFIED;
+          case 1: return CHAT;
+          case 2: return NEW_PROJECT_AGENT;
+          case 3: return IMPORT_PROJECT;
+          case 4: return OTHER_ORIGIN;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<ConversationOrigin>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          ConversationOrigin> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<ConversationOrigin>() {
+              public ConversationOrigin findValueByNumber(int number) {
+                return ConversationOrigin.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final ConversationOrigin[] VALUES = values();
+
+      public static ConversationOrigin valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private ConversationOrigin(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin)
     }
 
     private int bitField0_;
@@ -1290,6 +1485,38 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ActivitySurface.ACTIVITY_SURFACE_UNSPECIFIED : result;
     }
 
+    public static final int CONVERSATION_ORIGIN_FIELD_NUMBER = 14;
+    private int conversationOrigin_ = 0;
+    /**
+     * <pre>
+     * Where in Studio the conversation this event belongs to was started. Set
+     * on every event with root_trajectory_id and always the same for a given
+     * root_trajectory_id. Stored with the conversation, so it survives IDE
+     * restarts. Applies to both the built-in agent and ACP agents.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+     * @return Whether the conversationOrigin field is set.
+     */
+    @java.lang.Override public boolean hasConversationOrigin() {
+      return ((bitField0_ & 0x00002000) != 0);
+    }
+    /**
+     * <pre>
+     * Where in Studio the conversation this event belongs to was started. Set
+     * on every event with root_trajectory_id and always the same for a given
+     * root_trajectory_id. Stored with the conversation, so it survives IDE
+     * restarts. Applies to both the built-in agent and ACP agents.
+     * </pre>
+     *
+     * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+     * @return The conversationOrigin.
+     */
+    @java.lang.Override public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin getConversationOrigin() {
+      com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin.forNumber(conversationOrigin_);
+      return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin.CONVERSATION_ORIGIN_UNSPECIFIED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1343,6 +1570,9 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00001000) != 0)) {
         output.writeEnum(13, activitySurface_);
       }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        output.writeEnum(14, conversationOrigin_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1395,6 +1625,10 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00001000) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(13, activitySurface_);
+      }
+      if (((bitField0_ & 0x00002000) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, conversationOrigin_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1474,6 +1708,10 @@ private static final long serialVersionUID = 0L;
       if (hasActivitySurface()) {
         if (activitySurface_ != other.activitySurface_) return false;
       }
+      if (hasConversationOrigin() != other.hasConversationOrigin()) return false;
+      if (hasConversationOrigin()) {
+        if (conversationOrigin_ != other.conversationOrigin_) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1538,6 +1776,10 @@ private static final long serialVersionUID = 0L;
       if (hasActivitySurface()) {
         hash = (37 * hash) + ACTIVITY_SURFACE_FIELD_NUMBER;
         hash = (53 * hash) + activitySurface_;
+      }
+      if (hasConversationOrigin()) {
+        hash = (37 * hash) + CONVERSATION_ORIGIN_FIELD_NUMBER;
+        hash = (53 * hash) + conversationOrigin_;
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -1706,6 +1948,7 @@ private static final long serialVersionUID = 0L;
         }
         model_ = 0;
         activitySurface_ = 0;
+        conversationOrigin_ = 0;
         return this;
       }
 
@@ -1793,6 +2036,10 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00001000) != 0)) {
           result.activitySurface_ = activitySurface_;
           to_bitField0_ |= 0x00001000;
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.conversationOrigin_ = conversationOrigin_;
+          to_bitField0_ |= 0x00002000;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1895,6 +2142,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasActivitySurface()) {
           setActivitySurface(other.getActivitySurface());
+        }
+        if (other.hasConversationOrigin()) {
+          setConversationOrigin(other.getConversationOrigin());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -2003,6 +2253,18 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 104
+              case 112: {
+                int tmpRaw = input.readEnum();
+                com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin tmpValue =
+                    com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin.forNumber(tmpRaw);
+                if (tmpValue == null) {
+                  mergeUnknownVarintField(14, tmpRaw);
+                } else {
+                  conversationOrigin_ = tmpRaw;
+                  bitField0_ |= 0x00002000;
+                }
+                break;
+              } // case 112
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3319,6 +3581,76 @@ private static final long serialVersionUID = 0L;
       public Builder clearActivitySurface() {
         bitField0_ = (bitField0_ & ~0x00001000);
         activitySurface_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int conversationOrigin_ = 0;
+      /**
+       * <pre>
+       * Where in Studio the conversation this event belongs to was started. Set
+       * on every event with root_trajectory_id and always the same for a given
+       * root_trajectory_id. Stored with the conversation, so it survives IDE
+       * restarts. Applies to both the built-in agent and ACP agents.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+       * @return Whether the conversationOrigin field is set.
+       */
+      @java.lang.Override public boolean hasConversationOrigin() {
+        return ((bitField0_ & 0x00002000) != 0);
+      }
+      /**
+       * <pre>
+       * Where in Studio the conversation this event belongs to was started. Set
+       * on every event with root_trajectory_id and always the same for a given
+       * root_trajectory_id. Stored with the conversation, so it survives IDE
+       * restarts. Applies to both the built-in agent and ACP agents.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+       * @return The conversationOrigin.
+       */
+      @java.lang.Override
+      public com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin getConversationOrigin() {
+        com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin result = com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin.forNumber(conversationOrigin_);
+        return result == null ? com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin.CONVERSATION_ORIGIN_UNSPECIFIED : result;
+      }
+      /**
+       * <pre>
+       * Where in Studio the conversation this event belongs to was started. Set
+       * on every event with root_trajectory_id and always the same for a given
+       * root_trajectory_id. Stored with the conversation, so it survives IDE
+       * restarts. Applies to both the built-in agent and ACP agents.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+       * @param value The conversationOrigin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConversationOrigin(com.google.wireless.android.sdk.stats.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00002000;
+        conversationOrigin_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Where in Studio the conversation this event belongs to was started. Set
+       * on every event with root_trajectory_id and always the same for a given
+       * root_trajectory_id. Stored with the conversation, so it survives IDE
+       * restarts. Applies to both the built-in agent and ACP agents.
+       * </pre>
+       *
+       * <code>optional .android_studio.GeminiTelemetryEvent.EventEnvelope.ConversationOrigin conversation_origin = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConversationOrigin() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        conversationOrigin_ = 0;
         onChanged();
         return this;
       }
@@ -5623,7 +5955,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Deprecated boolean hasActualModelId();
@@ -5635,7 +5967,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return The actualModelId.
        */
       @java.lang.Deprecated java.lang.String getActualModelId();
@@ -5647,7 +5979,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return The bytes for actualModelId.
        */
       @java.lang.Deprecated com.google.protobuf.ByteString
@@ -7461,7 +7793,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return Whether the actualModelId field is set.
        */
       @java.lang.Override
@@ -7476,7 +7808,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return The actualModelId.
        */
       @java.lang.Override
@@ -7502,7 +7834,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>optional string actual_model_id = 8 [deprecated = true];</code>
        * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-       *     See studio_stats.proto;l=18494
+       *     See studio_stats.proto;l=18515
        * @return The bytes for actualModelId.
        */
       @java.lang.Override
@@ -8731,7 +9063,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @return Whether the actualModelId field is set.
          */
         @java.lang.Deprecated public boolean hasActualModelId() {
@@ -8745,7 +9077,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @return The actualModelId.
          */
         @java.lang.Deprecated public java.lang.String getActualModelId() {
@@ -8770,7 +9102,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @return The bytes for actualModelId.
          */
         @java.lang.Deprecated public com.google.protobuf.ByteString
@@ -8794,7 +9126,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @param value The actualModelId to set.
          * @return This builder for chaining.
          */
@@ -8814,7 +9146,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @return This builder for chaining.
          */
         @java.lang.Deprecated public Builder clearActualModelId() {
@@ -8831,7 +9163,7 @@ private static final long serialVersionUID = 0L;
          *
          * <code>optional string actual_model_id = 8 [deprecated = true];</code>
          * @deprecated android_studio.GeminiTelemetryEvent.ServerEvent.ResponseEvent.actual_model_id is deprecated.
-         *     See studio_stats.proto;l=18494
+         *     See studio_stats.proto;l=18515
          * @param value The bytes for actualModelId to set.
          * @return This builder for chaining.
          */
@@ -12736,6 +13068,27 @@ private static final long serialVersionUID = 0L;
        */
       com.google.protobuf.ByteString
           getUserQueryIdBytes();
+
+      /**
+       * <pre>
+       * JSON-RPC error code returned by an ACP agent when the query failed
+       * (e.g., -32000, -32603). Unset otherwise.
+       * </pre>
+       *
+       * <code>optional int32 json_rpc_error_code = 5;</code>
+       * @return Whether the jsonRpcErrorCode field is set.
+       */
+      boolean hasJsonRpcErrorCode();
+      /**
+       * <pre>
+       * JSON-RPC error code returned by an ACP agent when the query failed
+       * (e.g., -32000, -32603). Unset otherwise.
+       * </pre>
+       *
+       * <code>optional int32 json_rpc_error_code = 5;</code>
+       * @return The jsonRpcErrorCode.
+       */
+      int getJsonRpcErrorCode();
     }
     /**
      * Protobuf type {@code android_studio.GeminiTelemetryEvent.UiEvent.UserQueryFinished}
@@ -12965,6 +13318,35 @@ private static final long serialVersionUID = 0L;
         }
       }
 
+      public static final int JSON_RPC_ERROR_CODE_FIELD_NUMBER = 5;
+      private int jsonRpcErrorCode_ = 0;
+      /**
+       * <pre>
+       * JSON-RPC error code returned by an ACP agent when the query failed
+       * (e.g., -32000, -32603). Unset otherwise.
+       * </pre>
+       *
+       * <code>optional int32 json_rpc_error_code = 5;</code>
+       * @return Whether the jsonRpcErrorCode field is set.
+       */
+      @java.lang.Override
+      public boolean hasJsonRpcErrorCode() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * JSON-RPC error code returned by an ACP agent when the query failed
+       * (e.g., -32000, -32603). Unset otherwise.
+       * </pre>
+       *
+       * <code>optional int32 json_rpc_error_code = 5;</code>
+       * @return The jsonRpcErrorCode.
+       */
+      @java.lang.Override
+      public int getJsonRpcErrorCode() {
+        return jsonRpcErrorCode_;
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -12991,6 +13373,9 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000008) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, userQueryId_);
         }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          output.writeInt32(5, jsonRpcErrorCode_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -13013,6 +13398,10 @@ private static final long serialVersionUID = 0L;
         }
         if (((bitField0_ & 0x00000008) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, userQueryId_);
+        }
+        if (((bitField0_ & 0x00000010) != 0)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(5, jsonRpcErrorCode_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
@@ -13049,6 +13438,11 @@ private static final long serialVersionUID = 0L;
           if (!getUserQueryId()
               .equals(other.getUserQueryId())) return false;
         }
+        if (hasJsonRpcErrorCode() != other.hasJsonRpcErrorCode()) return false;
+        if (hasJsonRpcErrorCode()) {
+          if (getJsonRpcErrorCode()
+              != other.getJsonRpcErrorCode()) return false;
+        }
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -13077,6 +13471,10 @@ private static final long serialVersionUID = 0L;
         if (hasUserQueryId()) {
           hash = (37 * hash) + USER_QUERY_ID_FIELD_NUMBER;
           hash = (53 * hash) + getUserQueryId().hashCode();
+        }
+        if (hasJsonRpcErrorCode()) {
+          hash = (37 * hash) + JSON_RPC_ERROR_CODE_FIELD_NUMBER;
+          hash = (53 * hash) + getJsonRpcErrorCode();
         }
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
@@ -13213,6 +13611,7 @@ private static final long serialVersionUID = 0L;
           exceptionClassName_ = "";
           latencyMs_ = 0L;
           userQueryId_ = "";
+          jsonRpcErrorCode_ = 0;
           return this;
         }
 
@@ -13262,6 +13661,10 @@ private static final long serialVersionUID = 0L;
           if (((from_bitField0_ & 0x00000008) != 0)) {
             result.userQueryId_ = userQueryId_;
             to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.jsonRpcErrorCode_ = jsonRpcErrorCode_;
+            to_bitField0_ |= 0x00000010;
           }
           result.bitField0_ |= to_bitField0_;
         }
@@ -13326,6 +13729,9 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000008;
             onChanged();
           }
+          if (other.hasJsonRpcErrorCode()) {
+            setJsonRpcErrorCode(other.getJsonRpcErrorCode());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -13372,6 +13778,11 @@ private static final long serialVersionUID = 0L;
                   bitField0_ |= 0x00000008;
                   break;
                 } // case 34
+                case 40: {
+                  jsonRpcErrorCode_ = input.readInt32();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -13733,6 +14144,66 @@ private static final long serialVersionUID = 0L;
           if (value == null) { throw new NullPointerException(); }
           userQueryId_ = value;
           bitField0_ |= 0x00000008;
+          onChanged();
+          return this;
+        }
+
+        private int jsonRpcErrorCode_ ;
+        /**
+         * <pre>
+         * JSON-RPC error code returned by an ACP agent when the query failed
+         * (e.g., -32000, -32603). Unset otherwise.
+         * </pre>
+         *
+         * <code>optional int32 json_rpc_error_code = 5;</code>
+         * @return Whether the jsonRpcErrorCode field is set.
+         */
+        @java.lang.Override
+        public boolean hasJsonRpcErrorCode() {
+          return ((bitField0_ & 0x00000010) != 0);
+        }
+        /**
+         * <pre>
+         * JSON-RPC error code returned by an ACP agent when the query failed
+         * (e.g., -32000, -32603). Unset otherwise.
+         * </pre>
+         *
+         * <code>optional int32 json_rpc_error_code = 5;</code>
+         * @return The jsonRpcErrorCode.
+         */
+        @java.lang.Override
+        public int getJsonRpcErrorCode() {
+          return jsonRpcErrorCode_;
+        }
+        /**
+         * <pre>
+         * JSON-RPC error code returned by an ACP agent when the query failed
+         * (e.g., -32000, -32603). Unset otherwise.
+         * </pre>
+         *
+         * <code>optional int32 json_rpc_error_code = 5;</code>
+         * @param value The jsonRpcErrorCode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setJsonRpcErrorCode(int value) {
+
+          jsonRpcErrorCode_ = value;
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * JSON-RPC error code returned by an ACP agent when the query failed
+         * (e.g., -32000, -32603). Unset otherwise.
+         * </pre>
+         *
+         * <code>optional int32 json_rpc_error_code = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearJsonRpcErrorCode() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          jsonRpcErrorCode_ = 0;
           onChanged();
           return this;
         }
